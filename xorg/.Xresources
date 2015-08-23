@@ -1,0 +1,68 @@
+! ----- color definitions -----
+#define White           #d2ba84
+#define Alt_white       #9898c8
+#define Magenta         #a08b42
+#define Alt_magenta     #c89d9a
+#define Blue            #8287a0
+#define Alt_blue        #e9ede3
+#define Red             #a07f7a
+#define Alt_red         #c88e86
+#define Green           #a0848a
+#define Alt_green       #c89366
+#define Yellow          #585ea0
+#define Alt_yellow      #e1d7b6
+#define Cyan            #bdb1ae
+#define Alt_cyan        #959ac8
+#define Black           #201b1c
+#define Alt_black       #80675f
+
+#define Primary         #a08b42
+#define Secondary       #a0848a
+#define Tertiary        #a07f7a
+
+
+! ----- Font Definitions -----
+#define Fontname    xft:Sauce Code Powerline
+#define Fontsize    12
+
+
+! ----- URxvt config -----
+URxvt*foreground:   Blue
+URxvt*background:   Black
+URxvt*cursorColor:  Blue
+URxvt*color0:       Alt_black      
+URxvt*color1:       Red  
+URxvt*color2:       Green
+URxvt*color3:       Yellow
+URxvt*color4:       Alt_blue
+URxvt*color5:       Magenta
+URxvt*color6:       Cyan
+URxvt*color7:       White
+URxvt*color8:       Alt_black
+URxvt*color9:       Alt_green
+URxvt*color10:      Alt_red
+URxvt*color11:      Alt_yellow
+URxvt*color12:      Alt_white
+URxvt*color13:      Alt_magenta
+URxvt*color14:      Alt_cyan
+URxvt*color15:      Alt_white
+
+URxvt*colorBD:              Magenta
+URxvt*colorIT:              Magenta
+URxvt*colorUL:              Yellow
+URxvt*underlineColor:       Yellow
+URxvt*highlightColor:       White
+URxvt*highlightTextColor:   Black
+
+URxvt*font:             Fontname:regular:pixelsize=Fontsize
+URxvt*imFont:           Fontname:regular:size=Fontsize
+URxvt*boldFont:         Fontname:bold:pixelsize=Fontsize
+URxvt*italicFont:       Fontname:italic:autohint=true:pixelsize=Fontsize
+URxvt*boldItalicFont:   Fontname:bold:italic:autohint=true:pixelsize=Fontsize
+
+URxvt*scrollBar: false
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
