@@ -1,0 +1,68 @@
+! ----- color definitions -----
+#define White           #a08b77
+#define Alt_white       #f4f2dd
+#define Magenta         #a0917b
+#define Alt_magenta     #c8b9a1
+#define Blue            #a08e79
+#define Alt_blue        #c8ad92
+#define Red             #a08f79
+#define Alt_red         #c87d3b
+#define Green           #ddd4bb
+#define Alt_green       #c8b48e
+#define Yellow          #a06029
+#define Alt_yellow      #c8b69f
+#define Cyan            #a08d79
+#define Alt_cyan        #c8b394
+#define Black           #1e1a15
+#define Alt_black       #807563
+
+#define Primary         #a0917b
+#define Secondary       #ddd4bb
+#define Tertiary        #a08f79
+
+
+! ----- Font Definitions -----
+#define Fontname    xft:source code pro
+#define Fontsize    11
+
+
+! ----- URxvt config -----
+URxvt*foreground:   White
+URxvt*background:   Black
+URxvt*cursorColor:  White
+URxvt*color0:       Black      
+URxvt*color1:       Red  
+URxvt*color2:       Green
+URxvt*color3:       Yellow
+URxvt*color4:       Blue
+URxvt*color5:       Magenta
+URxvt*color6:       Cyan
+URxvt*color7:       White
+URxvt*color8:       Alt_black
+URxvt*color9:       Alt_red
+URxvt*color10:      Alt_green
+URxvt*color11:      Alt_yellow
+URxvt*color12:      Alt_blue
+URxvt*color13:      Alt_magenta
+URxvt*color14:      Alt_cyan
+URxvt*color15:      Alt_white
+
+URxvt*colorBD:              Magenta
+URxvt*colorIT:              Magenta
+URxvt*colorUL:              Alt_white
+URxvt*underlineColor:       Alt_white
+URxvt*highlightColor:       White
+URxvt*highlightTextColor:   Black
+
+URxvt*font:             Fontname:light:pixelsize=Fontsize
+URxvt*imFont:           Fontname:regular:size=Fontsize
+URxvt*boldFont:         Fontname:bold:pixelsize=Fontsize
+URxvt*italicFont:       Fontname:italic:autohint=true:pixelsize=Fontsize
+URxvt*boldItalicFont:   Fontname:bold:italic:autohint=true:pixelsize=Fontsize
+
+URxvt*scrollBar: false
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
