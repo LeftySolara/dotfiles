@@ -13,7 +13,7 @@ set $warning        #3965a8
 
 # workspace names
 set $ws1 1: term
-set $ws2 2: code
+set $ws2 2: dev
 set $ws3 3: www
 set $ws4 4: mail
 set $ws5 5: media
