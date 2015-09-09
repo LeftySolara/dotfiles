@@ -53,6 +53,14 @@ new_dir() {
     mkdir -p $1
     cd $1
 }
+
+# add tickler items to taskwarrior
+alias in='task add +in'
+tickle() {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
 # =============================================================================
 
 # =============================================================================
@@ -68,6 +76,8 @@ alias tree='tree -C'
 alias mk=new_dir
 alias vedit='vim ~/.vimrc'
 alias zedit='vim ~/.zshrc'
+alias tick=tickle
+alias think='tickle +1d'
 # =============================================================================
 
 # =============================================================================
