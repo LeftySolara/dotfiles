@@ -15,15 +15,20 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
  
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
- 
 " Enable syntax highlighting
 syntax on
  
+" set runtime to include vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+
+call vundle#end()
  
+filetype plugin indent on
 "------------------------------------------------------------
 " Must have options {{{1
 "
@@ -155,6 +160,9 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
+
+" Open NERD Tree
+map <C-n> :NERDTreeToggle<CR>
  
 "------------------------------------------------------------
 
