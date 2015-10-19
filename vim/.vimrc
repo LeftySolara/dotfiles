@@ -1,7 +1,17 @@
 set nocompatible
+filetype off
 
 " Enable syntax highlighting
 syntax on
+
+" Include vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
 
 " Enable loading plugin and indent files for specific file types
 filetype plugin indent on
@@ -58,3 +68,6 @@ set number
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" Key mappings
+map <C-n> :NERDTreeToggle<CR>
