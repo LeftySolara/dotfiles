@@ -1,15 +1,15 @@
 set $mod Mod4
-set $font pango:Sauce Code Powerline 8
+set $font pango:Terminus 8
 
 # color definitions
-set $background     #201b1c
-set $focused_bg     #8287a0
-set $foreground     #8287a0
-set $gray           #bd9c56
-set $primary        #3965a8
+set $background     #070c0d
+set $focused_bg     #add9e4
+set $foreground     #add9e4
+set $gray           #6e8d95
+set $primary        #98c6d1
 set $secondary      #b5cfe0
 set $tertiary       #ddc168
-set $warning        #3965a8
+set $warning        #98c6d1
 
 # workspace names
 set $ws1 1: term
