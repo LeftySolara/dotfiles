@@ -90,9 +90,4 @@ export QT_IM_MODULE=ibus
 
 # Powerline
 export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline
-
-# stuff for virtual environments
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/codebase
-source /usr/bin/virtualenvwrapper.sh
 # =============================================================================
