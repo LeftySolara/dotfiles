@@ -70,10 +70,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # lock screen
-bindsym $mod+p exec i3lock -i ~/.config/themer/current/wallpaper.jpg
+bindsym $mod+p exec lock
 
 # start dmenu
-bindsym $mod+d exec dmenu_run -fn 'Sauce Code Powerline-8' -nb '$background' -nf '$foreground' -sb '$focused_bg' -sf '$background'
+bindsym $mod+d exec dmenu_run -fn 'Terminus-9' -nb '$background' -nf '$foreground' -sb '$focused_bg' -sf '$background'
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus

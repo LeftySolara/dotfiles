@@ -10,6 +10,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
@@ -65,9 +66,12 @@ set cmdheight=2
 set number
 
 " Indentation settings
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
+
+" Disable line wrapping
+set nowrap
 
 " Key mappings
 map <C-n> :NERDTreeToggle<CR>
