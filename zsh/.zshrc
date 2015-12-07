@@ -25,7 +25,7 @@ prompt walters
 
 # =============================================================================
 # Set path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/bin"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:"
 export PATH
 # =============================================================================
 
@@ -78,6 +78,7 @@ alias vedit='vim ~/.vimrc'
 alias zedit='vim ~/.zshrc'
 alias tick=tickle
 alias think='tickle +1d'
+alias rest="systemctl suspend"
 # =============================================================================
 
 # =============================================================================
