@@ -1,0 +1,13 @@
+bash/.bash_history
+
+mpd/.config/mpd/playlists/
+mpd/.config/mpd/database
+mpd/.config/mpd/log
+mpd/.config/mpd/pid
+mpd/.config/mpd/state
+mpd/.config/mpd/sticker.sql
+
+pianobar/.config/pianobar/nowplaying
+pianobar/.config/pianobar/state
+
+scripts/scripts/ynab
