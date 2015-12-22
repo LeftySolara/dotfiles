@@ -146,9 +146,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # change volume
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1dB+
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1dB-
-bindsym XF86AudioMute exec amixer -c 0 set Master toggle
+bindsym XF86AudioRaiseVolume exec sh -c "pactl set-sink-volume 1 +2%"
+bindsym XF86AudioLowerVolume exec sh -c "pactl set-sink-volume 1 -2%"
+bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
