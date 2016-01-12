@@ -65,12 +65,15 @@ alias tick=tickle
 alias think='tickle +1d'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
+alias steam='env SDL_AUDIODRIVER=alsa AUDIODEV=hw:0,0 steam'
 # =============================================================================
 
 # =============================================================================
 # Environment Variables
+export EDITOR=vim
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-
 export QT_STYLE_OVERRIDE=GTK+
+export SDL_AUDIODRIVER=alsa
+export AUDIODEV=hw:0,0

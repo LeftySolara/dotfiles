@@ -48,6 +48,8 @@ URxvt*boldItalicFont:   Fontname:bold:italic:autohint=true:pixelsize=Fontsize
 
 ! ----- Other Stuff -----
 URxvt*scrollBar: false
+URxvt*lineSpace: 2
+URxvt.internalBorder: 15
 URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard
 
