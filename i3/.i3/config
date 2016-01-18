@@ -1,15 +1,16 @@
 set $mod Mod4
-set $font pango:Terminus 8
+set $font pango:Droid Sans Mono 7
 
 # color definitions
-set $background     #070c0d
-set $focused_bg     #add9e4
-set $foreground     #add9e4
-set $gray           #6e8d95
-set $primary        #98c6d1
-set $secondary      #b5cfe0
-set $tertiary       #ddc168
-set $warning        #98c6d1
+set $background         #1d1f21
+set $focused_bg         #c5c8c6
+set $foreground         #c5c8c6
+set $gray               #707880
+set $green              #b5bd68
+set $primary            #b5bd68
+set $secondary          #f0c674
+set $tertiary           #81a2be
+set $warning            #cc6666
 
 # workspace names
 set $ws1 1: term
@@ -73,7 +74,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p exec lock
 
 # start dmenu
-bindsym $mod+d exec dmenu_run -fn 'Terminus-9' -nb '$background' -nf '$foreground' -sb '$focused_bg' -sf '$background'
+bindsym $mod+d exec dmenu_run -fn 'Droid Sans Mono-7' -nb '$background' -nf '$foreground' -sb '$background' -sf '$green'
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
@@ -228,13 +229,13 @@ bar {
 
     colors {
         background $background
-        statusline $primary
+        statusline $foreground
 
         # Colors go <border> <background> <text> <indicator>
-        focused_workspace $background $focused_bg $background
-        active_workspace $background $background $foreground
-        inactive_workspace $background $background $foreground
-        urgent_workspace $background $warning
+        focused_workspace  $background $background $green
+        active_workspace   $background $background $green
+        inactive_workspace $background $background $gray
+        urgent_workspace   $green $green $background
     }
 }
 

@@ -1,39 +1,40 @@
+! ------- Colors -------
 ! special
-URxvt*foreground:   #add9e4
-URxvt*background:   #070c0d
-URxvt*cursorColor:  #add9e4
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
 ! black
-URxvt*color0:       #0e1416
-URxvt*color8:       #98c6d1
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-URxvt*color1:       #151e20
-URxvt*color9:       #bab5da
+*.color1:       #a54242
+*.color9:       #cc6666
 
 ! green
-URxvt*color2:       #233033
-URxvt*color10:      #db997e
+*.color2:       #8c9440
+*.color10:      #b5bd68
 
 ! yellow
-URxvt*color3:       #37494d
-URxvt*color11:      #bfc771
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-URxvt*color4:       #50686e
-URxvt*color12:      #d8e17b
+*.color4:       #5f819d
+*.color12:      #81a2be
 
 ! magenta
-URxvt*color5:       #6e8d95
-URxvt*color13:      #eecfe0
+*.color5:       #85678f
+*.color13:      #b294bb
 
 ! cyan
-URxvt*color6:       #90b9c3
-URxvt*color14:      #e8a78d
+*.color6:       #5e8d87
+*.color14:      #8abeb7
 
 ! white
-URxvt*color7:       #cde7ee
-URxvt*color15:      #bfbae1
+*.color7:       #707880
+*.color15:      #c5c8c6
 
 
 ! ----- Font Definitions -----
@@ -47,6 +48,8 @@ URxvt*italicFont:       Fontname:italic:autohint=true:pixelsize=Fontsize
 URxvt*boldItalicFont:   Fontname:bold:italic:autohint=true:pixelsize=Fontsize
 
 URxvt*scrollBar: false
+URxvt*lineSpace: 2
+URxvt.internalBorder: 15
 URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard
 

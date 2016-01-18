@@ -32,12 +32,6 @@ export PATH
 # =============================================================================
 # Functions
 
-# because some programs do weird things when creating directories
-normal_permissions() {
-    chmod g=rx $1
-    chmod o=rx $1
-}
-
 # compile for c++11
 compile_cpp() {
     g++ -std=c++11 $1 -o $2
@@ -68,7 +62,7 @@ tickle() {
 alias ls='ls --color=auto'
 alias xre='xrdb ~/.Xresources'  # reload .Xresources
 alias wall='feh --bg-scale'     # set desktop wallpaper
-alias perm=normal_permissions   # set "regular" permissions
+alias perm='chmod 755'          # set "regular" permissions
 alias g=compile_cpp             # compile in c++11 mode
 alias gsql=compile_cpp_sql
 alias down='sudo shutdown now'
