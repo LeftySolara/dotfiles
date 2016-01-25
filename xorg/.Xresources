@@ -40,13 +40,13 @@
 #define Fontname    xft:Droid Sans Mono
 #define Fontsize    14
 
+! ----- URxvt Config -----
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
 URxvt*imFont:           Fontname:regular:size=Fontsize
 URxvt*boldFont:         Fontname:bold:pixelsize=Fontsize
 URxvt*italicFont:       Fontname:italic:autohint=true:pixelsize=Fontsize
 URxvt*boldItalicFont:   Fontname:bold:italic:autohint=true:pixelsize=Fontsize
 
-! ----- Other Stuff -----
 URxvt*scrollBar: false
 URxvt*lineSpace: 2
 URxvt.internalBorder: 15
@@ -56,3 +56,8 @@ URxvt.perl-ext-common: default,clipboard
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
+! ----- Rofi Config -----
+rofi.lines: 10
+rofi.opacity: 90
+rofi.bw: 0
+rofi.hide-scrollbar: true
