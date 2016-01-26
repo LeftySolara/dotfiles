@@ -13,14 +13,14 @@ set $tertiary           #81a2be
 set $warning            #cc6666
 
 # workspace names
-set $ws1 1: term
-set $ws2 2: dev
-set $ws3 3: www
-set $ws4 4: mail
-set $ws5 5: media
-set $ws6 6: doc
-set $ws7 7: irc
-set $ws8 8: misc
+set $ws1 "1   term"
+set $ws2 "2   dev"
+set $ws3 "3   web"
+set $ws4 "4   mail"
+set $ws5 "5   media"
+set $ws6 "6   doc"
+set $ws7 "7   irc"
+set $ws8 "8    misc"
 
 # application workspace assignments
 assign [class="Subl3"] $ws2
@@ -231,7 +231,7 @@ bar {
         font pango: Droid Sans Mono, Icons 10
         position top
         strip_workspace_numbers yes
-        separator_symbol "|"
+        separator_symbol " "
         tray_output primary
         height 20
 
