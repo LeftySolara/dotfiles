@@ -52,6 +52,9 @@ sh ~/.fehbg &
 xset -dpms &
 xset s off &
 
+# start redshift
+redshift &
+
 # start Dropbox
 dropbox &
 

@@ -1,7 +1,7 @@
 #! /bin/bash
 
-# force alsa to output to HDMI device when hotplugging
-# meant to be used with the udev rule hdmi.rules in this repo
+# Force alsa to output to HDMI device when hotplugging.
+# Meant to be used with the udev rule ./hdmi.rules
 
 set -x
 

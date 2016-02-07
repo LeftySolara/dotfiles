@@ -11,7 +11,6 @@ export LANGUAGE=C
 
 # Info Options {{{
 
-
 # Info
 # See this wiki page for more info:
 # https://github.com/dylanaraps/fetch/wiki/Customizing-Info
@@ -32,10 +31,10 @@ printinfo () {
     info "CPU" cpu
     info "GPU" gpu
     info "Memory" memory
-    info "Disk" disk
-    info "Song" song
     info "Birthday" birthday
 
+    # info "Song" song
+    # info "Disk" disk
     # info "Resolution" resolution
     # info "Font" gtkfont
     # info "Battery" battery
@@ -96,7 +95,7 @@ speed_type="max"
 
 # Shorten output of the getgpu funcion
 # --gpu_shorthand on/off
-gpu_shorthand="off"
+gpu_shorthand="on"
 
 
 # Gtk Theme / Icons
@@ -127,7 +126,7 @@ battery_num="all"
 # By default each battery gets its own line and title.
 # NOTE: Only works on Linux.
 # --battery_shorthand on/off
-battery_shorthand="off"
+battery_shorthand="on"
 
 
 # Birthday
@@ -190,7 +189,7 @@ info_color=6
 
 # Toggle line wrapping
 # --line_wrap on/off
-line_wrap="on"
+line_wrap="off"
 
 # Toggle bold text
 # --bold on/off
@@ -257,11 +256,11 @@ crop_offset="center"
 
 # Font width
 # Used when calculating dynamic image size
-font_width=7
+font_width=8
 
 # Right gap between image and text
 # --gap num
-gap=-3
+gap=0
 
 # Image offsets
 # --xoffset px

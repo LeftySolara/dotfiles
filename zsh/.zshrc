@@ -62,7 +62,7 @@ tickle() {
 alias ls='ls --color=auto'
 alias xre='xrdb ~/.Xresources'  # reload .Xresources
 alias wall='feh --bg-scale'     # set desktop wallpaper
-alias perm='chmod 755'          # set "regular" permissions
+alias perm='chmod 755'          # set default permissions
 alias g=compile_cpp             # compile in c++11 mode
 alias gsql=compile_cpp_sql
 alias down='sudo shutdown now'
@@ -71,6 +71,8 @@ alias mk=new_dir
 alias vedit='vim ~/.vimrc'
 alias zedit='vim ~/.zshrc'
 alias tick=tickle
+alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
+alias pianobar='pianobar; pc'
 alias think='tickle +1d'
 alias rest="systemctl suspend"
 # =============================================================================
@@ -78,7 +80,7 @@ alias rest="systemctl suspend"
 # =============================================================================
 # Environment Variables
 
-# iBus stuff (for Japanese IME)
+# iBus stuff for Japanese IME
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
