@@ -40,7 +40,7 @@ workspace_auto_back_and_forth yes
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 for_window [class="Anki"] floating enable
 for_window [class="Steam"] floating enable
 
@@ -151,9 +151,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # change volume
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1dB+
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1dB-
-bindsym XF86AudioMute exec amixer -c 0 set Master toggle
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 2 +3%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 2 -3%
+bindsym XF86AudioMute exec pactl set-sink-mute 2 toggle
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -228,21 +228,20 @@ mode "$mode_gaps_outer" {
 # finds out, if available)
 bar {
         status_command py3status -c ~/.config/i3/i3status.conf
-        font pango: Droid Sans Mono, Icons 10
-        position top
+        font pango: Droid Sans, Icons 11
+        position bottom
         strip_workspace_numbers yes
-        separator_symbol " "
         tray_output primary
         height 20
 
         colors {
             background $background
             statusline $foreground
-            separator $blue 
+            separator $background
 
             focused_workspace  $background $background $blue 
             active_workspace   $background $background $blue 
-            inactive_workspace $background $background $gray
+            inactive_workspace $background $background $foreground
             urgent_workspace   $blue  $blue  $background
         }
 }
