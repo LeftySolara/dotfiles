@@ -58,6 +58,6 @@ URxvt.preeditType: OverTheSpot
 
 ! ----- Rofi Config -----
 rofi.lines: 10
-rofi.opacity: 90
+rofi.opacity: 100 
 rofi.bw: 0
 rofi.hide-scrollbar: true
