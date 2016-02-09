@@ -23,7 +23,7 @@ artist = fields["artist"]
 
 if cmd == 'songstart':
     with open(fn, 'w') as f:
-        f.write("   {} - {}".format(artist,title))
+        f.write("{} - {}".format(artist,title))
 elif cmd == 'songfinish':
     with open(fn, 'w') as f:
         f.write("")

@@ -39,7 +39,10 @@ sh ~/.fehbg &
 # set cursor
 xsetroot -cursor_name left_ptr &
 
+# start redshift
+redshift &
+
 # Start iBus
 ibus-daemon --xim &
 
-exec i3 
+exec i3

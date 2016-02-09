@@ -1,20 +1,20 @@
 set $mod Mod4
-set $font pango:Droid Sans Mono 10
+set $font pango:Source Sans Pro 11
 
 # color definitions
-set $background         #1d1f21
-set $focused_bg         #c5c8c6
-set $foreground         #c5c8c6
-set $gray               #707880
-set $blue               #81a2be
-set $primary            #81a2be
-set $secondary          #f0c674
-set $tertiary           #81a2be
-set $warning            #cc6666
+set $background         #323D4F
+set $focused_bg         #F8E1D3
+set $foreground         #F8E1D3
+set $gray               #777576
+set $blue               #EBCAB9
+set $primary            #EBCAB9
+set $secondary          #F0C674
+set $tertiary           #EBCAB9
+set $warning            #CC6666
 
 # workspace names
 set $ws1 "1   term"
-set $ws2 "2   dev"
+set $ws2 "2   code"
 set $ws3 "3   web"
 set $ws4 "4   mail"
 set $ws5 "5   media"
@@ -22,31 +22,36 @@ set $ws6 "6   doc"
 set $ws7 "7   irc"
 set $ws8 "8    misc"
 
-# application workspace assignments
+# window borders
+new_window none
+smart_borders on
+
+# gaps settings
+gaps inner 20
+gaps outer 0
+smart_gaps on
+
+# workspace assignments for specific applications
 assign [class="Subl3"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Vlc"] $ws5
+assign [class="PlayOnLinux"] $ws5
 assign [class="llpp"] $ws6
-assign [class="Gummi"] $ws6
 assign [class="Anki"] $ws8
-assign [class="Steam"] $ws8
-
-# cycle back and forth when same workspace shortcut pressed
-workspace_auto_back_and_forth yes
 
 # window rules
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
 for_window [class="Anki"] floating enable
+for_window [class="Thunar"] floating enable
 for_window [class="Steam"] floating enable
 
-# window borders
-new_window none
-smart_borders on
+# cycle back and forth when same workspace shortcut pressed
+workspace_auto_back_and_forth yes
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -54,14 +59,9 @@ font $font
 
 # colors                BORDER      BACKGROUND TEXT        INDICATOR
 client.focused          $primary    $primary   $background $primary
-client.focused_inactive $background $primary   $foreground $background
+client.focused_inactive $gray       $gray      $foreground $background
 client.unfocused        $gray       $gray      $background $secondary
 client.urgent           $warning    $warning   $foreground $warning
-
-# gaps settings
-gaps inner 20
-gaps outer 0
-smart_gaps on
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -72,10 +72,13 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# lock screen (i3lock-fancy)
+bindsym $mod+p exec lock
+
 # start rofi
-bindsym $mod+d exec rofi -show run
-bindsym $mod+x exec rofi -show window
-bindsym $mod+c exec rofi -show ssh
+bindsym $mod+d exec rofi -show run -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "#CBAF9A" -hlbg "#CBAF9A" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
+bindsym $mod+x exec rofi -show window -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "#CBAF9A" -hlbg "#CBAF9A" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
+bindsym $mod+c exec rofi -show ssh -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "#CBAF9A" -hlbg "#CBAF9A" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
 
 # change focus
 focus_follows_mouse no
@@ -143,17 +146,22 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# lock screen using i3lock-fancy
-bindsym $mod+p exec lock
-
 # change laptop backlight level
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # change volume
-bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 2 +3%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 2 -3%
-bindsym XF86AudioMute exec pactl set-sink-mute 2 toggle
+bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1dB+
+bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1dB-
+bindsym XF86AudioMute exec amixer -c 0 set Master toggle
+
+# media controls
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+
+# take a screenshot
+bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/Pictures/system_scrots/'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -224,26 +232,25 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
-        status_command py3status -c ~/.config/i3/i3status.conf
-        font pango: Droid Sans, Icons 11
-        position bottom
-        strip_workspace_numbers yes
-        tray_output primary
-        height 20
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    font $font
+    position bottom
+    workspace_buttons yes
+    strip_workspace_numbers yes
+    tray_output none
 
-        colors {
-            background $background
-            statusline $foreground
-            separator $background
+    colors {
+        background $background
+        statusline $foreground
+        separator $blue
 
-            focused_workspace  $background $background $blue 
-            active_workspace   $background $background $blue 
-            inactive_workspace $background $background $foreground
-            urgent_workspace   $blue  $blue  $background
-        }
+        #                  <border>    <background> <text>       <indicator>
+        focused_workspace  $background $background  $foreground
+        active_workspace   $background $background  $foreground
+        inactive_workspace $background $background  $gray
+        urgent_workspace   $blue       $blue        $background
+    }
 }
 
 #start compton
