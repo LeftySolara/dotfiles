@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font pango:Source Sans Pro 11
+set $font pango:Source Sans Pro 12
 
 # color definitions
 set $background         #323D4F
@@ -35,6 +35,7 @@ smart_gaps on
 assign [class="Subl3"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="jetbrains-clion"] $ws2
+assign [class="jetbrains-studio"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Vlc"] $ws5
