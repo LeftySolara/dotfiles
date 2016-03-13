@@ -45,4 +45,7 @@ redshift &
 # Start iBus
 ibus-daemon --xim &
 
+# Start MPD
+mpd &
+
 exec i3

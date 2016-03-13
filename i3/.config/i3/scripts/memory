@@ -55,8 +55,8 @@ END {
 
 	# color
 	if (pct > 90) {
-		print("#A54242\n")
-		print("#A54242\n")
+		print("#F6E89F\n")
+		print("#F6E89F\n")
 	} else if (pct > 70) {
 		print("#F0C674\n")
 	}
