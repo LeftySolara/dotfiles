@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font pango:Terminus 13
+set $font pango:Tamsyn 13
 
 # color definitions
 set $background         #3F4A4C
@@ -10,7 +10,7 @@ set $blue               #EBCAB9
 set $primary            #F6E89F
 set $secondary          #F0C674
 set $tertiary           #EBCAB9
-set $warning            #A84E36
+set $warning            #A85E4B
 
 # workspace names
 set $ws1 "1   term"
@@ -79,9 +79,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p exec lock
 
 # start rofi
-bindsym $mod+d exec rofi -show run -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "#CBAF9A" -hlbg "#CBAF9A" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
-bindsym $mod+x exec rofi -show window -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "#CBAF9A" -hlbg "#CBAF9A" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
-bindsym $mod+c exec rofi -show ssh -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "#CBAF9A" -hlbg "#CBAF9A" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
+bindsym $mod+d exec rofi -show run -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "$foreground" -hlbg "$foreground" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
+bindsym $mod+x exec rofi -show window -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "$foreground" -hlbg "$foreground" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
+bindsym $mod+c exec rofi -show ssh -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$background" -fg "$foreground" -hlbg "$foreground" -hlfg "#162135" -font "Source Sans Pro 16" -hide-scrollbar true
 
 # change focus
 focus_follows_mouse no
@@ -242,6 +242,7 @@ bar {
     workspace_buttons yes
     strip_workspace_numbers yes
     tray_output none
+    height 28
 
     colors {
         background $background

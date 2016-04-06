@@ -37,8 +37,8 @@
 *.color15:      #F2F0EC
 
 ! ----- Font Definitions -----
-#define Fontname    xft:Droid Sans Mono
-#define Fontsize    16
+#define Fontname    xft:Tamsyn
+#define Fontsize    24
 
 ! ----- URxvt Config -----
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
