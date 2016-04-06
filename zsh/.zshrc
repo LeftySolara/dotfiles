@@ -55,6 +55,7 @@ alias tree='tree -C'
 alias xre='xrdb ~/.Xresources'	# reload .Xresources
 alias wall='feh --bg-scale'	    # set desktop wallpaper
 alias g=compile_cpp11
+alias gGL='g++ -std=c++11 -lGL -lglut -lGLU -lGLEW'
 alias mk=new_dir
 alias down='sudo shutdown now'
 alias rest='systemctl suspend && lock'
@@ -66,6 +67,8 @@ alias think='tickle +1d'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias steam='env SDL_AUDIODRIVER=alsa AUDIODEV=hw:0,0 steam'
+alias tasks='task'
+alias rbackup='rsync -aAXv --progress --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} -e ssh / jalen@vault-53:/srv/backup/xps13'
 # =============================================================================
 
 # =============================================================================
