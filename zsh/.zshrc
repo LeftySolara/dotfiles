@@ -74,7 +74,13 @@ alias tick=tickle
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias think='tickle +1d'
-alias rest="systemctl suspend"
+alias rest='systemctl suspend && lock'
+alias rmshit='python ~/scripts/rmshit.py'
+alias rbackup='rsync -aAv --progress --numeric-ids --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/lost+found"} -e "ssh -p 32719" / jalen@vault-53:/srv/backup/vault-101'
+alias fetch='neofetch'
+alias gst='git status'
+alias gk='gitk'
+alias ga='git add'
 # =============================================================================
 
 # =============================================================================
@@ -85,6 +91,9 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
+export QT_STYLE_OVERRIDE=GTK+
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
 # Powerline
-export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline
+#export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline
 # =============================================================================
