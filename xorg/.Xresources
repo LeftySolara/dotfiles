@@ -39,7 +39,7 @@
 
 ! ----- Font Definitions -----
 #define Fontname  xft:Droid Sans Mono
-#define Fontsize  14
+#define Fontsize  15
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
 URxvt*imFont:           Fontname:regular:size=Fontsize
