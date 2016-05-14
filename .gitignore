@@ -1,0 +1,10 @@
+mpd/.config/mpd/database
+mpd/.config/mpd/log
+mpd/.config/mpd/pid
+mpd/.config/mpd/state
+mpd/.config/mpd/sticker.sql
+
+ncmpcpp/.ncmpcpp/error.log
+
+pianobar/.config/pianobar/nowplaying
+pianobar/.config/pianobar/state
