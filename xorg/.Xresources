@@ -1,8 +1,8 @@
 ! ------- Colors -------
 ! special
-*.foreground:   #F8E1D3
-*.background:   #323D4F
-*.cursorcolor:  #F8E1D3
+*.foreground:   #D0D0D0
+*.background:   #2D3739
+*.cursorcolor:  #D0D0D0
 
 ! black
 *.color0:       #282A2E
@@ -38,7 +38,7 @@
 
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Droid Sans Mono
+#define Fontname  xft:Tamsyn
 #define Fontsize  15
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
@@ -55,3 +55,12 @@ URxvt.perl-ext-common: default,clipboard
 
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #2d3739, #2d3739, #2d3739
+rofi.color-normal: #2d3739, #F8E1D3, argb:5e2d3739, #586e75, #eee8d5
+rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
+rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
