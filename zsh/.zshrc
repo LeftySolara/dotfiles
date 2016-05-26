@@ -69,6 +69,8 @@ alias pianobar='pianobar; pc'
 alias steam='env SDL_AUDIODRIVER=alsa AUDIODEV=hw:0,0 steam'
 alias tasks='task'
 alias rbackup='rsync -aAXv --progress --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} -e ssh / jalen@vault-53:/srv/backup/xps13'
+alias gst='git status'
+alias gk='gitk'
 # =============================================================================
 
 # =============================================================================

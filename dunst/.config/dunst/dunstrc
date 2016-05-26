@@ -1,5 +1,5 @@
 [global]
-    font = Terminus 14 
+    font = Tamsyn 14
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -42,7 +42,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = 90
     
     # Split notifications into multiple lines if they don't fit into
     # geometry.
@@ -149,7 +149,7 @@
 
 [frame]
     width = 4
-    color = "#E1E1E1"
+    color = "#2D3739"
 
 [shortcuts]
 
@@ -176,17 +176,17 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#3F4A4C"
-    foreground = "#E1E1E1"
+    foreground = "#2D3739"
     timeout = 10
 
 [urgency_normal]
     background = "#3F4A4C"
-    foreground = "#E1E1E1"
+    foreground = "#2D3739"
     timeout = 10
 
 [urgency_critical]
     background = "#3F4A4C"
-    foreground = "#E1E1E1"
+    foreground = "#2D3739"
     timeout = 0
 
 

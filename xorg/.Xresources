@@ -1,46 +1,46 @@
 ! ------- Colors -------
 ! special
-*.foreground:   #E1E1E1
-*.background:   #3F4A4C
-*.cursorColor:  #E1E1E1
+*.foreground:   #D0D0D0
+*.background:   #2D3739
+*.cursorcolor:  #D0D0D0
 
 ! black
-*.color0:       #3F4A4C
-*.color8:       #747369
+*.color0:       #282A2E
+*.color8:       #373B41
 
 ! red
-*.color1:       #A85E4B
-*.color9:       #A85E4B
+*.color1:       #A54242
+*.color9:       #CC6666
 
 ! green
-*.color2:       #99CC99
-*.color10:      #99CC99
+*.color2:       #8C9440
+*.color10:      #B5BD68
 
 ! yellow
-*.color3:       #FFCC66
-*.color11:      #FFCC66
+*.color3:       #DE935F
+*.color11:      #F0C674
 
 ! blue
-*.color4:       #6699CC
-*.color12:      #6699CC
+*.color4:       #5F819D
+*.color12:      #81A2BE
 
 ! magenta
-*.color5:       #CC99CC
-*.color13:      #CC99CC
+*.color5:       #85678F
+*.color13:      #B294BB
 
 ! cyan
-*.color6:       #66CCCC
-*.color14:      #66CCCC
+*.color6:       #5E8D87
+*.color14:      #8ABEB7
 
 ! white
-*.color7:       #E1E1E1
-*.color15:      #F2F0EC
+*.color7:       #707880
+*.color15:      #C5C8C6
+
 
 ! ----- Font Definitions -----
-#define Fontname    xft:Tamsyn
-#define Fontsize    24
+#define Fontname  xft:Tamsyn
+#define Fontsize  24
 
-! ----- URxvt Config -----
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
 URxvt*imFont:           Fontname:regular:size=Fontsize
 URxvt*boldFont:         Fontname:bold:pixelsize=Fontsize
@@ -55,3 +55,12 @@ URxvt.perl-ext-common: default,clipboard
 
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #2d3739, #2d3739, #2d3739
+rofi.color-normal: #2d3739, #F8E1D3, argb:5e2d3739, #586e75, #eee8d5
+rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
+rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
