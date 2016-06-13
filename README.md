@@ -16,5 +16,3 @@
 
 To keep these organized, I keep them all in a directory ~/dotfiles and use GNU Stow to symlink everything to the correct place.
 
-##Scrot
-![](scrots/2016-04-06_07-07-44.png)
