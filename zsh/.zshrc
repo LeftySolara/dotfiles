@@ -21,7 +21,7 @@ prompt walters
 
 # =============================================================================
 # Path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
 export PATH
 # =============================================================================
 
@@ -82,3 +82,7 @@ export QT_IM_MODULE=ibus
 export QT_STYLE_OVERRIDE=GTK+
 export SDL_AUDIODRIVER=alsa
 export AUDIODEV=hw:0,0
+
+export rvm_ignore_gemrc_issues=1
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/heroku/bin:$PATH"
