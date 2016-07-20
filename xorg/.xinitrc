@@ -34,7 +34,7 @@ fi
 xsetroot -cursor_name left_ptr &
 
 # activate num lock
-# numlockx &
+numlockx &
 
 # load key bindings (bspwm)
 # sxhkd &
@@ -54,6 +54,9 @@ dropbox &
 
 # Start ibus
 ibus-daemon --xim &
+
+# Start MPD
+mpd &
 
 # start window manager
 # exec bspwm

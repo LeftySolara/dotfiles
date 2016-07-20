@@ -25,7 +25,7 @@ prompt walters
 
 # =============================================================================
 # Set path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
 export PATH
 # =============================================================================
 
@@ -96,4 +96,9 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # Powerline
 #export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline
+
+# Ruby stuff
+export rvm_ignore_gemrc_issues=1
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/heroku/bin:$PATH"
 # =============================================================================
