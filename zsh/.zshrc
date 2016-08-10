@@ -57,7 +57,6 @@ alias perm='chmod 755'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias steam='env SDL_AUDIODRIVER=alsa AUDIODEV=hw:0,0 steam'
-alias tasks='task'
 alias gst='git status'
 alias gk='gitk'
 # =============================================================================
