@@ -38,14 +38,6 @@ new_dir() {
     mkdir -p $1
     cd $1
 }
-
-# add tasks to tickler folder in Taskwarrior
-alias in='task add +in'
-tickle() {
-    deadline=$1
-    shift
-    in +tickle wait:$deadline $@
-}
 # =============================================================================
 
 # =============================================================================
@@ -62,8 +54,6 @@ alias rest='systemctl suspend && lock'
 alias vedit='vim ~/.vimrc'
 alias zedit='vim ~/.zshrc'
 alias perm='chmod 755'
-alias tick=tickle
-alias think='tickle +1d'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias steam='env SDL_AUDIODRIVER=alsa AUDIODEV=hw:0,0 steam'
