@@ -77,6 +77,8 @@ export QT_IM_MODULE=ibus
 export QT_STYLE_OVERRIDE=GTK+
 export SDL_AUDIODRIVER=alsa
 export AUDIODEV=hw:0,0
+export VENV_HOME=~/venvs
+export PROJECT_HOME=~/projects
 
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
