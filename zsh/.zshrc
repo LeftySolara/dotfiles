@@ -30,6 +30,13 @@ export PATH
 # =============================================================================
 
 # =============================================================================
+# Coala Configuration
+  autoload bashcompinit
+  bashcompinit
+  eval "$(register-python-argcomplete `which coala`)"
+# =============================================================================
+
+# =============================================================================
 # Functions
 
 # compile for c++11
@@ -79,12 +86,17 @@ alias rmshit='python ~/scripts/rmshit.py'
 alias rbackup='rsync -aAv --progress --numeric-ids --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/lost+found"} -e "ssh -p 32719" / jalen@vault-53:/srv/backup/vault-101'
 alias fetch='neofetch'
 alias gst='git status'
-alias gk='gitk'
+alias gk='gitk &'
 alias ga='git add'
+alias key='keychain --eval --agents ssh id_rsa'
 # =============================================================================
 
 # =============================================================================
 # Environment Variables
+
+# virtualenv
+export VENV_HOME=~/venvs
+export PROJECT_HOME=~/proj
 
 # iBus stuff for Japanese IME
 export GTK_IM_MODULE=ibus
