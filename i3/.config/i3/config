@@ -1,16 +1,17 @@
 set $mod Mod4
-set $font pango:Tamsyn 12
+set $font pango:Tamsyn 11
 
 # color definitions
-set $background         #2D3739
-set $focused_bg         #D0D0D0
-set $foreground         #D0D0D0
-set $gray               #777576
-set $blue               #2D3739
-set $primary            #2D3739
+set $background         #3C4D5C
+set $focused_bg         #E2E4EA
+set $foreground         #E2E4EA
+set $gray               #9A9CA0
+set $blue               #3C4D5C
+set $red                #E0807D
+set $primary            #3C4D5C
 set $secondary          #F0C674
-set $tertiary           #2D3739
-set $warning            #BDA358
+set $tertiary           #3C4D5C
+set $warning            #F09089
 
 # workspace names
 set $ws1 "1   term"
@@ -59,9 +60,9 @@ workspace_auto_back_and_forth yes
 font $font
 
 # colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $foreground   $background  $primary
-client.focused_inactive $background   $background   $foreground  $background
-client.unfocused        $background   $background   $gray        $secondary
+client.focused          $background   $red          $background  $primary
+client.focused_inactive $background   $gray         $background  $background
+client.unfocused        $background   $gray         $background  $secondary
 client.urgent           $warning      $warning      $foreground  $warning
 
 # Use Mouse+$mod to drag floating windows to their wanted position
