@@ -10,9 +10,23 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 
 call vundle#end()
+
+" Plugin Settings ===================================================
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Allow commenting and inverting empty lines
+let g:NERDCommentEmptyLines = 1
+
+" ===================================================================
 
 " Enable loading plugin and indent files for specific file types
 filetype plugin indent on
