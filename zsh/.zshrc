@@ -3,6 +3,8 @@ HISTSIZE=500
 SAVEHIST=500
 unsetopt beep
 bindkey -v
+
+source virtualenvwrapper.sh
 # =============================================================================
 
 # =============================================================================
@@ -80,6 +82,7 @@ export SDL_AUDIODRIVER=alsa
 export AUDIODEV=hw:0,0
 export VENV_HOME=~/venvs
 export PROJECT_HOME=~/projects
+export TERMINAL=xterm-termite
 
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
