@@ -58,6 +58,9 @@ ibus-daemon --xim &
 # Start MPD
 mpd &
 
+#load nvidia settings
+nvidia-settings --load-config-only &
+
 # start window manager
 # exec bspwm
 exec i3

@@ -1,17 +1,22 @@
 set $mod Mod4
-set $font pango:Tamsyn 11
+set $font pango:Tamsyn 12
 
 # color definitions
-set $background         #3C4D5C
-set $focused_bg         #E2E4EA
-set $foreground         #E2E4EA
-set $gray               #9A9CA0
-set $blue               #3C4D5C
-set $red                #E0807D
-set $primary            #3C4D5C
-set $secondary          #F0C674
-set $tertiary           #3C4D5C
-set $warning            #F09089
+
+set $background     #2b303b
+set $focused_bg     #c0c5ce
+set $foreground     #c0c5ce
+
+set $black          #2b303b
+set $red            #bf616a
+set $green          #a3be8c
+set $yellow         #ebcb8b
+set $blue           #8fa1b3
+set $magenta        #b48ead
+set $cyan           #96b5b4
+set $white          #eff1f5
+set $light_grey     #c0c5ce
+set $dark_grey      #65737e
 
 # workspace names
 set $ws1 "1   term"
@@ -22,6 +27,7 @@ set $ws5 "5   media"
 set $ws6 "6   doc"
 set $ws7 "7   irc"
 set $ws8 "8   misc"
+set $ws9 "9   ftp"
 
 # window borders
 new_window none
@@ -46,7 +52,7 @@ assign [class="Anki"] $ws8
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 6
 for_window [class="Anki"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="QuizMe"] floating enable
@@ -60,16 +66,16 @@ workspace_auto_back_and_forth yes
 font $font
 
 # colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $red          $background  $primary
-client.focused_inactive $background   $gray         $background  $background
-client.unfocused        $background   $gray         $background  $secondary
-client.urgent           $warning      $warning      $foreground  $warning
+client.focused          $background   $yellow       $black  $green
+client.focused_inactive $background   $cyan         $black  $background
+client.unfocused        $background   $cyan         $black  $secondary
+client.urgent           $green        $green        $white  $green
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -133,7 +139,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace 9
+bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
@@ -145,7 +151,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # change laptop backlight level
@@ -167,7 +173,7 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86Sleep exec systemctl suspend && lock
 
 # take a screenshot
-bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/pictures/system_scrots/'
+bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/pics/Screencaps/system'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -252,9 +258,9 @@ bar {
         separator $blue
 
         #                  <border>    <background> <text>       <indicator>
-        focused_workspace  $background $background  $foreground
+        focused_workspace  $background $background  $cyan
         active_workspace   $background $background  $foreground
-        inactive_workspace $background $background  $gray
+        inactive_workspace $background $background  $foreground
         urgent_workspace   $foreground $foreground  $background
     }
 }
