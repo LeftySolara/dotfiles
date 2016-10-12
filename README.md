@@ -9,12 +9,12 @@ Dotfiles for my main desktop system
 * Launcher: `rofi`
 * Compositor: `compton`
 * Shell: `zsh`
-* Terminal Emulator: `rxvt-unicode`
+* Terminal Emulator: `termite`
 * Editors: `vim`, `sublime text`
 * Music Daemon: `mpd`
 * Music Client: `ncmpcpp`
 * Pandora Client: `pianobar`
 * File Manager: `thunar`
-* Browser: `firefox`
+* Browser: `firefox-developer`
 * Mail Client: `thunderbird`
 

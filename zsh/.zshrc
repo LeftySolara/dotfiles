@@ -94,9 +94,12 @@ alias key='keychain --eval --agents ssh id_rsa'
 # =============================================================================
 # Environment Variables
 
+export TERMINAL=xterm-termite
+
 # virtualenv
 export VENV_HOME=~/venvs
 export PROJECT_HOME=~/proj
+source virtualenvwrapper.sh
 
 # iBus stuff for Japanese IME
 export GTK_IM_MODULE=ibus
