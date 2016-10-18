@@ -60,7 +60,7 @@ URxvt.preeditType: OverTheSpot
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #2b303b, #96b5b4, #2b303b
-rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #96b5b4, #2b303b
-rofi.color-active: #ebcb8b, #2b303b, #2b303b, #8fa1b3, #2b303b
-rofi.color-urgent: #ebcb8b, #dc322f, #2b303b, #dc322f, #ebcb8b
+rofi.color-window: #1c1f26, #96b5b4, #1c1f26
+rofi.color-normal: #1c1f26, #c0c5ce, #1c1f26, #96b5b4, #1c1f26
+rofi.color-active: #ebcb8b, #1c1f26, #1c1f26, #8fa1b3, #1c1f26
+rofi.color-urgent: #ebcb8b, #dc322f, #1c1f26, #dc322f, #ebcb8b

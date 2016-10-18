@@ -13,10 +13,10 @@ font = Tamsyn 14
 foreground      = #c0c5ce
 foreground_bold = #c0c5ce
 cursor          = #c0c5ce
-background      = #2b303b
+background      = #1c1f26
 
 # black
-color0  = #2b303b
+color0  = #1c1f26
 color8  = #65737e
 
 # red

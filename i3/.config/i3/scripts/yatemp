@@ -1,0 +1,2 @@
+CPUTEMP=$(cat /sys/class/hwmon/hwmon2/temp1_input)
+echo $((CPUTEMP/1000))°C
