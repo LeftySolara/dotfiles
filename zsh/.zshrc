@@ -65,10 +65,12 @@ alias zedit='vim ~/.zshrc'
 alias perm='chmod 755'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
-alias steam='env SDL_AUDIODRIVER=alsa AUDIODEV=hw:0,0 steam'
 alias gst='git status'
 alias gk='gitk &'
 alias fetch='neofetch'
+
+# Taskwarrior Aliases
+alias in='task add +in'
 # =============================================================================
 
 # =============================================================================
@@ -82,7 +84,6 @@ export SDL_AUDIODRIVER=alsa
 export AUDIODEV=hw:0,0
 export VENV_HOME=~/venvs
 export PROJECT_HOME=~/projects
-export TERMINAL=xterm-termite
 
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
