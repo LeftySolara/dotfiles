@@ -1,40 +1,40 @@
 ! ------- Colors -------
 ! special
-*.foreground:   #E2E4EA
-*.background:   #3C4D5C
-*.cursorcolor:  #E2E4EA
+*.foreground:   #c0c5ce
+*.background:   #1c1f26
+*.cursorcolor:  #c0c5ce
 
 ! black
-*.color0:       #151B20
-*.color8:       #3C4D5C
+*.color0:       #1c1f26
+*.color8:       #1c1f26
 
 ! red
-*.color1:       #8B8EA0
+*.color1:       #bf616a
 *.color9:       #B9BDD5
 
 ! green
-*.color2:       #A05C5A
+*.color2:       #a3be8c
 *.color10:      #E0807D
 
 ! yellow
-*.color3:       #929BA0
+*.color3:       #ebcb8b
 *.color11:      #C1CDD4
 
 ! blue
-*.color4:       #B16A65
+*.color4:       #8fa1b3
 *.color12:      #F09089
 
 ! magenta
-*.color5:       #9A9CA0
+*.color5:       #b48ead
 *.color13:      #CBCDD2
 
 ! cyan
-*.color6:       #A0A4A7
+*.color6:       #96b5b4
 *.color14:      #D0D6DA
 
 ! white
-*.color7:       #B1B3B8
-*.color15:      #E2E4EA
+*.color7:       #eff1f5
+*.color15:      #c0c5ce
 
 
 ! ----- Font Definitions -----
