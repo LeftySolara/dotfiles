@@ -43,7 +43,7 @@
 	"caret_extra_width": 0,
 	"caret_style": "smooth",
 	"close_windows_when_empty": false,
-	"color_inactive_tabs": true,
+	"color_inactive_tabs": false,
 	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-ocean.tmTheme",
 	"copy_with_empty_selection": true,
 	"create_window_at_startup": true,
@@ -98,7 +98,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 13,
+	"font_size": 11,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,
@@ -149,7 +149,7 @@
 	"show_panel_on_build": true,
 	"show_tab_close_buttons": true,
 	"sidebar_row_padding_medium": true,
-	"sidebar_size_13": true,
+	"sidebar_size_12": true,
 	"smart_indent": true,
 	"spell_check": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.c.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)",

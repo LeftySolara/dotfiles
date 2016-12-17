@@ -24,5 +24,5 @@ context.home=+@home or +@anywhere or +@computer or +@owen and -@location
 taskd.certificate=\/home\/jalen\/.task\/jalen_adams.cert.pem
 taskd.key=\/home\/jalen\/.task\/jalen_adams.key.pem
 taskd.ca=\/home\/jalen\/.task\/ca.cert.pem
-***REMOVED***192.168.8.213:53589
-***REMOVED***Jalen\/Jalen Adams\/bec74b05-deda-4813-a2f6-21cf27807a9a
+taskd.server=192.168.8.213:53589
+taskd.credentials=Jalen\/Jalen Adams\/bec74b05-deda-4813-a2f6-21cf27807a9a

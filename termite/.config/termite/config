@@ -4,45 +4,45 @@ scroll_on_output = false
 cursor_blink = off
 audible_bell = false
 padding = 15
-font = Tamsyn 13
+font = Tamsyn 12
 
 
 [colors]
 
 # special
-foreground      = #c0c5ce
-foreground_bold = #c0c5ce
-cursor          = #c0c5ce
-background      = #2b303b
+foreground      = #c7ccd1
+foreground_bold = #c7ccd1
+cursor          = #c7ccd1
+background      = #1c2023
 
 # black
-color0  = #2b303b
-color8  = #65737e
+color0  = #1c2023
+color8  = #747c84
 
 # red
-color1  = #bf616a
-color9  = #bf616a
+color1  = #c7ae95
+color9  = #c7ae95
 
 # green
-color2  = #a3be8c
-color10 = #a3be8c
+color2  = #95c7ae
+color10 = #95c7ae
 
 # yellow
-color3  = #ebcb8b
-color11 = #ebcb8b
+color3  = #aec795
+color11 = #aec795
 
 # blue
-color4  = #8fa1b3
-color12 = #8fa1b3
+color4  = #ae95c7
+color12 = #ae95c7
 
 # magenta
-color5  = #b48ead
-color13 = #b48ead
+color5  = #c795ae
+color13 = #c795ae
 
 # cyan
-color6  = #96b5b4
-color14 = #96b5b4
+color6  = #95aec7
+color14 = #95aec7
 
 # white
-color7  = #c0c5ce
-color15 = #eff1f5
+color7  = #c7ccd1
+color15 = #f3f4f5
