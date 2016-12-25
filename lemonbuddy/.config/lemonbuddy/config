@@ -11,20 +11,20 @@ monitor = eDP1
 dock = false
 
 ; Put the bar at the bottom of the screen
-bottom = true
+bottom = false
 
 ; Omit the % to specify the width in pixels
 width = 100%
-height = 35
+height = 30
 
 ; Offset defined in pixels
 offset-x = 0
 offset-y = 0
 
 ; Colors
-background = #ff1c1f26
-foreground = #ffc0c5ce
-linecolor = #ffa3be8c
+background = #ff1c2023
+foreground = #ffc7ccd1
+linecolor = #ffaec795
 
 ; Borders
 border-size = 0
@@ -40,12 +40,12 @@ padding-left = 0
 padding-right = 0
 
 ; Number of spaces to add before/after each module
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 0
 
 ; Fonts are defined using <FontName>;<Offset>
-font-0 = Tamsyn:size=13;0
-font-1 = FontAwesome:size=13;0
+font-0 = Tamsyn:size=10.2;0
+font-1 = FontAwesome:size=10.2;0
 
 ; Locale used to localize module output
 locale = sv_SE.UTF-8
@@ -61,7 +61,7 @@ locale = sv_SE.UTF-8
 ; Define what modules to output
 modules-left = i3 mpd pianobar
 ;modules-center = label
-modules-right = volume wireless-network memory cpu cpuTemp battery date time
+modules-right = volume cpu cpuTemp memory wireless-network battery date time
 
 ;==============================================================================
 
@@ -82,7 +82,7 @@ poll-interval = 3
 ;   <ramp-capacity>
 ;   <animation-charging>
 format-charging = <animation-charging> <label-charging>
-format-charging-overline = #a3be8c
+format-charging-underline = #1c2023
 format-charging-padding = 0
 
 ; Available tags:
@@ -90,7 +90,7 @@ format-charging-padding = 0
 ;   <bar-capaity>
 ;   <ramp-capacity>
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-overline = #96b5b4
+format-discharging-underline = #1c2023
 format-discharging-padding = 0
 
 ; Available tags:
@@ -98,25 +98,25 @@ format-discharging-padding = 0
 ;   <bar-capaity>
 ;   <ramp-capacity>
 ;format-full = <ramp-capacity> <label-full>
-;format-full-overline = #96b5b4
+;format-full-underline = #1c2023
 ;format-full-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default)
 label-charging = %percentage%
-label-charging-overline = #a3be8c
+label-charging-underline = #1c2023
 label-charging-padding = 1
 
 ; Available tokens:
 ;   %percentage% (default)
 label-discharging = %percentage%
-label-discharging-overline = #96b5b4
+label-discharging-underline = #1c2023
 label-discharging-padding = 1
 
 ; Available tokens:
 ;   %percentage% (default)
 label-full = Fully charged
-label-full-overline = #96b5b4
+label-full-underline = #1c2023
 label-full-padding = 1
 
 ; Only applies if <ramp-capacity> is used
@@ -153,13 +153,13 @@ interval = 1
 ;   <ramp-load>
 ;   <ramp-coreload>
 format = <ramp-load> <label>
-format-overline = #96b5b4
+format-underline = #1c2023
 format-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default) - total cpu load
 label = %percentage%
-label-overline = #96b5b4
+label-underline = #1c2023
 label-padding = 1
 
 ramp-load-0 = 
@@ -189,7 +189,7 @@ tail = false
 interval = 3
 
 ; Limit the length of the output string
-maxlen = 0
+maxlen = 7
 
 ; Add trailing ellipsis when truncating the string
 ellipsis = true
@@ -199,8 +199,8 @@ ellipsis = true
 ;format = <output>
 format-background = #1c1f26
 format-foreground = #c0c5ce
-format-overline = #96b5b4
-format-padding = 1
+format-underline = #1c2023
+format-padding = 0
 
 ;==============================================================================
 
@@ -253,7 +253,7 @@ ws-icon-default = 
 label-focused = %name%
 label-focused-foreground = #c0c5ce
 label-focused-background = #1c1f26
-label-focused-overline = #a3be8c
+label-focused-underline = #95aec7
 label-focused-padding = 2
 
 ; Available tokens:
@@ -261,7 +261,7 @@ label-focused-padding = 2
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-unfocused = 
+label-unfocused =
 ;label-unfocused-padding = 2
 
 ; Available tokens:
@@ -269,8 +269,8 @@ label-unfocused =
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-visible = 
-label-visible-underline = #555555
+label-visible =
+label-visible-underline = #1c2023
 label-visible-padding = 2
 
 ; Available tokens:
@@ -279,8 +279,8 @@ label-visible-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 label-urgent = %name%
-label-urgent-foreground = #1c1f26
-label-urgent-background = #ebcb8b
+label-urgent-foreground = #1c2023
+label-urgent-background = #ae95c7
 label-urgent-padding = 2
 
 ;==============================================================================
@@ -295,8 +295,8 @@ interval = 1
 ; Available tags:
 ;   <date> (default)
 format =   <date>
-format-overline = #96b5b4
-format-padding = 1
+format-underline = #1c2023
+format-padding = 0
 
 ;==============================================================================
 
@@ -310,8 +310,8 @@ interval = 1
 ; Available tags:
 ;   <date> (default)
 format =   <date>
-format-overline = #96b5b4
-format-padding = 1
+format-underline = #1c2023
+format-padding = 0
 
 ;==============================================================================
 
@@ -337,8 +337,8 @@ format = <label>
 ;   %mb_free%
 ;   %mb_total%
 label =  %gb_used%
-label-overline = #96b5b4
-label-padding = 1
+label-underline = #1c2023
+label-padding = 0
 
 ; Only applies if <bar-used> is used
 ;bar-used-width = 50
@@ -449,7 +449,7 @@ ellipsis = true
 ;format = <output>
 format-background = #1c1f26
 format-foreground = #c0c5ce
-format-padding = 1
+format-padding = 0
 
 ; Available tokens:
 ;   %counter%
@@ -488,14 +488,14 @@ udspeed-minwidth = 3
 ;   <label-connected> (default)
 ;   <ramp-signal>
 format-connected = <label-connected>
-format-connected-overline = #96b5b4
-format-conected-padding = 1
+format-connected-underline = #1c2023
+format-conected-padding = 0
 
 ; Available tags:
 ;   <label-disconnected> (default)
 format-disconnected = <label-disconnected>
-format-disconnected-overline = #ebcb8b
-format-disconnected-padding = 1
+format-disconnected-underline = #1c2023
+format-disconnected-padding = 0
 
 ; Available tags:
 ;   <label-connected> (default)
@@ -514,16 +514,16 @@ format-packetloss = <label-connected>
 ; Default: %ifname% %local_ip%
 label-connected =  %essid%
 label-connected-foreground = #ffc0c5ce
-label-connected-overline = #96b5b4
-label-connected-padding = 1
+label-connected-underline = #1c2023
+label-connected-padding = 0
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
 ; Default: (none)
 label-disconnected = not connected
 label-disconnected-foreground = #ffc0c5ce
-label-disconnected-overline = #96b5b4
-label-disconnected-padding = 1
+label-disconnected-underline = #1c2023
+label-disconnected-padding = 0
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
@@ -579,28 +579,28 @@ speaker-mixer = Speaker
 ;   <ramp-volume>
 ;   <bar-volume>
 format-volume = <ramp-volume> <label-volume>
-format-volume-overline = #96b5b4
-format-volume-padding = 1
+format-volume-underline = #1c2023
+format-volume-padding = 0
 
 ; Available tags:
 ;   <label-muted> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
 format-muted = <label-muted>
-format-muted-overline = #ebcb8b
+format-muted-underline = #1c2023
 format-muted-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default)
 label-volume = %percentage%
-label-volume-overline = #96b5b4
+label-volume-underline = #1c2023
 label-volume-padding = 1
 
 ; Available tokens:
 ;   %percentage% (default)
 label-muted =  muted
 label-muted-foreground = #c0c5ce
-label-muted-overline = #ebcb8b
+label-muted-underline = #1c2023
 label-muted-padding = 1
 
 ; Only applies if <ramp-volume> is used
