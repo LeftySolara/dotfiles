@@ -3,9 +3,9 @@ Jalen's Dotfiles
 Dotfiles for my main desktop system
 
 ##Setup
-* Linux Distro: `arch`
+* Distro: `Arch Linux`
 * Window Manager: `i3`
-* Bar: `i3blocks`
+* Bar: `lemonbuddy`
 * Launcher: `rofi`
 * Compositor: `compton`
 * Shell: `zsh`
@@ -15,6 +15,6 @@ Dotfiles for my main desktop system
 * Music Client: `ncmpcpp`
 * Pandora Client: `pianobar`
 * File Manager: `thunar`
-* Browser: `firefox-developer`
+* Browser: `firefox`
 * Mail Client: `thunderbird`
 
