@@ -44,7 +44,7 @@ module-margin-left = 2
 module-margin-right = 0
 
 ; Fonts are defined using <FontName>;<Offset>
-font-0 = Tamsyn:size=10.2;0
+font-0 = Misc Tamsyn:size=10.2;0
 font-1 = FontAwesome:size=10.2;0
 
 ; Locale used to localize module output

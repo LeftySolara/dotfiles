@@ -4,7 +4,7 @@ scroll_on_output = false
 cursor_blink = off
 audible_bell = false
 padding = 15
-font = Tamsyn 13
+font = Misc Tamsyn 13
 
 
 [colors]

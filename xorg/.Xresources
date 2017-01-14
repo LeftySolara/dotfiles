@@ -38,7 +38,7 @@
 
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Tamsyn
+#define Fontname  xft:Misc Tamsyn
 #define Fontsize  18
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
