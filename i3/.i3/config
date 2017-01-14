@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font pango:Tamsyn 10
+set $font pango:Misc Tamsyn 10
 
 # color definitions
 

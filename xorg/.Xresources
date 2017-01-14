@@ -23,7 +23,7 @@
 ! blue
 *.color4:       #B16A65
 *.color12:      #F09089
-*.color5:       #96b5b4
+*.color5:       #95aec7
 *.color13:      #CBCDD2
 
 ! cyan
@@ -36,8 +36,8 @@
 
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Tamsyn
-#define Fontsize  17
+#define Fontname  xft:Misc Tamsyn
+#define Fontsize  13
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
 URxvt*imFont:           Fontname:regular:size=Fontsize
@@ -58,7 +58,7 @@ URxvt.preeditType: OverTheSpot
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #2b303b, #96b5b4, #2b303b
-rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #96b5b4, #2b303b
-rofi.color-active: #ebcb8b, #2b303b, #2b303b, #8fa1b3, #2b303b
-rofi.color-urgent: #ebcb8b, #dc322f, #2b303b, #dc322f, #ebcb8b
+rofi.color-window: #1c2023, #95aec7, #1c2023
+rofi.color-normal: #1c2023, #c7ccd1, #1c2023, #95aec7, #1c2023
+rofi.color-active: #aec795, #1c2023, #1c2023, #8fa1b3, #1c2023
+rofi.color-urgent: #aec795, #dc322f, #1c2023, #dc322f, #aec795
