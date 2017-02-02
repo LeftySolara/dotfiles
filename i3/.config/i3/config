@@ -54,7 +54,6 @@ for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
 for_window [class="^.*"] border pixel 4
 for_window [class="Anki"] floating enable
-for_window [class="Thunar"] floating enable
 for_window [class="QuizMe"] floating enable
 
 # cycle back and forth when same workspace shortcut pressed
@@ -86,9 +85,9 @@ bindsym $mod+p exec lock
 # bindsym $mod+d exec dmenu_run -b -fn 'Source Sans Pro 10' -nb '$background' -nf '$foreground' -sb '$background' -sf '$blue'
 
 # start rofi
-bindsym $mod+d exec rofi -show run -font "Tamsyn 14"
-bindsym $mod+x exec rofi -show window -font "Tamsyn 14"
-bindsym $mod+c exec rofi -show ssh -font "Tamsyn 14"
+bindsym $mod+d exec rofi -show run -font "Misc Tamsyn 14"
+bindsym $mod+x exec rofi -show window -font "Misc Tamsyn 14"
+bindsym $mod+c exec rofi -show ssh -font "Misc Tamsyn 14"
 
 # change focus
 focus_follows_mouse no
