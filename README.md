@@ -2,10 +2,9 @@ Jalen's Dotfiles
 ================
 Dotfiles for my main desktop system
 
-##Setup
 * Distro: `Arch Linux`
 * Window Manager: `i3`
-* Bar: `lemonbuddy`
+* Bar: `polybar`
 * Launcher: `rofi`
 * Compositor: `compton`
 * Shell: `zsh`
