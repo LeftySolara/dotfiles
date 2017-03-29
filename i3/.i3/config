@@ -245,26 +245,27 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-bar {
-    status_command i3blocks -c ~/.i3/i3blocks.conf
-    font $font
-    position top
-    workspace_buttons yes
-    strip_workspace_numbers yes
-    tray_output none
-
-    colors {
-        background $background
-        statusline $foreground
-        separator $blue
-
-        #                  <border>    <background> <text>       <indicator>
-        focused_workspace  $background $background  #a2c8d9
-        active_workspace   $background $background  $yellow
-        inactive_workspace $background $background  $yellow
-        urgent_workspace   $foreground $foreground  $background
-    }
-}
+# bar {
+#     status_command i3blocks -c ~/.i3/i3blocks.conf
+#     font $font
+#     position top
+#     workspace_buttons yes
+#     strip_workspace_numbers yes
+#     tray_output none
+# 
+#     colors {
+#         background $background
+#         statusline $foreground
+#         separator $blue
+# 
+#         #                  <border>    <background> <text>       <indicator>
+#         focused_workspace  $background $background  #a2c8d9
+#         active_workspace   $background $background  $yellow
+#         inactive_workspace $background $background  $yellow
+#         urgent_workspace   $foreground $foreground  $background
+#     }
+# }
 
 # autostart
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
