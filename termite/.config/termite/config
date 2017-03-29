@@ -4,45 +4,45 @@ scroll_on_output = false
 cursor_blink = off
 audible_bell = false
 padding = 15
-font = Misc Tamsyn 12
+font = Droid Sans Mono 10
 
 
 [colors]
 
 # special
-foreground      = #c7ccd1
-foreground_bold = #c7ccd1
-cursor          = #c7ccd1
-background      = #1c2023
+foreground      = #699CA0
+foreground_bold = #699CA0
+cursor          = #699CA0
+background      = #160E20
 
 # black
-color0  = #1c2023
-color8  = #747c84
+color0  = #160E20
+color8  = #452B66
 
 # red
-color1  = #c7ae95
-color9  = #c7ae95
+color1  = #7B5CA0
+color9  = #AB80DF
 
 # green
-color2  = #95c7ae
-color10 = #95c7ae
+color2  = #6E6AA0
+color10 = #9791DC
 
 # yellow
-color3  = #aec795
-color11 = #aec795
+color3  = #7384A0
+color11 = #9CB3DA
 
 # blue
-color4  = #ae95c7
-color12 = #ae95c7
+color4  = #7894A0
+color12 = #A2C8D9
 
 # magenta
-color5  = #c795ae
-color13 = #c795ae
+color5  = #6B97A0
+color13 = #93CFDC
 
 # cyan
-color6  = #95aec7
-color14 = #95aec7
+color6  = #86A09E
+color14 = #B3D6D3
 
 # white
-color7  = #c7ccd1
-color15 = #f3f4f5
+color7  = #699CA0
+color15 = #90D6DC

@@ -1,26 +1,26 @@
 set $mod Mod4
-set $font pango:Misc Tamsyn 10
+set $font pango:Source Sans Pro 10
 
 # color definitions
 
-set $background     #1c2023
-set $focused_bg     #c7ccd1
-set $foreground     #c7ccd1
+set $background     #160E20
+set $focused_bg     #699CA0
+set $foreground     #699CA0
 
-set $black          #1c2023
-set $red            #c7ae95
-set $green          #95c7ae
-set $yellow         #aec795
-set $blue           #ae95c7
-set $magenta        #c795ae
-set $cyan           #95aec7
-set $white          #f3f4f5
-set $light_grey     #c7ccd1
-set $dark_grey      #747c84
+set $black          #160E20
+set $red            #7B5CA0
+set $green          #6E6AA0
+set $yellow         #7384A0
+set $blue           #7894A0
+set $magenta        #6B97A0
+set $cyan           #86A09E
+set $white          #699CA0
+set $light_grey     #90D6DC
+set $dark_grey      #452B66
 
 # workspace names
 set $ws1 "1   term"
-set $ws2 "2   code"
+set $ws2 "2   dev"
 set $ws3 "3   web"
 set $ws4 "4   mail"
 set $ws5 "5   media"
@@ -52,11 +52,12 @@ assign [class="Anki"] $ws8
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 0
 for_window [class="Anki"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="QuizMe"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="feh"] floating enable
 
 # cycle back and forth when same workspace shortcut pressed
 workspace_auto_back_and_forth yes
@@ -66,9 +67,9 @@ workspace_auto_back_and_forth yes
 font $font
 
 # colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $cyan          $black      $green
-client.focused_inactive $background   $cyan          $black      $background
-client.unfocused        $background   $dark_grey     $black      $secondary
+client.focused          $background   $green         $green
+client.focused_inactive $background   $background    $black      $background
+client.unfocused        $background   $background    $black      $secondary
 client.urgent           $green        $green         $white      $green
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -87,9 +88,9 @@ bindsym $mod+p exec lock
 # bindsym $mod+d exec dmenu_run -b -fn 'Source Sans Pro 10' -nb '$background' -nf '$foreground' -sb '$background' -sf '$blue'
 
 # start rofi
-bindsym $mod+d exec rofi -show run -font "Tamsyn 14"
-bindsym $mod+x exec rofi -show window -font "Tamsyn 14"
-bindsym $mod+c exec rofi -show ssh -font "Tamsyn 14"
+bindsym $mod+d exec rofi -show run -font "Droid Sans Mono 11"
+bindsym $mod+x exec rofi -show window -font "Droid Sans Mono 11"
+bindsym $mod+c exec rofi -show ssh -font "Droid Sans Mono 11"
 
 # change focus
 focus_follows_mouse no
@@ -159,9 +160,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # change volume
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1dB+
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1dB-
-bindsym XF86AudioMute exec amixer -c 0 set Master toggle
+bindsym XF86AudioRaiseVolume exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +3%"
+bindsym XF86AudioLowerVolume exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -3%"
+bindsym XF86AudioMute exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
 # media controls
 bindsym XF86AudioPlay exec mpc toggle
@@ -258,9 +259,9 @@ bar {
         separator $blue
 
         #                  <border>    <background> <text>       <indicator>
-        focused_workspace  $background $background  $cyan
-        active_workspace   $background $background  $foreground
-        inactive_workspace $background $background  $foreground
+        focused_workspace  $background $background  #a2c8d9
+        active_workspace   $background $background  $yellow
+        inactive_workspace $background $background  $yellow
         urgent_workspace   $foreground $foreground  $background
     }
 }

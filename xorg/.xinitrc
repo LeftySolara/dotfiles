@@ -58,6 +58,9 @@ ibus-daemon --xim &
 # Start MPD
 mpd &
 
+# sync taskwarrior
+task sync &
+
 #load nvidia settings
 nvidia-settings --load-config-only &
 
