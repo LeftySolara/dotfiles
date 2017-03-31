@@ -54,7 +54,7 @@ new_dir() {
 alias ls='ls --color=auto'
 alias tree='tree -C'
 alias xre='xrdb ~/.Xresources'	# reload .Xresources
-alias wall='feh --bg-scale'	    # set desktop wallpaper
+alias wall='feh --bg-scale'	# set desktop wallpaper
 alias g=compile_cpp11
 alias gGL='g++ -std=c++11 -lGL -lglut -lGLU -lGLEW'
 alias mk=new_dir
@@ -68,6 +68,8 @@ alias pianobar='pianobar; pc'
 alias gst='git status'
 alias gk='gitk &'
 alias fetch='neofetch'
+alias rmshit='python ~/bin/rmshit.py'
+alias pg='pacgraph -f graph && feh graph.png'
 
 # Taskwarrior Aliases
 alias in='task add +in'
@@ -84,6 +86,7 @@ export SDL_AUDIODRIVER=alsa
 export AUDIODEV=hw:0,0
 export VENV_HOME=~/venvs
 export PROJECT_HOME=~/projects
+export RANGER_LOAD_DEFAULT_RC=FALSE
 
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
