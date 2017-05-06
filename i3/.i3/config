@@ -41,6 +41,7 @@ smart_gaps on
 # workspace assignments for specific applications
 assign [class="Subl3"] $ws2
 assign [class="QtCreator"] $ws2
+assign [class="jetbrains-clion"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Vlc"] $ws5
@@ -67,9 +68,9 @@ workspace_auto_back_and_forth yes
 font $font
 
 # colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $green         $green
-client.focused_inactive $background   $background    $black      $background
-client.unfocused        $background   $background    $black      $secondary
+client.focused          $background   $green         $background $black
+client.focused_inactive $background   $background    $green      $background
+client.unfocused        $background   $background    $green      $secondary
 client.urgent           $green        $green         $white      $green
 
 # Use Mouse+$mod to drag floating windows to their wanted position
