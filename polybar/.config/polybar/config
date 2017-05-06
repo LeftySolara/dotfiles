@@ -1,16 +1,15 @@
 [colors]
-background = #160E20
-foreground = #699CA0
-black      = #160E20
-red        = #7B5CA0
-green      = #6E6AA0
-yellow     = #7384A0
-blue       = #7894A0
-magenta    = #6B97A0
-cyan       = #86A09E
-white      = #699CA0
-light_grey = #90D6DC
-dark_grey  = #452B66
+background = #201017
+focused_bg = #C2C8C6
+foreground = #C2C8C6
+black      = #748C95
+red        = #80A2C8
+green      = #C2C8C6
+yellow     = #B9C8B6
+blue       = #DA818D
+magenta    = #C2C8AC
+cyan       = #CDC6AF
+white      = #E0D9CB
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -40,7 +39,7 @@ fixed-center = true
 
 ; Dimensiosn defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 width = 100%
-height = 25
+height = 30
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 offset-x = 0
@@ -83,7 +82,7 @@ padding = 0
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
 ;   module-margin-{left,right}
-module-margin = 2
+module-margin = 1
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
@@ -92,11 +91,11 @@ module-margin = 2
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 = "Source Sans Pro:Regular:size=11:antialias=true"
-font-1 = "FontAwesome:size=11:antialias=true"
-font-2 = "unifont:fontformat=truetype:size=11:antialias=true;0"
-font-3 = "Wuncon Siji:pixelsize=11;1"
-font-4 = "fixed:pixelsize=11;1"
+font-0 = "Inconsolata-g:Regular:size=13:antialias=true"
+font-1 = "FontAwesome:size=13:antialias=true"
+font-2 = "unifont:fontformat=truetype:size=13:antialias=true;0"
+font-3 = "Wuncon Siji:pixelsize=13;1"
+font-4 = "fixed:pixelsize=13;1"
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
@@ -335,7 +334,7 @@ format = <label-state> <label-mode>
 ;   %mode%
 ; Default: %mode%
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-background = ${colors.background}
 
 ; Available tokens:
@@ -347,8 +346,8 @@ label-mode-background = ${colors.background}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = #6E6AA0
-label-focused-padding = 4
+label-focused-underline = #A05369
+label-focused-padding = 1
 
 ; Available tokens:
 ;   %name%
@@ -585,7 +584,7 @@ interval = 1
 format = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
-format-padding = 4
+format-padding = 0
 
 ; Available tokens:
 ;   %output%

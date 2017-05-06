@@ -1,22 +1,22 @@
 set $mod Mod4
-set $font pango:Source Sans Pro 10
+set $font pango:Inconsolata-g 9
 
 # color definitions
 
-set $background     #160E20
-set $focused_bg     #699CA0
-set $foreground     #699CA0
+set $background     #201017
+set $focused_bg     #C2C8C6
+set $foreground     #C2C8C6
 
-set $black          #160E20
-set $red            #7B5CA0
-set $green          #6E6AA0
-set $yellow         #7384A0
-set $blue           #7894A0
-set $magenta        #6B97A0
-set $cyan           #86A09E
-set $white          #699CA0
-set $light_grey     #90D6DC
-set $dark_grey      #452B66
+set $black          #748C95
+set $red            #80A2C8
+set $green          #C2C8C6
+set $yellow         #B9C8B6
+set $blue           #DA818D
+set $magenta        #C2C8AC
+set $cyan           #CDC6AF
+set $white          #E0D9CB
+set $light_grey     #7D7EA0
+set $dark_grey      #748C95
 
 # workspace names
 set $ws1 "1   term"
@@ -68,10 +68,10 @@ workspace_auto_back_and_forth yes
 font $font
 
 # colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $green         $background $black
-client.focused_inactive $background   $background    $green      $background
-client.unfocused        $background   $background    $green      $secondary
-client.urgent           $green        $green         $white      $green
+client.focused          $background   $yellow        $background $black
+client.focused_inactive $background   $background    $yellow     $background
+client.unfocused        $background   $background    $yellow     $secondary
+client.urgent           $yellow       $yellow        $white      $yellow
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
