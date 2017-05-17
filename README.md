@@ -3,11 +3,11 @@
 ##Setup
 * Distro: `arch`
 * Window Manager: `i3`
-* Bar: `i3blocks`
+* Bar: `lemonbuddy`
 * Launcher: `rofi`
 * Compositor: `compton`
 * Shell: `zsh`
-* Terminal Emulator: `rxvt-unicode`
+* Terminal Emulator: `termite`
 * Editor: `vim`
 * Music Player: `ncmpcpp`
 * File Manager: `thunar`
