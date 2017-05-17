@@ -1,12 +1,12 @@
 ! ------- Colors -------
 ! special
-*.foreground:   #89B0A3
-*.background:   #170F20
-*.cursorcolor:  #89B0A3
+*.foreground:   #C2C8C6
+*.background:   #201017
+*.cursorcolor:  #C2C8C6
 
 ! black
-*.color0:       #170F20
-*.color8:       #170F20
+*.color0:       #201017
+*.color8:       #201017
 
 ! red
 *.color1:       #bf616a
@@ -29,12 +29,12 @@
 *.color13:      #CBCDD2
 
 ! cyan
-*.color6:       #89B0A3
+*.color6:       #C2C8C6
 *.color14:      #D0D6DA
 
 ! white
 *.color7:       #eff1f5
-*.color15:      #89B0A3
+*.color15:      #C2C8C6
 
 
 ! ----- Font Definitions -----
@@ -60,7 +60,7 @@ URxvt.preeditType: OverTheSpot
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #170F20, #170F20, #170F20
-rofi.color-normal: #170F20, #89B0A3, #170F20, #89B0A3, #170F20
-rofi.color-active: #170F20, #9E8CDD, #170F20, #7483A0, #170F20
-rofi.color-urgent: #170F20, #c795ae, #170F20, #7483A0, #170F20
+rofi.color-window: #201017, #201017, #201017
+rofi.color-normal: #201017, #C2C8C6, #201017, #C2C8C6, #201017
+rofi.color-active: #201017, #A05369, #201017, #7483A0, #201017
+rofi.color-urgent: #201017, #c795ae, #201017, #7483A0, #201017
