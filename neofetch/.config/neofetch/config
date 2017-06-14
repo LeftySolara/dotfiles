@@ -366,7 +366,7 @@ scrot_cmd="scrot -c -d 3"
 # Scrot dir
 # Where to save the screenshots
 # --scrot_dir /path/to/screenshot/folder
-scrot_dir="$HOME/Pictures/"
+scrot_dir="$HOME/personal/pics/desktop_scrots/"
 
 # Scrot filename
 # What to name the screenshots

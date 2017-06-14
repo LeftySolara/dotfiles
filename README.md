@@ -17,3 +17,4 @@ Dotfiles for my main desktop system
 * Browser: `firefox`
 * Mail Client: `thunderbird`
 
+![](scrot.png?raw=true)
