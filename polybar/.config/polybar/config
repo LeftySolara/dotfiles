@@ -1,15 +1,15 @@
 [colors]
-background = #201017
-focused_bg = #C2C8C6
-foreground = #C2C8C6
-black      = #748C95
-red        = #80A2C8
-green      = #C2C8C6
-yellow     = #B9C8B6
-blue       = #DA818D
-magenta    = #C2C8AC
-cyan       = #CDC6AF
-white      = #E0D9CB
+background = #2c3941
+focused_bg = #ececec
+foreground = #ececec
+black      = #2c3941
+red        = #865f5b
+green      = #66907d
+yellow     = #b1a990
+blue       = #6a8e95
+magenta    = #b18a73
+cyan       = #88b2ac
+white      = #ececec
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -64,7 +64,7 @@ radius = 0.0
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 2
+line-size = 3
 line-color = #f00
 
 ; Values applied to all borders
@@ -81,8 +81,8 @@ padding = 0
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
-;   module-margin-{left,right}
-module-margin = 1
+;   module-margin-{left,rght}
+module-margin = 3
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
@@ -91,18 +91,18 @@ module-margin = 1
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 = "Inconsolata-g:Regular:size=13:antialias=true"
-font-1 = "FontAwesome:size=13:antialias=true"
-font-2 = "unifont:fontformat=truetype:size=13:antialias=true;0"
-font-3 = "Wuncon Siji:pixelsize=13;1"
-font-4 = "fixed:pixelsize=13;1"
+font-0 = "Source Sans Pro:Regular:size=12:antialias=true"
+font-1 = "FontAwesome:size=12:antialias=true"
+font-2 = "unifont:fontformat=truetype:size=12:antialias=true;0"
+font-3 = "Wuncon Siji:pixelsize=12;1"
+font-4 = "fixed:pixelsize=12;1"
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = i3 mpd pianobar
-modules-center =
+modules-left = i3
+modules-center = mpd pianobar
 modules-right = pavolume wired-network memory cpu temperature date
 
 ; The separator will be inserted between the output of each module
@@ -346,8 +346,8 @@ label-mode-background = ${colors.background}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = #A05369
-label-focused-padding = 1
+label-focused-underline = ${colors.green}
+label-focused-padding = 3
 
 ; Available tokens:
 ;   %name%
@@ -355,7 +355,7 @@ label-focused-padding = 1
 ;   %index%
 ; Default: %icon%  %name%
 label-unfocused =
-label-unfocused-padding = 4
+label-unfocused-padding = 3
 
 ; Available tokens:
 ;   %name%
@@ -363,8 +363,8 @@ label-unfocused-padding = 4
 ;   %index%
 ; Default: %icon%  %name%
 label-visible = 
-label-visible-underline = #AB80DF
-label-visible-padding = 4
+label-visible-underline = ${colors.green}
+label-visible-padding = 3
 
 ; Available tokens:
 ;   %name%
@@ -373,8 +373,8 @@ label-visible-padding = 4
 ; Default: %icon%  %name%
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.foreground}
-label-urgent-padding = 4
+label-urgent-background = ${colors.green}
+label-urgent-padding = 3
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -453,7 +453,7 @@ format-online = <label-song>
 ;   %date%
 ;   %title%
 ; Default: %artist% - %title%
-label-song = 𝄞 %artist% - %title%
+label-song = 𝄞 %artist%   -   %title%
 
 ; Available tokens:
 ;   %elapsed%

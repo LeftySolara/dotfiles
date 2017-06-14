@@ -3,20 +3,20 @@ set $font pango:Inconsolata-g 9
 
 # color definitions
 
-set $background     #201017
-set $focused_bg     #C2C8C6
-set $foreground     #C2C8C6
+set $background     #2c3941
+set $focused_bg     #ececec
+set $foreground     #ececec
 
-set $black          #748C95
-set $red            #80A2C8
-set $green          #C2C8C6
-set $yellow         #B9C8B6
-set $blue           #DA818D
-set $magenta        #C2C8AC
-set $cyan           #CDC6AF
-set $white          #E0D9CB
-set $light_grey     #7D7EA0
-set $dark_grey      #748C95
+set $black          #2c3941
+set $red            #865f5b
+set $green          #66907d
+set $yellow         #b1a990
+set $blue           #6a8e95
+set $magenta        #b18a73
+set $cyan           #88b2ac
+set $white          #ececec
+set $light_grey     #5d7079
+set $dark_grey      #2c3941
 
 # workspace names
 set $ws1 "1   term"
@@ -89,9 +89,9 @@ bindsym $mod+p exec lock
 # bindsym $mod+d exec dmenu_run -b -fn 'Source Sans Pro 10' -nb '$background' -nf '$foreground' -sb '$background' -sf '$blue'
 
 # start rofi
-bindsym $mod+d exec rofi -show run -font "Droid Sans Mono 11"
-bindsym $mod+x exec rofi -show window -font "Droid Sans Mono 11"
-bindsym $mod+c exec rofi -show ssh -font "Droid Sans Mono 11"
+bindsym $mod+d exec rofi -show run -font "Inconsolata-g 13" -width 40
+bindsym $mod+x exec rofi -show window -font "Inconsolata-g 13" -width 40
+bindsym $mod+c exec rofi -show ssh -font "Inconsolata-g 13" -width 40
 
 # change focus
 focus_follows_mouse no

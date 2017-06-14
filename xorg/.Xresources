@@ -1,44 +1,44 @@
 ! ------- Colors -------
 ! special
-*.foreground:   #699CA0
-*.background:   #160E20
-*.cursorcolor:  #699CA0
+*.foreground:   #ececec
+*.background:   #2c3941
+*.cursorcolor:  #ececec
 
 ! black
-*.color0:       #160E20
-*.color8:       #747c84
+*.color0:       #2c3941
+*.color8:       #2c3941
 
 ! red
-*.color1:       #c7ae95
-*.color9:       #c7ae95
+*.color1:       #865f5b
+*.color9:       #865f5b
 
 ! green
-*.color2:       #95c7ae
-*.color10:      #95c7ae
+*.color2:       #ececec
+*.color10:      #ececec
 
 ! yellow
-*.color3:       #7384A0
-*.color11:      #7384A0
+*.color3:       #b1a990
+*.color11:      #b1a990
 
 ! blue
-*.color4:       #ae95c7
-*.color12:      #ae95c7
+*.color4:       #6a8e95
+*.color12:      #6a8e95
 
 ! magenta
-*.color5:       #c795ae
-*.color13:      #c795ae
+*.color5:       #b18a73
+*.color13:      #b18a73
 
 ! cyan
-*.color6:       #86A09E
-*.color14:      #86A09E
+*.color6:       #88b2ac
+*.color14:      #88b2ac
 
 ! white
-*.color7:       #699CA0
-*.color15:      #f3f4f5
+*.color7:       #ececec
+*.color15:      #ececec
 
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Misc Tamsyn
+#define Fontname  xft:Inconsolata-g
 #define Fontsize  16
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
@@ -60,7 +60,7 @@ URxvt.preeditType: OverTheSpot
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #160E20, #86A09E, #160E20
-rofi.color-normal: #160E20, #699CA0, #160E20, #86A09E, #160E20
-rofi.color-active: #7384A0, #160E20, #160E20, #8fa1b3, #160E20
-rofi.color-urgent: #7384A0, #dc322f, #160E20, #dc322f, #7384A0
+rofi.color-window: #2c3941, #88b2ac, #2c3941
+rofi.color-normal: #2c3941, #ececec, #2c3941, #88b2ac, #2c3941
+rofi.color-active: #b1a990, #2c3941, #2c3941, #66907d, #2c3941
+rofi.color-urgent: #b1a990, #dc322f, #2c3941, #dc322f, #b1a990
