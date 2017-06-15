@@ -8,7 +8,7 @@ eval `keychain --eval --agents ssh id_rsa`
 [ ! -s ~/.config/mpd/pid ] && mpd
 
 # Sync taskwarrior
-task sync
+# task sync
 
 # Start X
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

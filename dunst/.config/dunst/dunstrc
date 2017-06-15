@@ -1,5 +1,5 @@
 [global]
-    font = Inconsolata 12
+    font = Inconsolata-g 11
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -64,7 +64,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "350x5-30+55"
+    geometry = "350x5-80+70"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -149,7 +149,7 @@
 
 [frame]
     width = 0
-    color = "#201017"
+    color = "#2c3941"
 
 [shortcuts]
 
@@ -175,18 +175,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#201017"
-    foreground = "#C2C8C6"
+    background = "#2c3941"
+    foreground = "#ececec"
     timeout = 10
 
 [urgency_normal]
-    background = "#201017"
-    foreground = "#C2C8C6"
+    background = "#2c3941"
+    foreground = "#ececec"
     timeout = 10
 
 [urgency_critical]
-    background = "#201017"
-    foreground = "#C2C8C6"
+    background = "#2c3941"
+    foreground = "#ececec"
     timeout = 0
 
 
