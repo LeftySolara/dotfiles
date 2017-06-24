@@ -19,15 +19,15 @@ set $light_grey     #5d7079
 set $dark_grey      #2c3941
 
 # workspace names
-set $ws1 1:
-set $ws2 2:
-set $ws3 3:
-set $ws4 4:
-set $ws5 5:
-set $ws6 6:
-set $ws7 7:
-set $ws9 8:
-set $ws8 9:
+set $ws1 "1   term"
+set $ws2 "2   dev"
+set $ws3 "3   web"
+set $ws4 "4   mail"
+set $ws5 "5   media"
+set $ws6 "6   doc"
+set $ws7 "7   irc"
+set $ws8 "8   misc"
+set $ws9 "9  ftp"
 
 # window borders
 new_window none
@@ -159,9 +159,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # change volume
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1dB+
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1dB-
-bindsym XF86AudioMute exec amixer -c 0 set Master toggle
+bindsym XF86AudioRaiseVolume exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +3%"
+bindsym XF86AudioLowerVolume exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -3%"
+bindsym XF86AudioMute exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
 # media controls
 bindsym XF86AudioPlay exec mpc toggle
@@ -267,5 +267,5 @@ mode "$mode_gaps_outer" {
 #}
 
 # autostart
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
-exec_always --no-startup-id $HOME/.config/lemonbuddy/launch.sh
