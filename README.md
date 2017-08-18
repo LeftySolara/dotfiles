@@ -15,4 +15,4 @@ Dotfiles for my XPS-13 (9343)
 * Browser: `firefox-esr`
 * Email Client: `thunderbird`
 
-![](neofetch-2017-08-18-19:22:44.png?raw=true)
+![](scrots/scrot.png?raw=true)
