@@ -67,7 +67,7 @@ alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias gst='git status'
 alias gk='gitk &'
-alias fetch='neofetch'
+alias fetch='neofetch --w3m'
 alias rmshit='python ~/bin/rmshit.py'
 alias pg='pacgraph -f graph && feh graph.png'
 

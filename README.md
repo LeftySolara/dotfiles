@@ -1,18 +1,18 @@
-##Dotfiles for my XPS-13 (9343)
+Jalen's Dotfiles
+================
+Dotfiles for my XPS-13 (9343)
 
-##Setup
-* Distro: `arch`
+* Distro: `Arch Linux`
 * Window Manager: `i3`
-* Bar: `lemonbuddy`
+* Bar: `polybar`
 * Launcher: `rofi`
 * Compositor: `compton`
 * Shell: `zsh`
 * Terminal Emulator: `termite`
-* Editor: `vim`
-* Music Player: `ncmpcpp`
-* File Manager: `thunar`
-* Browser: `firefox`
+* Editors: `vim, sublime text 3, spacemacs`
+* Music Players: `ncmpcpp, pianobar`
+* File Managers: `thunar, ranger`
+* Browser: `firefox-esr`
 * Email Client: `thunderbird`
 
-To keep these organized, I keep them all in a directory ~/dotfiles and use GNU Stow to symlink everything to the correct place.
-
+![](neofetch-2017-08-18-19:22:44.png?raw=true)

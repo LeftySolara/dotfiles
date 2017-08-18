@@ -1,20 +1,20 @@
 set $mod Mod4
-set $font pango:Inconsolata-g 9
+set $font pango:Inconsolata-g 10
 
 # color definitions
 
 set $background     #2c3941
-set $focused_bg     #ececec
-set $foreground     #ececec
+set $focused_bg     #d6dae0
+set $foreground     #d6dae0
 
 set $black          #2c3941
-set $red            #865f5b
-set $green          #66907d
-set $yellow         #b1a990
-set $blue           #6a8e95
-set $magenta        #b18a73
-set $cyan           #88b2ac
-set $white          #ececec
+set $red            #6fb1df
+set $green          #e0c565
+set $yellow         #c8c699
+set $blue           #8cb9de
+set $magenta        #abc8ba
+set $cyan           #b7cde0
+set $white          #d6dae0
 set $light_grey     #5d7079
 set $dark_grey      #2c3941
 

@@ -28,7 +28,6 @@ printinfo () {
     info "Theme" theme
     info "Icons" icons
     info "CPU" cpu
-    info "GPU" gpu
     info "Memory" memory
     info "Birthday" birthday
 
@@ -37,6 +36,7 @@ printinfo () {
     info linebreak
     info linebreak
 
+    # info "GPU" gpu
     # info "Font" font
     # info "Disk" disk
     # info "Battery" battery
@@ -280,10 +280,11 @@ disk_display="off"
 
 # Image Options {{{
 
+imaage_backend="w3m"
 
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
-image="wall"
+image="$HOME/media/pics/icons/Nichijou/tumblr_nk74eg5OR21slitoto7_1280.jpg"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
@@ -366,7 +367,7 @@ scrot_cmd="scrot -c -d 3"
 # Scrot dir
 # Where to save the screenshots
 # --scrot_dir /path/to/screenshot/folder
-scrot_dir="$HOME/Pictures/"
+scrot_dir="$HOME/media/pics/scrots/"
 
 # Scrot filename
 # What to name the screenshots
