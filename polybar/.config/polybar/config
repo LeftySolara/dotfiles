@@ -1,15 +1,15 @@
 [colors]
-background = #2c3941
-focused_bg = #ececec
-foreground = #ececec
-black      = #2c3941
-red        = #865f5b
-green      = #66907d
-yellow     = #b1a990
-blue       = #6a8e95
-magenta    = #b18a73
-cyan       = #88b2ac
-white      = #ececec
+background = #2d2d2d
+focused_bg = #c7ccd1
+foreground = #c7ccd1
+black      = #2d2d2d
+red        = #c7ae95
+green      = #95c7ae
+yellow     = #aec795
+blue       = #ae95c7
+magenta    = #c795ae
+cyan       = #95aec7
+white      = #c7ccd1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -17,13 +17,13 @@ white      = #ececec
 ; Use the following command to list available outputs:
 ; If unspecified, the application will pick the first one it finds.
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+monitor = DP-4
 
 ; Use the specified monitor as a fallback if the main one is not found.
-monitor-fallback =
+monitor-fallback = HDMI-0
 
 ; Require the monitor to be in connected state
-; XRandR sometimes report my monitor as being disconnected (when in use)
+; XRandR sometimes report my monitor as being disconnected (when in use')
 monitor-strict = false
 
 ; Tell the Window Manager not to configure the window.
@@ -277,7 +277,7 @@ type = internal/i3
 ; on different bars
 ;
 ; Default: false
-pin-workspaces = true
+pin-workspaces = false
 
 ; This will split the workspace name on ':'
 ; Default: false
@@ -335,7 +335,8 @@ format = <label-state> <label-mode>
 ; Default: %mode%
 label-mode = %mode%
 label-mode-padding = 1
-label-mode-background = ${colors.background}
+label-mode-background = ${colors.red}
+label-mode-foreground = ${colors.black}
 
 ; Available tokens:
 ;   %name%
@@ -346,7 +347,7 @@ label-mode-background = ${colors.background}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.red}
 label-focused-padding = 3
 
 ; Available tokens:
@@ -363,7 +364,7 @@ label-unfocused-padding = 3
 ;   %index%
 ; Default: %icon%  %name%
 label-visible = 
-label-visible-underline = ${colors.green}
+label-visible-underline = ${colors.red}
 label-visible-padding = 3
 
 ; Available tokens:
@@ -373,7 +374,7 @@ label-visible-padding = 3
 ; Default: %icon%  %name%
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.green}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 3
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

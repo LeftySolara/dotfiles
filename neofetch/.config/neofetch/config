@@ -283,7 +283,7 @@ disk_display="off"
 
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
-image="wall"
+image="/home/jalen/personal/pics/walls/mobile/v89j7VK.jpg"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
@@ -299,7 +299,7 @@ image_position="left"
 
 # Crop mode
 # --crop_mode normal/fit/fill
-crop_mode="fit"
+crop_mode="normal"
 
 # Crop offset
 # Only affects normal mode.

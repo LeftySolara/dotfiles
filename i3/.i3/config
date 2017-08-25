@@ -1,22 +1,22 @@
 set $mod Mod4
-set $font pango:Inconsolata-g 9
+set $font pango:Inconsolata-g 10
 
 # color definitions
 
-set $background     #2c3941
-set $focused_bg     #ececec
-set $foreground     #ececec
+set $background     #2d2d2d
+set $focused_bg     #c7ccd1
+set $foreground     #c7ccd1
 
-set $black          #2c3941
-set $red            #865f5b
-set $green          #66907d
-set $yellow         #b1a990
-set $blue           #6a8e95
-set $magenta        #b18a73
-set $cyan           #88b2ac
-set $white          #ececec
-set $light_grey     #5d7079
-set $dark_grey      #2c3941
+set $black          #2d2d2d
+set $red            #c7ae95
+set $green          #95c7ae
+set $yellow         #aec795
+set $blue           #ae95c7
+set $magenta        #c795ae
+set $cyan           #95aec7
+set $white          #f3f4f5
+set $light_grey     #c7ccd1
+set $dark_grey      #2d2d2d
 
 # workspace names
 set $ws1 "1   term"
@@ -28,6 +28,10 @@ set $ws6 "6   doc"
 set $ws7 "7   irc"
 set $ws8 "8   misc"
 set $ws9 "9   ftp"
+
+# Assign workspaces to monitors
+workspace $ws5 output HDMI-0
+workspace $ws8 output HDMI-0
 
 # window borders
 new_window none
@@ -68,10 +72,10 @@ workspace_auto_back_and_forth yes
 font $font
 
 # colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $yellow        $background $black
-client.focused_inactive $background   $background    $yellow     $background
-client.unfocused        $background   $background    $yellow     $secondary
-client.urgent           $yellow       $yellow        $white      $yellow
+client.focused          $background   $red           $background $black
+client.focused_inactive $background   $background    $red        $background
+client.unfocused        $background   $background    $red        $secondary
+client.urgent           $red          $red           $white      $yellow
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -175,7 +179,7 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86Sleep exec systemctl suspend && lock
 
 # take a screenshot
-bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/pics/Screencaps/system'
+bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/personal/pics/desktop_scrots'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

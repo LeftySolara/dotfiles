@@ -10,39 +10,43 @@ font = Inconsolata-g 11
 [colors]
 
 # special
-foreground      = #ececec
-foreground_bold = #ececec
-cursor          = #ececec
-background      = #2c3941
+foreground      = #c7ccd1
+foreground_bold = #c7ccd1
+cursor          = #c7ccd1
+background      = #2d2d2d
 
 # black
-color0  = #2c3941
-color8  = #5d7079
+color0  = #1c2023
+color8  = #747c84
 
 # red
-color1  = #865f5b
-color9  = #865f5b
+color1  = #c7ae95
+color9  = #c7ae95
 
 # green
-color2  = #66907d
-color10 = #66907d
+color2  = #95c7ae
+color10 = #95c7ae
 
 # yellow
-color3  = #b1a990
-color11 = #b1a990
+color3  = #aec795
+color11 = #aec795
 
 # blue
-color4  = #6a8e95
-color12 = #6a8e95
+color4  = #ae95c7
+color12 = #ae95c7
 
 # magenta
-color5  = #b18a73
-color13 = #b18a73
+color5  = #c795ae
+color13 = #c795ae
 
 # cyan
-color6  = #88b2ac
-color14 = #88b2ac
+color6  = #95aec7
+color14 = #95aec7
 
 # white
-color7  = #ececec
-color15 = #ececec
+color7  = #c7ccd1
+color15 = #f3f4f5
+
+
+
+
