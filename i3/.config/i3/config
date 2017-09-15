@@ -39,7 +39,7 @@ gaps outer 0
 smart_gaps on
 
 # workspace assignments for specific applications
-assign [class="Subl3"] $ws2
+assign [class="Subl"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="jetbrains-clion"] $ws2
 assign [class="Firefox"] $ws3
