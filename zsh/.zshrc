@@ -77,6 +77,7 @@ alias in='task add +in'
 
 # =============================================================================
 # Environment Variables
+export CFLAGS='-g -Wall -O3'
 export EDITOR=vim
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
