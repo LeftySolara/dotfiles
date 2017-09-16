@@ -1,15 +1,15 @@
 [colors]
-background = #2c3941
-focused_bg = #d6dae0
-foreground = #d6dae0
-black      = #2c3941
-red        = #6fb1df
-green      = #e0c565
-yellow     = #c8c699
-blue       = #8cb9de
-magenta    = #abc8ba
-cyan       = #b7cde0
-white      = #d6dae0
+background = #2d2d2d
+focused_bg = #c7ccd1
+foreground = #c7ccd1
+black      = #2d2d2d
+red        = #c7ae95
+green      = #95c7ae
+yellow     = #aec795
+blue       = #ae95c7
+magenta    = #c795ae
+cyan       = #95aec7
+white      = #c7ccd1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -418,7 +418,8 @@ format = <label-state> <label-mode>
 ; Default: %mode%
 label-mode = %mode%
 label-mode-padding = 1
-label-mode-background = ${colors.background}
+label-mode-background = ${colors.red}
+label-mode-foreground = ${colors.black}
 
 ; Available tokens:
 ;   %name%
@@ -429,7 +430,7 @@ label-mode-background = ${colors.background}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.red}
 label-focused-padding = 3
 
 ; Available tokens:
@@ -456,7 +457,7 @@ label-visible-padding = 3
 ; Default: %icon%  %name%
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.green}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 3
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

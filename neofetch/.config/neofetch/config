@@ -284,7 +284,7 @@ imaage_backend="w3m"
 
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
-image="$HOME/personal/pics/icons/Nichijou/tumblr_nk74eg5OR21slitoto7_1280.jpg"
+image="$HOME/personal/pics/icons/Nichijou/tumblr_nk74eg5OR21slitoto5_1280.jpg"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
@@ -300,7 +300,7 @@ image_position="left"
 
 # Crop mode
 # --crop_mode normal/fit/fill
-crop_mode="fit"
+crop_mode="normal"
 
 # Crop offset
 # Only affects normal mode.
@@ -367,7 +367,7 @@ scrot_cmd="scrot -c -d 3"
 # Scrot dir
 # Where to save the screenshots
 # --scrot_dir /path/to/screenshot/folder
-scrot_dir="$HOME/media/pics/scrots/"
+scrot_dir="$HOME/personal/pics/desktop_scrots/"
 
 # Scrot filename
 # What to name the screenshots

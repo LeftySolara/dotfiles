@@ -1,40 +1,40 @@
 ! ------- Colors -------
 ! special
-*.foreground:   #d6dae0
-*.background:   #2c3941
-*.cursorcolor:  #d6dae0
+*.foreground:   #c7ccd1
+*.background:   #2d2d2d
+*.cursorcolor:  #c7ccd1
 
 ! black
-*.color0:       #2c3941
-*.color8:       #2c3941
+*.color0:   #1c2023
+*.color8:   #747c84
 
 ! red
-*.color1:       #6fb1df
-*.color9:       #6fb1df
+*.color1:   #c7ae95
+*.color9:   #c7ae95
 
 ! green
-*.color2:       #e0c565
-*.color10:      #e0c565
+*.color2:   #95c7ae
+*.color10:  #95c7ae
 
 ! yellow
-*.color3:       #c8c699
-*.color11:      #c8c699
+*.color3:   #aec795
+*.color11:  #aec795
 
 ! blue
-*.color4:       #8cb9de
-*.color12:      #8cb9de
+*.color4:   #ae95c7
+*.color12:  #ae95c7
 
 ! magenta
-*.color5:       #abc8ba
-*.color13:      #abc8ba
+*.color5:   #c795ae
+*.color13:  #c795ae
 
 ! cyan
-*.color6:       #b7cde0
-*.color14:      #b7cde0
+*.color6:   #95aec7
+*.color14:  #95aec7
 
 ! white
-*.color7:       #d6dae0
-*.color15:      #d6dae0
+*.color7:   #c7ccd1
+*.color15:  #f3f4f5
 
 
 ! ----- Font Definitions -----
@@ -60,7 +60,7 @@ URxvt.preeditType: OverTheSpot
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #2c3941, #b7cde0, #2c3941
-rofi.color-normal: #2c3941, #d6dae0, #2c3941, #b7cde0, #2c3941
-rofi.color-active: #c8c699, #2c3941, #2c3941, #66907d, #2c3941
-rofi.color-urgent: #c8c699, #dc322f, #2c3941, #dc322f, #c8c699
+rofi.color-window: #2d2d2d, #c7ae95, #2d2d2d
+rofi.color-normal: #2d2d2d, #c7ccd1, #2d2d2d, #c7ae95, #2d2d2d
+rofi.color-active: #ae95c7, #2d2d2d, #2d2d2d, #c7ae95, #2d2d2d
+rofi.color-urgent: #c795ae, #dc322f, #2d2d2d, #dc322f, #ae95c7
