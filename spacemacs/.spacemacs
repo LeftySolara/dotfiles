@@ -44,7 +44,7 @@ values."
      emacs-lisp
      git
      markdown
-     org
+     (org :variables org-enable-github-support t)
      themes-megapack
      (shell :variables
              shell-default-height 30
