@@ -39,7 +39,7 @@ export PATH
 
 # compile .cpp files in C++11 mode
 compile_cpp11() {
-    g++ -std=c++11 $1 -o $2
+    g++ -std=c++17 $1 -o $2
 }
 
 # create a new directory and then enter it
@@ -52,6 +52,7 @@ new_dir() {
 # =============================================================================
 # Aliases
 alias ls='ls --color=auto'
+alias cm='cmake .. && make'
 alias tree='tree -C'
 alias xre='xrdb ~/.Xresources'	# reload .Xresources
 alias wall='feh --bg-scale'	# set desktop wallpaper
