@@ -36,6 +36,14 @@
 *.color7:   #c7ccd1
 *.color15:  #f3f4f5
 
+! ----- DPI Settings -----
+Xft.dpi: 168
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb1
 
 ! ----- Font Definitions -----
 #define Fontname  xft:Misc Tamsyn

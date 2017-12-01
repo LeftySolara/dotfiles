@@ -4,7 +4,7 @@ scroll_on_output = false
 cursor_blink = off
 audible_bell = false
 padding = 15
-font = Source Code Pro 12
+font = Source Code Pro 7
 
 
 [colors]
@@ -12,7 +12,7 @@ font = Source Code Pro 12
 # special
 foreground      = #c7ccd1
 foreground_bold = #c7ccd1
-cursor          = #c7ccd1
+cursor   W       = #c7ccd1
 background      = #2d2d2d
 
 # black

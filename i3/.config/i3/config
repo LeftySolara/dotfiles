@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font pango:Inconsolata-g 10
+set $font pango:Inconsolata-g 7
 
 # color definitions
 
@@ -87,9 +87,9 @@ bindsym $mod+p exec lock
 # bindsym $mod+d exec dmenu_run -b -fn 'Source Sans Pro 10' -nb '$background' -nf '$foreground' -sb '$background' -sf '$blue'
 
 # start rofi
-bindsym $mod+d exec rofi -show run -font "Inconsolata-g 11" -width 50
-bindsym $mod+x exec rofi -show window -font "Inconsolata-g 11" -width 50
-bindsym $mod+c exec rofi -show ssh -font "Inconsolata-g 11" -width 50
+bindsym $mod+d exec rofi -show run -font "Inconsolata-g 14" -width 50
+bindsym $mod+x exec rofi -show window -font "Inconsolata-g 14" -width 50
+bindsym $mod+c exec rofi -show ssh -font "Inconsolata-g 14" -width 50
 
 # change focus
 focus_follows_mouse no

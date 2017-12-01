@@ -48,4 +48,7 @@ ibus-daemon --xim &
 # Start MPD
 mpd &
 
+# set DPI
+xrandr --dpi 168 &
+
 exec i3
