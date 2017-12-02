@@ -21,19 +21,23 @@
 #
 mpd_host = 127.0.0.1 
 #
+# MPD Port
 mpd_port = 6600
+#
+# Mopidy Port
+#mpd_port = 6603
 #
 #mpd_connection_timeout = 5
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = ~/Music
+mpd_music_dir = /home/jalen/personal/music
 #
 #mpd_crossfade_time = 5
 #
 ##### music visualizer #####
 ##
-## Note: In order to make music visualizer work you'll
+## Note: In order to msystemd remove unitake music visualizer work you'll
 ## need to use mpd fifo output, whose format parameter
 ## has to be set to 44100:16:1 for mono visualization
 ## or 44100:16:2 for stereo visualization. Example
