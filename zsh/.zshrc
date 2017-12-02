@@ -39,14 +39,14 @@ export PATH
 # =============================================================================
 # Functions
 
-# compile for c++11
+# compile for c++17
 compile_cpp() {
-    g++ -std=c++11 $1 -o $2
+    g++ -std=c++17 $1 -o $2
 }
 
-# compile foe c++11 with sqlite3 library
+# compile for c++17 with sqlite3 library
 compile_cpp_sql() {
-    g++ -std=c++11 $1 -lsqlite3 -o $2
+    g++ -std=c++17 $1 -lsqlite3 -o $2
 }
 
 # create a directory and then enter it
@@ -82,7 +82,7 @@ alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias think='tickle +1d'
 alias rest='systemctl suspend && lock'
-alias rmshit='python ~/scripts/rmshit.py'
+alias rmshit='python ~/bin/rmshit.py'
 alias rbackup='rsync -aAv --progress --numeric-ids --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/lost+found"} -e "ssh -p 32719" / jalen@vault-53:/srv/backup/vault-101'
 alias fetch='neofetch --w3m'
 alias gst='git status'
@@ -90,6 +90,7 @@ alias gk='gitk &'
 alias ga='git add'
 alias key='keychain --eval --agents ssh id_rsa'
 alias cm='cmake .. && make'
+alias texclean='mkdir -p out; mv *.aux *.log *.pdf *.synctex.gz *.bcf *.xml out/'
 # =============================================================================
 
 # =============================================================================
