@@ -52,7 +52,7 @@ new_dir() {
 # =============================================================================
 # Aliases
 alias ls='ls --color=auto'
-alias cm='cmake .. && make'
+alias cm='cmake ../.. && make'
 alias tree='tree -C'
 alias xre='xrdb ~/.Xresources'	# reload .Xresources
 alias wall='feh --bg-scale'	# set desktop wallpaper
@@ -90,7 +90,7 @@ export AUDIODEV=hw:0,0
 export VENV_HOME=~/venvs
 export PROJECT_HOME=~/projects
 export RANGER_LOAD_DEFAULT_RC=FALSE
-export GDK_SCALE=2
+export GDK_SCALE=1
 
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting

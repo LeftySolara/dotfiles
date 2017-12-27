@@ -4,7 +4,7 @@ scroll_on_output = false
 cursor_blink = off
 audible_bell = false
 padding = 15
-font = Source Code Pro 7
+font = Source Code Pro 8
 
 
 [colors]

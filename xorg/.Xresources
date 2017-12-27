@@ -46,7 +46,7 @@ Xft.antialias: 1
 Xft.rgba: rgb1
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Misc Tamsyn
+#define Fontname  xft:Source Code Pro
 #define Fontsize  18
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
