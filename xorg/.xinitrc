@@ -40,7 +40,7 @@ numlockx &
 # sxhkd &
 
 # restore desktop wallpaper
-sh ~/.fehbg &
+# sh ~/.fehbg &
 
 # disable screen blanking
 xset -dpms &
@@ -59,7 +59,7 @@ ibus-daemon --xim &
 mpd &
 
 # sync taskwarrior
-task sync &
+# task sync &
 
 #load nvidia settings
 nvidia-settings --load-config-only &

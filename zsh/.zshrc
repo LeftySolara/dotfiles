@@ -89,7 +89,7 @@ alias gst='git status'
 alias gk='gitk &'
 alias ga='git add'
 alias key='keychain --eval --agents ssh id_rsa'
-alias cm='cmake .. && make'
+alias cm='cmake ../.. && make'
 alias texclean='mkdir -p out; mv *.aux *.log *.pdf *.synctex.gz *.bcf *.xml out/'
 # =============================================================================
 

@@ -283,7 +283,7 @@ disk_display="off"
 
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
-image="/home/jalen/personal/pics/walls/mobile/v89j7VK.jpg"
+image="/home/jalen/personal/pics/icons/Nichijou/tumblr_nk74eg5OR21slitoto3_1280.jpg"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
