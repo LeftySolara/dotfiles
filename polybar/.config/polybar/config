@@ -82,7 +82,7 @@ padding = 0
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
 ;   module-margin-{left,rght}
-module-margin = 3
+module-margin = 1
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
@@ -91,7 +91,7 @@ module-margin = 3
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 = "Inconsolata-g:size=12:antialias=true"
+font-0 = "Source Code Pro:size=11:antialias=true"
 font-1 = "FontAwesome:size=12:antialias=true"
 font-2 = "unifont:fontformat=truetype:size=12:antialias=true;0"
 font-3 = "Wuncon Siji:pixelsize=12;1"
@@ -221,7 +221,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label =   %percentage%%
+label =  %percentage%%
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -345,7 +345,7 @@ format-foreground = ${colors.foreground}
 ;   %date%
 ;   %time%
 ; Default: %date%
-label = %date%  %time%
+label = %date% %time%
 label-font = 0
 label-foreground = ${colors.foreground}
 
@@ -431,7 +431,7 @@ label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.red}
-label-focused-padding = 3
+label-focused-padding = 1
 
 ; Available tokens:
 ;   %name%
@@ -439,7 +439,7 @@ label-focused-padding = 3
 ;   %index%
 ; Default: %icon%  %name%
 label-unfocused =
-label-unfocused-padding = 3
+label-unfocused-padding = 1
 
 ; Available tokens:
 ;   %name%
@@ -448,7 +448,7 @@ label-unfocused-padding = 3
 ; Default: %icon%  %name%
 label-visible =
 label-visible-underline = ${colors.green}
-label-visible-padding = 3
+label-visible-padding = 1
 
 ; Available tokens:
 ;   %name%
@@ -458,7 +458,7 @@ label-visible-padding = 3
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.red}
-label-urgent-padding = 3
+label-urgent-padding = 1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -484,7 +484,7 @@ format = <label>
 ;   %mb_used%
 ;   %mb_free%
 ;   %mb_total%
-label =   %gb_used%
+label =  %gb_used%
 
 ; Only applies if <bar-used> is used
 bar-used-indicator =
@@ -537,7 +537,7 @@ format-online = <label-song>
 ;   %date%
 ;   %title%
 ; Default: %artist% - %title%
-label-song = 𝄞 %artist%   -   %title%
+label-song = %artist% - %title%
 
 ; Available tokens:
 ;   %elapsed%
@@ -547,7 +547,7 @@ label-song = 𝄞 %artist%   -   %title%
 
 ; Available tokens:
 ;   None
-label-offline = 🎜 mpd is offline
+label-offline = mpd is offline
 
 ; Only applies if <icon-X> is used
 icon-play = ⏵
