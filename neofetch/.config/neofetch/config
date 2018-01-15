@@ -44,7 +44,6 @@ printinfo () {
     # info "Public IP" publicip
     # info "Users" users
     # info "Song" song
-
 }
 
 
@@ -284,7 +283,7 @@ imaage_backend="w3m"
 
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
-image="$HOME/personal/pics/icons/Nichijou/tumblr_nk74eg5OR21slitoto5_1280.jpg"
+image="/home/jalen/personal/pics/walls/1920x1080/r403fr61ut901.jpg"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"

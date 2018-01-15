@@ -19,7 +19,7 @@
 #
 ##### connection settings #####
 #
-mpd_host = 127.0.0.1 
+mpd_host = 127.0.0.1
 #
 mpd_port = 6600
 #
@@ -27,7 +27,7 @@ mpd_port = 6600
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = ~/media/music
+mpd_music_dir = ~/personal/music
 #
 #mpd_crossfade_time = 5
 #
@@ -325,7 +325,7 @@ mpd_music_dir = ~/media/music
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+user_interface = alternative
 #
 #data_fetching_delay = yes
 #

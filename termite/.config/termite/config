@@ -10,39 +10,39 @@ font = Source Code Pro 8
 [colors]
 
 # special
-foreground      = #c7ccd1
-foreground_bold = #c7ccd1
-cursor   W       = #c7ccd1
-background      = #2d2d2d
+foreground      = #eae4da
+foreground_bold = #eae4da
+cursor          = #eae4da
+background      = #463f51
 
 # black
-color0  = #1c2023
-color8  = #747c84
+color0  = #463f51
+color8  = #a39f98
 
 # red
-color1  = #c7ae95
-color9  = #c7ae95
+color1  = #e0a19b
+color9  = #e0a19b
 
 # green
-color2  = #95c7ae
-color10 = #95c7ae
+color2  = #d3afac
+color10 = #d3afac
 
 # yellow
-color3  = #aec795
-color11 = #aec795
+color3  = #d7cab7
+color11 = #d7cab7
 
 # blue
-color4  = #ae95c7
-color12 = #ae95c7
+color4  = #e6cfb4
+color12 = #e6cfb4
 
 # magenta
-color5  = #c795ae
-color13 = #c795ae
+color5  = #b8bdc2
+color13 = #b8bdc2
 
 # cyan
-color6  = #95aec7
-color14 = #95aec7
+color6  = #d7d3c4
+color14 = #d7d3c4
 
 # white
-color7  = #c7ccd1
-color15 = #f3f4f5
+color7  = #eae4da
+color15 = #eae4da

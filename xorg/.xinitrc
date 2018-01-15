@@ -33,14 +33,14 @@ fi
 # start dropbox
 dropbox &
 
-# apply desktop background
-sh ~/.fehbg &
-
 # set cursor
 xsetroot -cursor_name left_ptr &
 
 # start redshift
 redshift &
+
+# start Dunst
+dunst &
 
 # Start iBus
 ibus-daemon --xim &
@@ -50,5 +50,9 @@ mpd &
 
 # set DPI
 xrandr --dpi 168 &
+
+# Restore the last colorscheme set by pywal
+wal -R &
+feh --bg-scale "$(< "${HOME}/.cache/wal/wal")" &
 
 exec i3

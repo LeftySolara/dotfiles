@@ -1,22 +1,9 @@
 set $mod Mod4
-set $font pango:Inconsolata-g 7
+set $font pango:Clear Sans 7
 
 # color definitions
-
-set $background     #2d2d2d
-set $focused_bg     #c7ccd1
-set $foreground     #c7ccd1
-
-set $black          #2d2d2d
-set $red            #c7ae95
-set $green          #95c7ae
-set $yellow         #aec795
-set $blue           #ae95c7
-set $magenta        #c795ae
-set $cyan           #95aec7
-set $white          #f3f4f5
-set $light_grey     #c7ccd1
-set $dark_grey      #2d2d2d
+set $fg #eae4da
+set $bg #463f51
 
 # workspace names
 set $ws1 "1   term"
@@ -33,12 +20,18 @@ set $ws9 "9  ftp"
 new_window none
 smart_borders on
 
-# gaps settings
-gaps inner 20
-gaps outer 0
-smart_gaps on
+# global gaps settings
+gaps inner 30
+gaps outer 20
+# smart_gaps on
 
-# workspace assignments for specific applications
+# per-workspace gaps settings
+workspace $ws2 gaps inner 0
+workspace $ws2 gaps outer 0
+workspace $ws4 gaps inner 0
+workspace $ws4 gaps outer 0
+
+# workspace assignments for applications
 assign [class="Subl"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="jetbrains-clion"] $ws2
@@ -48,15 +41,14 @@ assign [class="Vlc"] $ws5
 assign [class="PlayOnLinux"] $ws5
 assign [class="llpp"] $ws6
 assign [class="TeXstudio"] $ws6
-assign [class="Anki"] $ws9
+assign [class="Anki"] $ws8
 
 # window rules
+for_window [class="^.*"] border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
-for_window [class="^.*"] border pixel 0
 for_window [class="Anki"] floating enable
-for_window [class="QuizMe"] floating enable
 
 # cycle back and forth when same workspace shortcut pressed
 workspace_auto_back_and_forth yes
@@ -65,11 +57,13 @@ workspace_auto_back_and_forth yes
 # is used in the bar {} block below.
 font $font
 
-# colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $red           $background $black
-client.focused_inactive $background   $background    $red        $background
-client.unfocused        $background   $background    $red        $secondary
-client.urgent           $red          $red           $white      $yellow
+# window colors         border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.background       $bg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -83,13 +77,10 @@ bindsym $mod+Shift+q kill
 # lock screen (i3lock-fancy)
 bindsym $mod+p exec lock
 
-# start dmenu
-# bindsym $mod+d exec dmenu_run -b -fn 'Source Sans Pro 10' -nb '$background' -nf '$foreground' -sb '$background' -sf '$blue'
-
-# start rofi
-bindsym $mod+d exec rofi -show run -font "Inconsolata-g 14" -width 50
-bindsym $mod+x exec rofi -show window -font "Inconsolata-g 14" -width 50
-bindsym $mod+c exec rofi -show ssh -font "Inconsolata-g 14" -width 50
+# launch rofi
+bindsym $mod+d exec rofi -show run -font "Clear Sans 16" -width 40 -lines 8 -hide-scrollbar
+bindsym $mod+x exec rofi -show window -font "Clear Sans 16" -width 40 -lines 8 -hide-scrollbar
+bindsym $mod+c exec rofi -show ssh -font "Clear Sans 16" -width 40 -lines 8 -hide-scrollbar
 
 # change focus
 focus_follows_mouse no
@@ -173,7 +164,7 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86Sleep exec systemctl suspend && lock
 
 # take a screenshot
-bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/media/pics/scrots/'
+bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/personal/pics/scrots/'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -207,7 +198,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# gaps
+# gaps commands
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -243,28 +234,6 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-#bar {
-#    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#    font $font
-#    position bottom
-#    workspace_buttons yes
-#    strip_workspace_numbers yes
-#    tray_output none
-#    height 35
-#
-#    colors {
-#        background $background
-#        statusline $foreground
-#        separator  $blue
-#
-#        #                  <border>    <background> <text>       <indicator>
-#        focused_workspace  $background $background  $cyan
-#        active_workspace   $background $background  $foreground
-#        inactive_workspace $background $background  $foreground
-#        urgent_workspace   $foreground $foreground  $background
-#    }
-#}
 
 # autostart
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

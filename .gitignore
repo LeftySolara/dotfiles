@@ -1,11 +1,12 @@
-bash/.bash_history
+bash/
 
-bin/
+bin/bin/i3lock-fancy/
+bin/bin/ynab
 
-mpd/.config/mpd/playlists/
 mpd/.config/mpd/database
 mpd/.config/mpd/log
 mpd/.config/mpd/pid
+mpd/.config/mpd/playlists/
 mpd/.config/mpd/state
 mpd/.config/mpd/sticker.sql
 

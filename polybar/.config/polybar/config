@@ -1,15 +1,15 @@
 [colors]
-background = #2d2d2d
-focused_bg = #c7ccd1
-foreground = #c7ccd1
-black      = #2d2d2d
-red        = #c7ae95
-green      = #95c7ae
-yellow     = #aec795
-blue       = #ae95c7
-magenta    = #c795ae
-cyan       = #95aec7
-white      = #c7ccd1
+background = ${xrdb:color0}
+focused_bg = ${xrdb:color2}
+foreground = ${xrdb:color7}
+black      = ${xrdb:color0}
+red        = ${xrdb:color1}
+green      = ${xrdb:color2}
+yellow     = ${xrdb:color3}
+blue       = ${xrdb:color4}
+magenta    = ${xrdb:color5}
+cyan       = ${xrdb:color6}
+white      = ${xrdb:color7}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -82,7 +82,7 @@ padding = 0
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
 ;   module-margin-{left,rght}
-module-margin = 1
+module-margin = 2
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
@@ -91,7 +91,7 @@ module-margin = 1
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 = "Source Code Pro:size=11:antialias=true"
+font-0 = "Clear Sans:size=12:antialias=true"
 font-1 = "FontAwesome:size=12:antialias=true"
 font-2 = "unifont:fontformat=truetype:size=12:antialias=true;0"
 font-3 = "Wuncon Siji:pixelsize=12;1"
@@ -134,7 +134,7 @@ locale = en_US.UTF-8
 ; Currently supported WM's:
 ;   bspwm
 ;   i3 (requires: `override-redirect = true`)
-; wm-restack = false
+wm-restack = false
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
@@ -417,7 +417,7 @@ format = <label-state> <label-mode>
 ;   %mode%
 ; Default: %mode%
 label-mode = %mode%
-label-mode-padding = 1
+label-mode-padding = 2
 label-mode-background = ${colors.red}
 label-mode-foreground = ${colors.black}
 
@@ -430,8 +430,8 @@ label-mode-foreground = ${colors.black}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.red}
-label-focused-padding = 1
+label-focused-underline = ${colors.green}
+label-focused-padding = 2
 
 ; Available tokens:
 ;   %name%
@@ -439,7 +439,7 @@ label-focused-padding = 1
 ;   %index%
 ; Default: %icon%  %name%
 label-unfocused =
-label-unfocused-padding = 1
+label-unfocused-padding = 2
 
 ; Available tokens:
 ;   %name%
@@ -448,7 +448,7 @@ label-unfocused-padding = 1
 ; Default: %icon%  %name%
 label-visible =
 label-visible-underline = ${colors.green}
-label-visible-padding = 1
+label-visible-padding = 2
 
 ; Available tokens:
 ;   %name%
@@ -458,7 +458,7 @@ label-visible-padding = 1
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.red}
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -604,13 +604,13 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ; Default: %ifname% %local_ip%
-label-connected =  %essid%     %local_ip%
+label-connected =  %essid%
 label-connected-foreground = ${colors.foreground}
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
 ; Default: (none)
-label-disconnected =  not connected
+label-disconnected =  not connected
 label-disconnected-foreground = ${colors.foreground}
 
 ; Available tokens:
