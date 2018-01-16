@@ -30,7 +30,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '((c-c++ :variables c-c++-enable-clang-support t)
+   '(c-c++
      python
      (latex :variables latex-build-command "LaTeX" latex-enable-auto-fill t)
      ;; ----------------------------------------------------------------
