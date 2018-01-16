@@ -38,8 +38,8 @@
 
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Inconsolata-g
-#define Fontsize  16
+#define Fontname  xft:Source Code Pro
+#define Fontsize  20
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
 URxvt*imFont:           Fontname:regular:size=Fontsize
