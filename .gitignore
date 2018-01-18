@@ -1,6 +1,7 @@
 bash/
 
 bin/bin/i3lock-fancy/
+bin/bin/install_scripts
 bin/bin/ynab
 
 mpd/.config/mpd/database
