@@ -83,6 +83,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
+# open an emacs anywhere buffer
+bindsym $mod+Shift+z exec ~/.emacs_anywhere/bin/run
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -251,7 +254,7 @@ mode "$mode_gaps_outer" {
 }
 
 # autostart
-exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 2560x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 0x0 --rotate normal --dpi 117 --primary
+exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 1920x0 --rotate normal --dpi 117 --primary
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec_always sh ~/.fehbg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
