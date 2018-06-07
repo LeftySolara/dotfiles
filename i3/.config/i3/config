@@ -26,8 +26,8 @@ gaps outer 20
 # smart_gaps on
 
 # per-workspace gaps settings
-workspace $ws2 gaps inner 0
-workspace $ws2 gaps outer 0
+# workspace $ws2 gaps inner 0
+# workspace $ws2 gaps outer 0
 workspace $ws4 gaps inner 0
 workspace $ws4 gaps outer 0
 
@@ -58,7 +58,7 @@ workspace_auto_back_and_forth yes
 font $font
 
 # window colors         border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused          $fg     $fg     $bg  $fg       $fg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg

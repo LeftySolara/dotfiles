@@ -23,7 +23,7 @@ prompt walters
 
 # =============================================================================
 # Path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/home/jalen/.cargo/bin:$HOME/.local/bin:$PATH"
 export PATH
 # =============================================================================
 
