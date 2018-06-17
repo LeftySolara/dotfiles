@@ -36,12 +36,6 @@ xsetroot -cursor_name left_ptr &
 # activate num lock
 numlockx &
 
-# load key bindings (bspwm)
-# sxhkd &
-
-# restore desktop wallpaper
-# sh ~/.fehbg &
-
 # disable screen blanking
 xset -dpms &
 xset s off &
@@ -58,12 +52,12 @@ ibus-daemon --xim &
 # Start MPD
 mpd &
 
-# sync taskwarrior
-# task sync &
-
 #load nvidia settings
 nvidia-settings --load-config-only &
 
+# Restore last colorscheme set by pywal
+wal -R &
+feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
+
 # start window manager
-# exec bspwm
 exec i3

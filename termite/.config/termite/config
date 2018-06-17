@@ -10,43 +10,24 @@ font = Source Code Pro 14
 [colors]
 
 # special
-foreground      = #c7ccd1
-foreground_bold = #c7ccd1
-cursor          = #c7ccd1
-background      = #2d2d2d
+foreground      = #c5bfc2
+foreground_bold = #c5bfc2
+cursor          = #c5bfc2
+background      = #0E0D10
 
-# black
-color0  = #1c2023
-color8  = #747c84
-
-# red
-color1  = #c7ae95
-color9  = #c7ae95
-
-# green
-color2  = #95c7ae
-color10 = #95c7ae
-
-# yellow
-color3  = #aec795
-color11 = #aec795
-
-# blue
-color4  = #ae95c7
-color12 = #ae95c7
-
-# magenta
-color5  = #c795ae
-color13 = #c795ae
-
-# cyan
-color6  = #95aec7
-color14 = #95aec7
-
-# white
-color7  = #c7ccd1
-color15 = #f3f4f5
-
-
-
-
+color0 = #0E0D10
+color1 = #9D6A48
+color2 = #AE8C6F
+color3 = #385F87
+color4 = #64768A
+color5 = #6F8697
+color6 = #6BAAC4
+color7 = #c5bfc2
+color8 = #898587
+color9 = #9D6A48
+color10 = #AE8C6F
+color11 = #385F87
+color12 = #64768A
+color13 = #6F8697
+color14 = #6BAAC4
+color15 = #c5bfc2

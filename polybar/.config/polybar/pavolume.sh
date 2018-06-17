@@ -111,9 +111,11 @@ function volMute {
 }
 
 function volMuteStatus {
-
-        curStatus=`pacmd list-sinks |grep -A 15 'index: '${active_sink}'' |awk '/muted/{ print $2}'`
-
+        # On this machine, the sink indexes are 1 and 10, so grep gives two outputs which breaks this script.
+        # Only use the second version on lunaris
+        
+        # curStatus=`pacmd list-sinks |grep -A 15 'index: '${active_sink}'' |awk '/muted/{ print $2}'`
+        curStatus=`pacmd list-sinks |grep -A 14 'analog-stereo' |awk '/muted/{ print $2}'`
 }
 
 

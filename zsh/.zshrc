@@ -25,7 +25,7 @@ prompt walters
 
 # =============================================================================
 # Set path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$PATH"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$PATH"
 export PATH
 # =============================================================================
 
@@ -56,7 +56,7 @@ new_dir() {
 }
 
 # add tickler items to taskwarrior
-alias in='task add +in'
+alias in='task add +inbox'
 tickle() {
     deadline=$1
     shift

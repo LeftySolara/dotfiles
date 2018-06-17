@@ -283,7 +283,7 @@ disk_display="off"
 
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
-image="/home/jalen/personal/pics/icons/Nichijou/tumblr_nk74eg5OR21slitoto3_1280.jpg"
+image="/home/jalen/personal/pics/icons/Transistor/cartoon_red_upscaled2.png"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
@@ -299,7 +299,7 @@ image_position="left"
 
 # Crop mode
 # --crop_mode normal/fit/fill
-crop_mode="normal"
+crop_mode="fit"
 
 # Crop offset
 # Only affects normal mode.
@@ -314,13 +314,13 @@ image_size="auto"
 
 # Right gap between image and text
 # --gap num
-gap=2
+gap=0
 
 # Image offsets
 # --xoffset px
 # --yoffset px
-yoffset=17
-xoffset=17
+yoffset=15
+xoffset=15
 
 
 # }}}
