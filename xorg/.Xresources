@@ -91,7 +91,7 @@ URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
 ! ----- Rofi -----
-rofi.color-window: #463f51, #463f51, #D3AFAC
+rofi.color-window: #463f51, #463f51, #463f51
 rofi.color-normal: #463f51, #eae4da, #463f51, #D3AFAC, #463f51
 rofi.color-active: #463f51, #eae4da, #463f51, #D3AFAC, #463f51
-rofi.color-urgent: #463f51, #E0A19B, #463f51, #E0A19B,  #eae4da
+rofi.color-urgent: #463f51, #E0A19B, #463f51, #E0A19B, #eae4da
