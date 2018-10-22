@@ -116,6 +116,6 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # Ruby stuff
 export rvm_ignore_gemrc_issues=1
-export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.5.0/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
 # =============================================================================

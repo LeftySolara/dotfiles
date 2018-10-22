@@ -59,5 +59,8 @@ nvidia-settings --load-config-only &
 wal -R &
 feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
 
+# Merge .Xresources
+xrdb ~/.Xresources
+
 # start window manager
 exec i3

@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font pango:Inconsolata-g 10
+set $font pango:SF Pro Display 10
 
 # color definitions
 set_from_resource $background color0 #2d3338

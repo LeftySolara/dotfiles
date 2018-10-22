@@ -65,8 +65,8 @@ URxvt*depth: 32
 
 
 ! ----- Font Definitions -----
-#define Fontname  xft:Source Code Pro
-#define Fontsize  20
+#define Fontname  xft:SF Mono
+#define Fontsize  18
 
 URxvt*font:             Fontname:regular:pixelsize=Fontsize
 URxvt*imFont:           Fontname:regular:size=Fontsize

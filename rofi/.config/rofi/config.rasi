@@ -1,9 +1,9 @@
 configuration {
 /*	modi: "window,run,ssh";*/
 	width: 15;
-	lines: 44;
+	lines: 49;
 /*	columns: 1;*/
-	font: "Source Sans Pro 15";
+	font: "SF Pro Text 14";
 /*	bw: 1;*/
 	location: 3;
 	padding: 10;
