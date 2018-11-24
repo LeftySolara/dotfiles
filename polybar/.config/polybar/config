@@ -82,15 +82,13 @@ padding = 0
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
 ;   module-margin-{left,rght}
-module-margin = 4
+module-margin = 2
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
-font-0 = "SF Pro Display:Regular:size=13:antialias=true"
+font-0 = "NotoSans Nerd Font:Regular:size=13:antialias=true"
 font-1 = "Source Han Sans JP:Regular:size=13:antialias=true"
-font-2 = "FontAwesome:size=13:antialias=true"
-font-3 = "unifont:fontformat=truetype:size=13:antialias=true;0"
-font-4 = "Wuncon Siji:pixelsize=13;1"
+font-2 = "Wuncon Siji:pixelsize=13;1"
 
 
 ; Modules are added to one of the available blocks
@@ -634,7 +632,7 @@ format-warn = <label-warn>
 
 ; Available tokens:
 ;   %temperature% (default)
-label = %temperature%
+label =  %temperature%
 
 ; Available tokens:
 ;   %temperature% (default)

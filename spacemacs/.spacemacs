@@ -326,6 +326,8 @@ you should place your code here."
    )
   (setq c-default-style "cc-mode")
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  (load-file "~/.emacs.d/layers/+misc/discord-emacs.el")
+  (discord-emacs-run "384815451978334208")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
