@@ -92,7 +92,7 @@ module-margin = 2
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
 font-0 = "Clear Sans:size=12:antialias=true"
-font-1 = "FontAwesome:size=12:antialias=true"
+font-1 = "NotoSansMono Nerd Font:size=12:antialias=true"
 font-2 = "unifont:fontformat=truetype:size=12:antialias=true;0"
 font-3 = "Wuncon Siji:pixelsize=12;1"
 font-4 = "fixed:pixelsize=12;1"
@@ -721,11 +721,11 @@ format-warn = <label-warn>
 
 ; Available tokens:
 ;   %temperature% (default)
-label = %temperature%
+label =  %temperature%
 
 ; Available tokens:
 ;   %temperature% (default)
-label-warn = %temperature%
+label-warn =  %temperature%
 label-warn-foreground = #B3D6D3
 
 ; Requires the <ramp> tag

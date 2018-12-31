@@ -94,3 +94,9 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export SDL_AUDIODRIVER=alsa
 export VENV_HOME=~/venvs
 export XMODIFIERS=@im=ibus
+
+# Ruby stuff
+export rvm_ignore_gemrc_issues=1
+export PATH="$PATH:$HOME/.rvm/rubies/default/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/heroku/bin:$PATH"
+  

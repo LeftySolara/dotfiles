@@ -58,7 +58,7 @@ values."
      git
      markdown
      org
-     themes-megapack
+     ; themes-megapack
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
