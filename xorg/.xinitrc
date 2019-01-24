@@ -53,6 +53,9 @@ xrandr --dpi 168 &
 
 # Restore the last colorscheme set by pywal
 wal -R &
-feh --bg-scale "$(< "${HOME}/.cache/wal/wal")" &
+feh --bg-scale "${HOME}/media/pics/walls/1920x1080/r403fr61ut901.jpg" &
+
+# Start emacs daemon
+emacs --daemon=instance1 &
 
 exec i3
