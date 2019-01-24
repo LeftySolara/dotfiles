@@ -118,4 +118,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.5.0/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Rust stuff
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 # =============================================================================

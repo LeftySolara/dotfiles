@@ -62,5 +62,8 @@ feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
 # Merge .Xresources
 xrdb ~/.Xresources
 
+# Start emacs daemon
+emacs --daemon=instance1 &
+
 # start window manager
 exec i3
