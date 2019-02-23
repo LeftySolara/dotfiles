@@ -95,7 +95,7 @@ font-2 = "Wuncon Siji:pixelsize=13;1"
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = i3 pianobar mpd
+modules-left = i3 pianobar mpd spotify
 modules-center =
 modules-right = pavolume wired-network memory cpu temperature date
 
@@ -341,7 +341,7 @@ label-mode-foreground = ${colors.black}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.red}
+label-focused-underline = ${colors.magenta}
 label-focused-padding = 3
 
 ; Available tokens:
@@ -614,7 +614,7 @@ interval = 1
 ; To list all the zone types, run 
 ; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
 ; Default: 0
-thermal-zone = 0
+thermal-zone = 3
 
 ; Threshold temperature to display warning label
 ; Default: 80
@@ -658,3 +658,13 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/pavolume.sh --up
 scroll-down = ~/.config/polybar/pavolume.sh --down
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/spotify]
+type = custom/script
+interval = 1
+;format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/spotify_status.py -f '{artist} - {song}' --font=0
+format-underline = #1db954
