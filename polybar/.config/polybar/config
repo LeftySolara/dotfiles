@@ -97,7 +97,7 @@ font-2 = "Wuncon Siji:pixelsize=13;1"
 ;   modules-right = ipc clock
 modules-left = i3 pianobar mpd spotify
 modules-center =
-modules-right = pavolume wired-network memory cpu temperature date
+modules-right = taskwarrior pavolume wired-network memory cpu temperature date
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -668,3 +668,11 @@ interval = 1
 format = <label>
 exec = python ~/.config/polybar/spotify_status.py -f '{artist} - {song}' --font=0
 format-underline = #1db954
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/taskwarrior]
+type = custom/script
+interval = 1
+label =  %output%
+exec = task status:pending count
