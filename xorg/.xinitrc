@@ -57,7 +57,7 @@ mpd_discord_richpresence --no-idle --fork &
 nvidia-settings --load-config-only &
 
 # Start emacs daemon
-emacs --daemon=instance1 &
+emacs --daemon &
 
 # Restore last colorscheme set by pywal
 wal -R &
