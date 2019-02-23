@@ -64,7 +64,7 @@ radius = 0.0
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 3
+line-size = 5
 line-color = #f00
 
 ; Values applied to all borders

@@ -5,24 +5,23 @@ print_info() {
     info underline
 
     info "OS" distro
+    # info "Host" model
+    # info "Kernel" kernel
     info "Uptime" uptime
     info "Packages" packages
     info "Shell" shell
     info "Resolution" resolution
+    # info "DE" de
     info "WM" wm
+    # info "WM Theme" wm_theme
     info "Theme" theme
     info "Icons" icons
     info "Terminal" term
     info "Terminal Font" term_font
     info "CPU" cpu
-    info "GPU" gpu
+    # info "GPU" gpu
     info "Memory" memory
-    info "Birthday" birthday
 
-    # info "WM Theme" wm_theme
-    # info "DE" de
-    # info "Host" model
-    # info "Kernel" kernel
     # info "GPU Driver" gpu_driver  # Linux/macOS only
     # info "CPU Usage" cpu_usage
     # info "Disk" disk
@@ -109,7 +108,7 @@ uptime_shorthand="on"
 # on:   '998 (pacman), 8 (flatpak), 4 (snap)'
 # tiny: '908 (pacman, flatpak, snap)'
 # off:  '908'
-package_managers="on"
+package_managers="off"
 
 
 # Shell
@@ -160,7 +159,7 @@ speed_type="bios_limit"
 # Example:
 # on:    'i7-6500U (4) @ 3.1GHz'
 # off:   'i7-6500U (4) @ 3.100GHz'
-speed_shorthand="off"
+speed_shorthand="on"
 
 # Enable/Disable CPU brand in output.
 #
@@ -290,7 +289,7 @@ gtk_shorthand="on"
 # Example:
 # on:  'Numix [GTK2], Adwaita [GTK3]'
 # off: 'Adwaita [GTK3]'
-gtk2="off"
+gtk2="on"
 
 # Enable/Disable gtk3 Theme / Icons / Font
 #
@@ -606,7 +605,7 @@ image_backend="w3m"
 # NOTE: 'auto' will pick the best image source for whatever image backend is used.
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
-image_source="/home/jalen/media/pics/walls/1920x1080/r403fr61ut901.jpg"
+image_source="wallpaper"
 
 
 # Ascii Options
