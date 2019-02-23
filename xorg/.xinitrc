@@ -49,8 +49,9 @@ dropbox &
 # Start ibus
 ibus-daemon --xim &
 
-# Start MPD
+# Start MPD and enable rich presence for Discord
 mpd &
+mpd_discord_richpresence --no-idle --fork &
 
 #load nvidia settings
 nvidia-settings --load-config-only &
