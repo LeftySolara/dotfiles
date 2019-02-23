@@ -87,9 +87,9 @@ export EDITOR=vim
 export GDK_SCALE=1
 export GTK_IM_MODULE=ibus
 export PROJECT_HOME=~/dev/proj
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_IM_MODULE=ibus
 export QT_STYLE_OVERRIDE=GTK+
+export QT_QPA_PLATFORMTHEME=gtk2
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export SDL_AUDIODRIVER=alsa
 export VENV_HOME=~/venvs
@@ -99,4 +99,14 @@ export XMODIFIERS=@im=ibus
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/rubies/default/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
-  
+# ==============================================================================
+
+# ==============================================================================
+# Pywal
+
+# Import colorscheme from pywal asynchronously
+(cat ~/.cache/wal/sequences &)
+
+# Add support for TTYs
+# source ~/.cache/wal/colors-tty.sh
+# ==============================================================================

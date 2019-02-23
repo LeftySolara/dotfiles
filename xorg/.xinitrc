@@ -30,11 +30,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# start dropbox
-dropbox &
+# set DPI
+xrandr --dpi 166 &
+
+# Set the wallpaper
+sh ~/.fehbg &
 
 # set cursor
 xsetroot -cursor_name left_ptr &
+
+# start dropbox
+dropbox &
 
 # start redshift
 redshift &
@@ -48,12 +54,8 @@ ibus-daemon --xim &
 # Start MPD
 mpd &
 
-# set DPI
-xrandr --dpi 168 &
-
 # Restore the last colorscheme set by pywal
 wal -R &
-feh --bg-scale "${HOME}/media/pics/walls/1920x1080/r403fr61ut901.jpg" &
 
 # Start emacs daemon
 emacs --daemon=instance1 &
