@@ -103,7 +103,7 @@ font-4 = "fixed:pixelsize=12;1"
 ;   modules-right = ipc clock
 modules-left = i3 mpd pianobar
 modules-center =
-modules-right = pavolume network memory cpu battery temperature date
+modules-right = taskwarrior pavolume network memory cpu battery temperature date
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -747,3 +747,11 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/pavolume.sh --up
 scroll-down = ~/.config/polybar/pavolume.sh --down
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/taskwarrior]
+type = custom/script
+interval = 1
+label =  %output%
+exec = task status:pending count
