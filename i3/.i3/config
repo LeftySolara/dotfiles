@@ -1,30 +1,39 @@
 set $mod Mod4
-set $font pango:SF Pro Display 10
 
-# color definitions
-set_from_resource $background color0 #2d3338
-set_from_resource $focused_bg color1 #cbdde8
-set_from_resource $foreground color1 #cbdde8
+# Font for window titles
+font pango:NotoSans Nerd Font 10
 
-set_from_resource $black        color0 #2d3338
-set_from_resource $red          color1 #5C8FB6
-set_from_resource $green        color2 #5C98CF
-set_from_resource $yellow       color3 #6CAADB
-set_from_resource $blue         color4 #73B6E3
-set_from_resource $magenta      color5 #B3BC9D
-set_from_resource $cyan         color6 #8CB6DD
-set_from_resource $white        color7 #cbdde8
+# Set colors from Xresources
+# The second listed color will be used as a fallback
+set_from_resource $background   color0  #2d3338
+set_from_resource $focused_bg   color1  #cbdde8
+set_from_resource $foreground   color1  #cbdde8
 
-set_from_resource $black_alt    color8
-set_from_resource $red_alt      color9
-set_from_resource $green_alt    color10
-set_from_resource $yellow_alt   color11
-set_from_resource $blue_alt     color12
-set_from_resource $magenta_alt  color13
-set_from_resource $cyan_alt     color14
-set_from_resource $white_alt    color15
+set_from_resource $black        color0  #2d3338
+set_from_resource $red          color1  #5C8FB6
+set_from_resource $green        color2  #5C98CF
+set_from_resource $yellow       color3  #6CAADB
+set_from_resource $blue         color4  #73B6E3
+set_from_resource $magenta      color5  #B3BC9D
+set_from_resource $cyan         color6  #8CB6DD
+set_from_resource $white        color7  #cbdde8
 
-# workspace names
+set_from_resource $black_alt    color8  #2d3338
+set_from_resource $red_alt      color9  #5C8FB6
+set_from_resource $green_alt    color10 #5C98CF
+set_from_resource $yellow_alt   color11 #6CAADB
+set_from_resource $blue_alt     color12 #73B6E3
+set_from_resource $magenta_alt  color13 #B3BC9D
+set_from_resource $cyan_alt     color14 #8CB6DD
+set_from_resource $white_alt    color15 #cbdde8
+
+# Class                 BORDER        BACKGROUND     TEXT        INDICATOR
+client.focused          $background   $red           $background $black
+client.focused_inactive $background   $background    $red        $background
+client.unfocused        $background   $background    $red        $green
+client.urgent           $red          $red           $white      $yellow
+
+# Workspace names
 set $ws1 "1   term"
 set $ws2 "2   dev"
 set $ws3 "3   web"
@@ -40,16 +49,16 @@ workspace $ws5 output HDMI-0
 workspace $ws6 output HDMI-0
 workspace $ws8 output HDMI-0
 
-# window borders
+# Window borders
 new_window none
 smart_borders on
 
-# gaps settings
+# Gaps settings
 gaps inner 40
 gaps outer 20
-# smart_gaps on
+#smart_gaps on
 
-# workspace assignments for specific applications
+# Workspace assignments for specific applications
 assign [class="Subl3"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="jetbrains-clion"] $ws2
@@ -60,91 +69,78 @@ assign [class="PlayOnLinux"] $ws5
 assign [class="llpp"] $ws6
 assign [class="Anki"] $ws8
 
-# window rules
+# Window rules
+for_window [class="^.*"] border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [instance="float"] floating enable
-for_window [class="^.*"] border pixel 0
 for_window [class="Anki"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="feh"] floating enable
 
-# cycle back and forth when same workspace shortcut pressed
+# Cycle back and forth when same workspace shortcut pressed
 workspace_auto_back_and_forth yes
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font $font
-
-# colors                BORDER        BACKGROUND     TEXT        INDICATOR
-client.focused          $background   $red           $background $black
-client.focused_inactive $background   $background    $red        $background
-client.unfocused        $background   $background    $red        $green
-client.urgent           $red          $red           $white      $yellow
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec termite
+# Start a terminal
+bindsym $mod+Return exec urxvt
 
-# open an emacs anywhere buffer
-bindsym $mod+Shift+z exec ~/.emacs_anywhere/bin/run
+# Open an emacs anywhere buffer
+bindsym $mod+Shift+z exec ~/.emacs_anywhere/bin/run -nc -s instance1
 
-# kill focused window
+# Kill focused window
 bindsym $mod+Shift+q kill
 
-# lock screen (i3lock-fancy)
+# Lock screen (i3lock-fancy)
 bindsym $mod+p exec lock
 
-# start dmenu
-# bindsym $mod+d exec dmenu_run -b -fn 'Source Sans Pro 10' -nb '$background' -nf '$foreground' -sb '$background' -sf '$blue'
-
-# start rofi
+# Launch rofi
 bindsym $mod+d exec rofi -show run
-bindsym $mod+x exec rofi -show window
+bindsym $mod+x exec rofi -show window -width 20
 bindsym $mod+c exec rofi -show ssh
 
-# change focus
+# Change window focus
 focus_follows_mouse no
 bindsym $mod+l focus up
 bindsym $mod+k focus down
 bindsym $mod+j focus left
 bindsym $mod+semicolon focus right
 
-# move focused window
+# Move focused window
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+semicolon move right
 
-# split in horizontal orientation
+# Split in horizontal orientation
 bindsym $mod+h split h
 
-# split in vertical orientation
+# Split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+# Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+Shift+s floating toggle
 
-# change focus between tiling / floating windows
+# Change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# Focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
+# Focus the child container
+# bindsym $mod+d focus child
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -156,7 +152,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace 10
 
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -168,33 +164,33 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# change volume
+# Change volume
 bindsym XF86AudioRaiseVolume exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +3%"
 bindsym XF86AudioLowerVolume exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -3%"
 bindsym XF86AudioMute exec sh -c "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
-# media controls
+# Media controls
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
 
-# go to sleep
+# Go to sleep and lock the screen upon waking
 bindsym XF86Sleep exec systemctl suspend && lock
 
-# take a screenshot
-bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/personal/pics/desktop_scrots'
+# Take a screenshot
+bindsym $mod+o exec scrot -z -q 100 "%Y-%m-%d_%H-%M-%S.png" -e 'mv $f ~/media/pics/scrots/desktops'
 
-# reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
+# Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window
+# Resize window
 mode "resize" {
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
@@ -205,19 +201,19 @@ mode "resize" {
         bindsym l resize shrink height 5 px or 5 ppt
         bindsym semicolon resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
+        # Same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape
+        # Back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
-# gaps
+# Gaps
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -254,8 +250,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# autostart
+# Autostart
 exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 1920x0 --rotate normal --dpi 117 --primary
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
-exec_always sh ~/.fehbg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

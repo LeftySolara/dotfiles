@@ -1,53 +1,53 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+	modi: "window,run,ssh";
 	width: 15;
-	lines: 49;
-/*	columns: 1;*/
-	font: "SF Pro Text 14";
-/*	bw: 1;*/
-	location: 3;
+	lines: 43;
+	columns: 1;
+	font: "NotoSans Nerd Font 14";
+	bw: 1;
+	location: 1;
 	padding: 10;
-/*	yoffset: 0;*/
-/*	xoffset: 0;*/
+	yoffset: 0;
+	xoffset: 0;
 	fixed-num-lines: true;
-/*	show-icons: false;*/
-/*	terminal: "rofi-sensible-terminal";*/
-/*	ssh-client: "ssh";*/
-/*	ssh-command: "{terminal} -e {ssh-client} {host}";*/
-/*	run-command: "{cmd}";*/
+	show-icons: false;
+	terminal: "urxvt";
+	ssh-client: "ssh";
+	ssh-command: "{terminal} -e {ssh-client} {host}";
+	run-command: "{cmd}";
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "xkill -id {window}";*/
 /*	window-match-fields: "all";*/
 /*	drun-icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories";*/
-/*	disable-history: false;*/
+	disable-history: false;
 /*	sort: false;*/
 /*	levenshtein-sort: false;*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 	sidebar-mode: true;
 /*	eh: 1;*/
-/*	auto-select: false;*/
-/*	parse-hosts: false;*/
-/*	parse-known-hosts: true;*/
+	auto-select: false;
+	parse-hosts: false;
+	parse-known-hosts: false;
 /*	combi-modi: "window,run";*/
-/*	matching: "normal";*/
+	matching: "fuzzy";
 /*	tokenize: true;*/
 	m: "primary";
 /*	line-margin: 2;*/
 /*	line-padding: 1;*/
 /*	filter: ;*/
 /*	separator-style: "dash";*/
-/*	hide-scrollbar: false;*/
-/*	fullscreen: false;*/
-/*	fake-transparency: false;*/
-/*	dpi: -1;*/
+	hide-scrollbar: true;
+	fullscreen: false;
+	fake-transparency: false;
+	dpi: -1;
 /*	threads: 0;*/
 	scrollbar-width: 0;
-/*	scroll-method: 0;*/
+	scroll-method: 1;
 /*	fake-background: "screenshot";*/
-/*	window-format: "{w}    {i}{c}   {t}";*/
+	window-format: "{c} {t}";
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
 /*	theme: ;*/
@@ -55,7 +55,7 @@ configuration {
 /*	color-urgent: "#0E0D10, #9D6A48, #0E0D10, #9D6A48, #c5bfc2"; */
 /*	color-active: "#0E0D10, #c5bfc2, #0E0D10, #AE8C6F, #0E0D10"; */
 /*	color-window: "#0E0D10, #0E0D10, #AE8C6F"; */
-/*	max-history-size: 25;*/
+	max-history-size: 50;
 /*	combi-hide-mode-prefix: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/

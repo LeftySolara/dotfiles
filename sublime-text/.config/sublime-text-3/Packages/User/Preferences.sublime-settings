@@ -94,11 +94,11 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "SF Mono",
+	"font_face": "Hack",
 	"font_options":
 	[
 	],
-	"font_size": 15,
+	"font_size": 11,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,

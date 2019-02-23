@@ -55,15 +55,15 @@ mpd &
 #load nvidia settings
 nvidia-settings --load-config-only &
 
+# Start emacs daemon
+emacs --daemon=instance1 &
+
 # Restore last colorscheme set by pywal
 wal -R &
 feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
 
 # Merge .Xresources
-xrdb ~/.Xresources
-
-# Start emacs daemon
-emacs --daemon=instance1 &
+xrdb ~/.Xresources &
 
 # start window manager
 exec i3
