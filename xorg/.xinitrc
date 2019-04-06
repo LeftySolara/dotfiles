@@ -49,9 +49,11 @@ dropbox &
 # Start ibus
 ibus-daemon --xim &
 
-# Start MPD and enable rich presence for Discord
+# Start MPD
 mpd &
-mpd_discord_richpresence --no-idle --fork &
+
+# Enable MPD rich presence for Discord
+mpd_discord_rpc &
 
 #load nvidia settings
 nvidia-settings --load-config-only &
@@ -60,8 +62,11 @@ nvidia-settings --load-config-only &
 emacs --daemon &
 
 # Restore last colorscheme set by pywal
-wal -R &
-feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
+#wal -R &
+#feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
+
+# Generate a pywal theme from a random wallpaper
+sh ~/bin/select_random_theme &
 
 # Merge .Xresources
 xrdb ~/.Xresources &
