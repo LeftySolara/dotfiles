@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+# Select a random wallpaper and use it to apply a pywal theme
+
+DIRECTORY="/home/jalen/media/pics/walls/_rotation"
+ls $DIRECTORY | sort -R | tail -1 | while read file; do
+    wal -i $DIRECTORY/$file
+done
