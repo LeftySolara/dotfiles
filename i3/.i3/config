@@ -47,6 +47,7 @@ set $ws9 "9   ftp"
 # Assign workspaces to monitors
 workspace $ws5 output HDMI-0
 workspace $ws6 output HDMI-0
+workspace $ws7 output HDMI-0
 workspace $ws8 output HDMI-0
 
 # Window borders
