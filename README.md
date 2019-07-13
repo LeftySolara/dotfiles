@@ -1,6 +1,6 @@
 Jalen's Dotfiles
 ================
-Dotfiles for my XPS-13 (9343)
+Dotfiles for my XPS-13 (9343). The current theme was mostly inspired by [this reddit post](https://www.reddit.com/r/unixporn/comments/cae6q8/bspwm_animeted_wallpaper_pywal/?st=jy200n9g&sh=10421173).
 
 * Distro: `Arch Linux`
 * Shell: `zsh`
@@ -8,9 +8,9 @@ Dotfiles for my XPS-13 (9343)
 * Bar: `polybar`
 * Launcher: `rofi`
 * Compositor: `compton`
-* Terminal Emulator: `termite`
+* Terminal Emulator: `urxvt`
 * Editors: `spacemacs`, `vim`, `sublime text 3`
-* Music Players: `ncmpcpp`, `pianobar`
+* Music Players: `ncmpcpp`, `pianobar`, `spotify`
 * File Managers: `thunar`, `ranger`
 * Browser: `firefox`
 * Email Client: `thunderbird`
