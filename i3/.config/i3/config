@@ -93,9 +93,10 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # lock screen (i3lock-fancy)
-bindsym $mod+p exec lock
+bindsym $mod+p exec betterlockscreen --lock blur
 
 # Launch rofi
+# bindsym $mod+d exec rofi -show run
 bindsym $mod+d exec rofi -show run
 bindsym $mod+x exec rofi -show window -width 20
 bindsym $mod+c exec rofi -show ssh
@@ -256,3 +257,5 @@ mode "$mode_gaps_outer" {
 # autostart
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
+exec --no-startup-id xwinwrap -g 1920x1080 -ov -ni -s -nf -- gifview -w WID --geometry 1920x1080 ~/media/pics/walls/_rotation/smilling-apple-no-wonder-i-scaled.gif -a &
+exec --no-startup-id betterlockscreen -u ~/media/pics/walls/_rotation/smilling-apple-no-wonder-i-scaled.jpg

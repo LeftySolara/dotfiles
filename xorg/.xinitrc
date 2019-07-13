@@ -34,7 +34,7 @@ fi
 xrandr --dpi 166 &
 
 # Set the wallpaper
-sh ~/.fehbg &
+# sh ~/.fehbg &
 
 # set cursor
 xsetroot -cursor_name left_ptr &
@@ -53,7 +53,10 @@ ibus-daemon --xim &
 
 # Start MPD and enable rich presence for Discord
 mpd &
-mpd_discord_richpresence --no-idle --fork &
+mpd_discord_rpc &
+
+# Generate a pywal theme from a random wallpaper
+ # sh ~/bin/select_random_theme &
 
 # Restore the last colorscheme set by pywal
 wal -R &
