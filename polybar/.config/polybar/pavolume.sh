@@ -147,7 +147,7 @@ case "$1" in
         *)
         getCurVol
         volMuteStatus
-                if [ ${curStatus} = 'yes' ]
+                if [ "${curStatus}" = 'yes' ]
                 then
             echo " $curVol%"
         else

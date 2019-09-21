@@ -62,7 +62,7 @@ nvidia-settings --load-config-only &
 emacs --daemon &
 
 # Restore last colorscheme set by pywal
-#wal -R &
+# wal -R &
 #feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
 
 # Generate a pywal theme from a random wallpaper

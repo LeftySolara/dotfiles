@@ -675,4 +675,4 @@ format-underline = #1db954
 type = custom/script
 interval = 1
 label =  %output%
-exec = task status:pending count
+exec = task status:pending +in count

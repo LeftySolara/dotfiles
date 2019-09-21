@@ -56,7 +56,7 @@ new_dir() {
 }
 
 # add tickler items to taskwarrior
-alias in='task add +inbox'
+alias in='task add +in'
 tickle() {
     deadline=$1
     shift
@@ -126,5 +126,5 @@ export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.5.0/bin" # Add RVM to PATH f
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Rust stuff
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+source ~/.cargo/env
 # =============================================================================
