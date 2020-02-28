@@ -53,6 +53,38 @@ wal-scale() {
     wal -n -i "$@"
     feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
 }
+
+# =============================================================================
+
+# =============================================================================
+# Taskwarrior setup
+
+alias in='task add +in'
+
+tickle() {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
+
+webpage_title() {
+    wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
+
+read_and_review (){
+    link="$1"
+    title=$(webpage_title $link)
+    echo $title
+    descr="\"Read and review: $title\""
+    id=$(task add +next +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+    task "$id" annotate "$link"
+}
+
+alias tick=tickle
+alias think='tickle +1d'
+alias rnd='task add +rnd +@computer +@online'
+alias rnr=read_and_review
+
 # =============================================================================
 
 # =============================================================================
@@ -63,7 +95,6 @@ alias fetch='neofetch --w3m'
 alias g=compile_cpp17
 alias gk='gitk &'
 alias gst='git status'
-alias in='task add +in'
 alias ls='ls --color=auto'
 alias mk=new_dir
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
