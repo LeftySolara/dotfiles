@@ -63,6 +63,7 @@ gaps outer 20
 assign [class="Subl3"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="jetbrains-clion"] $ws2
+assign [class="code-oss"] $ws2
 assign [class="firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Vlc"] $ws5
@@ -87,6 +88,7 @@ floating_modifier $mod
 
 # Start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec urxvt -b 0 -w 0
 
 # Open an emacs anywhere buffer
 bindsym $mod+Shift+z exec ~/.emacs_anywhere/bin/run -nc
@@ -253,6 +255,7 @@ mode "$mode_gaps_outer" {
 
 # Autostart
 exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 1920x0 --rotate normal --dpi 117 --primary
+exec --no-startup-id albert
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id xwinwrap -ov -ni -g 1920x1080+0+0 -- mpv -wid WID ~/media/pics/walls/_rotation/smilling-apple-no-wonder-i-scaled.gif --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
