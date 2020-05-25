@@ -61,7 +61,7 @@ workspace $ws4 gaps outer 0
 assign [class="Subl"] $ws2
 assign [class="QtCreator"] $ws2
 assign [class="jetbrains-clion"] $ws2
-assign [class="Firefox"] $ws3
+assign [class="firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Vlc"] $ws5
 assign [class="PlayOnLinux"] $ws5
@@ -88,6 +88,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec urxvt -b 0 -w 0
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -256,6 +257,7 @@ mode "$mode_gaps_outer" {
 
 # autostart
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id albert
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-id xwinwrap -g 1920x1080 -ov -ni -s -nf -- gifview -w WID --geometry 1920x1080 ~/media/pics/walls/_rotation/smilling-apple-no-wonder-i-scaled.gif -a &
-exec --no-startup-id betterlockscreen -u ~/media/pics/walls/_rotation/smilling-apple-no-wonder-i-scaled.jpg
+exec --no-startup-id betterlockscreen -u ~/media/pics/walls/1920x1080/wallhaven-56481.jpg
