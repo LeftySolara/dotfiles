@@ -4,7 +4,6 @@ SAVEHIST=500
 unsetopt beep
 bindkey -v
 
-source virtualenvwrapper.sh
 # =============================================================================
 
 # =============================================================================
@@ -12,6 +11,11 @@ source virtualenvwrapper.sh
 zstyle :compinstall filename '/home/jalen/.zshrc'
 autoload -Uz compinit
 compinit
+# =============================================================================
+
+# =============================================================================
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
 # =============================================================================
 
 # =============================================================================
@@ -29,9 +33,9 @@ export PATH
 
 # =============================================================================
 # Coala Configuration
-  autoload bashcompinit
-  bashcompinit
-  eval "$(register-python-argcomplete `which coala`)"
+#  autoload bashcompinit
+#  bashcompinit
+#  eval "$(register-python-argcomplete `which coala`)"
 # =============================================================================
 
 # =============================================================================
@@ -93,10 +97,12 @@ alias cm='cmake ../.. && make'
 alias down='sudo shutdown now'
 alias fetch='neofetch --w3m'
 alias g=compile_cpp17
-alias gk='gitk &'
+alias gk='git difftool --no-symlinks --dir-diff'
 alias gst='git status'
+alias icat='kitty +kitten icat'
 alias ls='ls --color=auto'
 alias mk=new_dir
+alias kdiff='kitty +kitten diff'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pg='pacgraph -f graph && feh graph.png'
 alias pianobar='pianobar; pc'
@@ -137,7 +143,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Pywal
 
 # Import colorscheme from pywal asynchronously
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 
 # Add support for TTYs
 # source ~/.cache/wal/colors-tty.sh

@@ -33,14 +33,11 @@ fi
 # set DPI
 xrandr --dpi 166 &
 
-# Set the wallpaper
-# sh ~/.fehbg &
+# set the wallpaper
+sh ~/.fehbg &
 
 # set cursor
 xsetroot -cursor_name left_ptr &
-
-# start dropbox
-dropbox &
 
 # start redshift
 redshift &
@@ -48,20 +45,17 @@ redshift &
 # start Dunst
 dunst &
 
-# Start iBus
-ibus-daemon --xim &
-
-# Start MPD and enable rich presence for Discord
-mpd &
+# Start rich presence for Discord
 mpd_discord_rpc &
 
 # Generate a pywal theme from a random wallpaper
- # sh ~/bin/select_random_theme &
+# sh ~/bin/select_random_theme &
 
 # Restore the last colorscheme set by pywal
-wal -R &
+# wal -R &
 
 # Start emacs daemon
-emacs --daemon=instance1 &
+# emacs --daemon=instance1 &
 
-exec i3
+# exec i3
+exec bspwm
