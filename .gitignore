@@ -4,6 +4,8 @@ bin/bin/i3lock-fancy/
 bin/bin/install_scripts
 bin/bin/ynab
 
+kitty/.config/kitty/theme.conf
+
 mpd/.config/mpd/database
 mpd/.config/mpd/log
 mpd/.config/mpd/pid
