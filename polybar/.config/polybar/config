@@ -73,7 +73,7 @@ radius = 0.0
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 5
+line-size = 3
 line-color = ${colors.foreground}
 
 ; Values applied to all borders
@@ -203,7 +203,7 @@ compositing-border = over
 ; Define fallback values used by all module formats
 format-foreground =
 format-background =
-format-underline =
+format-underline = ${colors.background}
 format-overline =
 format-spacing =
 format-padding =

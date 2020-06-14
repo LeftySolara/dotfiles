@@ -16,6 +16,5 @@ dropbox &
 # Start mpd
 [ ! -s ~/.config/mpd/pid ] && mpd
 
-
 # Start X
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
