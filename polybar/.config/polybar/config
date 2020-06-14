@@ -1,24 +1,5 @@
 [colors]
-background = #1d1f21
-focused_bg = #373b41
-foreground = #c5c8c6
-black      = #282a2e
-red        = #a54242
-green      = #8c9440
-yellow     = #de935f
-blue       = #5f819d
-magenta    = #85678f
-cyan       = #5e8d87
-grey       = #707880
-
-dark_grey      = #373b41
-bright_red     = #cc6666
-bright_green   = #b5bd68
-bright_yellow  = #f0c674
-bright_blue    = #81a2be
-bright_magenta = #b294bb
-bright_cyan    = #8abeb7
-bright_grey    = #c5c8c6
+include-file = /home/jalen/.config/polybar/theme.conf
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -81,7 +62,7 @@ line-color = ${colors.foreground}
 ;   border-{left,top,right,bottom}-size
 ;   border-{left,top,right,bottom}-color
 border-size = 0
-border-color = ${colors.black}
+border-color = ${colors.color0}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
@@ -428,8 +409,8 @@ format = <label-state> <label-mode>
 ; Default: %mode%
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-background = ${colors.red}
-label-mode-foreground = ${colors.black}
+label-mode-background = ${colors.color1}
+label-mode-foreground = ${colors.color0}
 
 ; Available tokens:
 ;   %name%
@@ -440,7 +421,7 @@ label-mode-foreground = ${colors.black}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.color2}
 label-focused-padding = 2
 
 ; Available tokens:
@@ -457,7 +438,7 @@ label-unfocused-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 label-visible =
-label-visible-underline = ${colors.green}
+label-visible-underline = ${colors.color2}
 label-visible-padding = 2
 
 ; Available tokens:
@@ -467,7 +448,7 @@ label-visible-padding = 2
 ; Default: %icon%  %name%
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.red}
+label-urgent-background = ${colors.color1}
 label-urgent-padding = 2
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -537,9 +518,9 @@ label-monitor-padding = 2
 ;   label-dimmed-occupied
 ;   label-dimmed-urgent
 ;   label-dimmed-empty
-label-dimmed-foreground = ${colors.grey}
+label-dimmed-foreground = ${colors.color8}
 label-dimmed-underline = ${colors.background}
-label-dimmed-focused-background = ${colors.blue}
+label-dimmed-focused-background = ${colors.color4}
 label-dimmed-focused-padding = 2
 
 ; Available tokens:
@@ -550,7 +531,7 @@ label-dimmed-focused-padding = 2
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.bright_green}
+label-focused-underline = ${colors.color10}
 label-focused-padding = 2
 
 ; Available tokens:
@@ -579,7 +560,7 @@ label-urgent-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 label-empty = %icon%
-label-empty-foreground = ${colors.grey}
+label-empty-foreground = ${colors.color8}
 label-empty-padding = 2
 
 ; The following labels will be used to indicate the layout/mode
@@ -881,7 +862,7 @@ label =  %temperature-c%
 ; Available tokens:
 ;   %temperature-c% (default)
 label-warn =  %temperature-c%
-label-warn-foreground = ${colors.bright_yellow}
+label-warn-foreground = ${colors.color11}
 
 ; Requires the <ramp> tag
 ; The icon selection will range from 0 to `warn-temperature`
