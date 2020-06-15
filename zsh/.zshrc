@@ -102,6 +102,7 @@ alias gst='git status'
 alias icat='kitty +kitten icat'
 alias ls='ls --color=auto'
 alias mk=new_dir
+alias ncmpcpp='ncmpcpp-ueberzug'
 alias kdiff='kitty +kitten diff'
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pg='pacgraph -f graph && feh graph.png'

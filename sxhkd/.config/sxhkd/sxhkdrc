@@ -6,6 +6,9 @@
 super + Return
 	kitty --single-instance
 
+super + shift + Return
+        kitty
+
 # program launcher
 super + d
 	rofi -show run
