@@ -21,5 +21,5 @@ bspc rule -a llpp desktop='^6'
 
 $HOME/.config/polybar/launch.sh &
 picom -b
-betterlockscreen -u ~/media/pics/walls/3840x1600/227491.jpg
+betterlockscreen -u '/home/jalen/media/pics/walls/1920x1080/wl8w - awwnime.jpg'
 albert &
