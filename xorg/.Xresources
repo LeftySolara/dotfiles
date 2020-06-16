@@ -17,9 +17,6 @@ URxvt.perl-ext-common: default,clipboard
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
-! ----- ROFI Color theme -----
-rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
-
 ! ----- DPI Settings -----
 Xft.dpi: 166
 Xft.autohint: 0
