@@ -66,7 +66,7 @@
     # screen width minus the width defined in within the geometry option.
     geometry = "350x5-80+70"
     frame_width = 0
-    frame_color = "#463f51"
+    frame_color = "#1d1f21"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -173,18 +173,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#463f51"
-    foreground = "#eae4da"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 10
 
 [urgency_normal]
-    background = "#463f51"
-    foreground = "#eae4da"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 10
 
 [urgency_critical]
-    background = "#463f51"
-    foreground = "#eae4da"
+    background = "#1d1f21"
+    foreground = "#c5c8c6"
     timeout = 0
 
 
