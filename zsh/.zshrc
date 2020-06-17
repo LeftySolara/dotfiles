@@ -22,7 +22,8 @@ kitty + complete setup zsh | source /dev/stdin
 # Prompt configuration
 autoload -U promptinit
 promptinit
-prompt walters
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # =============================================================================
 
 # =============================================================================
@@ -149,3 +150,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Add support for TTYs
 # source ~/.cache/wal/colors-tty.sh
 # ==============================================================================
+
