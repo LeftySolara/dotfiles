@@ -1,7 +1,7 @@
 configuration {
 	modi: "window,run,ssh";
 	width: 15;
-	lines: 43;
+	lines: 46;
 	columns: 1;
 	font: "NotoSans Nerd Font 14";
 	bw: 1;
@@ -11,7 +11,7 @@ configuration {
 	xoffset: 0;
 	fixed-num-lines: true;
 	show-icons: false;
-	terminal: "urxvt";
+	terminal: "kitty";
 	ssh-client: "ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host}";
 	run-command: "{cmd}";
@@ -137,3 +137,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+@import "theme.rasi"
