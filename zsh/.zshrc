@@ -75,8 +75,8 @@ alias gsql=compile_cpp_sql
 alias down='sudo shutdown now'
 alias tree='tree -C'
 alias mk=new_dir
-alias vedit='vim ~/.vimrc'
-alias zedit='vim ~/.zshrc'
+alias vedit='nvim ~/.config/nvim/init.vim'
+alias zedit='nvim ~/.zshrc'
 alias tick=tickle
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
@@ -107,7 +107,7 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
 export QT_STYLE_OVERRIDE=GTK+
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="qt5ct-style"
 
 # Powerline
 #export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline

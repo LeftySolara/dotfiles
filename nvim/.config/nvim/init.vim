@@ -251,6 +251,12 @@ set expandtab
 " Disable line wrapping
 set nowrap
 
+" Filetype detection
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+augroup END
+
 " Key mappings
 map <C-m> :NERDTreeToggle<CR>
 
