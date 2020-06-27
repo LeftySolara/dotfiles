@@ -1,15 +1,5 @@
 [colors]
-background = ${xrdb:color0}
-focused_bg = ${xrdb:color2}
-foreground = ${xrdb:color7}
-black      = ${xrdb:color0}
-red        = ${xrdb:color1}
-green      = ${xrdb:color2}
-yellow     = ${xrdb:color3}
-blue       = ${xrdb:color4}
-white      = ${xrdb:color5}
-magenta    = ${xrdb:color6}
-cyan       = ${xrdb:color7}
+include-file = /home/jalen/.config/polybar/theme.conf
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -65,19 +55,19 @@ radius = 0.0
 ;   {overline,underline}-size
 ;   {overline,underline}-color
 line-size = 4
-line-color = #f00
+line-color = ${colors.foreground}
 
-; Values applied to all borders
+; Values applied to all bor %${colors.foreground}
 ; Individual side values can be defined using:
 ;   border-{left,top,right,bottom}-size
 ;   border-{left,top,right,bottom}-color
 border-size = 0
-border-color = ${colors.black}
+border-color = ${colors.color0}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-padding = 0
+padding-right = 2
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
@@ -95,7 +85,7 @@ font-2 = "Wuncon Siji:pixelsize=13;1"
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = i3 pianobar mpd spotify
+modules-left = bspwm pianobar mpd spotify
 modules-center =
 modules-right = taskwarrior pavolume wired-network memory cpu temperature date
 
@@ -128,7 +118,7 @@ locale = en_US.UTF-8
 ; Currently supported WM's:
 ;   bspwm
 ;   i3 (requires: `override-redirect = true`)
-; wm-restack = false
+; wm-restack = true
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
@@ -329,8 +319,8 @@ format = <label-state> <label-mode>
 ; Default: %mode%
 label-mode = %mode%
 label-mode-padding = 1
-label-mode-background = ${colors.red}
-label-mode-foreground = ${colors.black}
+label-mode-background = ${colors.color1}
+label-mode-foreground = ${colors.color0}
 
 ; Available tokens:
 ;   %name%
@@ -341,7 +331,7 @@ label-mode-foreground = ${colors.black}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.magenta}
+label-focused-underline = ${colors.color5}
 label-focused-padding = 3
 
 ; Available tokens:
@@ -358,7 +348,7 @@ label-unfocused-padding = 3
 ;   %index%
 ; Default: %icon%  %name%
 label-visible = 
-label-visible-underline = ${colors.red}
+label-visible-underline = ${colors.color1}
 label-visible-padding = 3
 
 ; Available tokens:
@@ -368,8 +358,143 @@ label-visible-padding = 3
 ; Default: %icon%  %name%
 label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.red}
+label-urgent-background = ${colors.color1}
 label-urgent-padding = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/bspwm]
+type = internal/bspwm
+
+; Only show workspaces defined on the same output as the bar
+; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
+; But if you rename your bspwm monitors with bspc -n this option will no longer
+; behave correctly.
+; Default: true
+pin-workspaces = true
+
+; Output mode flags after focused state label
+; Default: false
+inline-mode = false
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Set the scroll cycle direction
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+
+; ws-icon-[0-9]+ = <label>;<icon>
+; Note that the <label> needs to correspond with the bspwm workspace name
+; Neither <label> nor <icon> can contain a semicolon (;)
+ws-icon-0 = term;
+ws-icon-1 = dev;
+ws-icon-2 = web;
+ws-icon-3 = mail;
+ws-icon-4 = media;
+ws-icon-5 = doc;
+ws-icon-6 = chat;
+ws-icon-7 = misc;
+
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(focused|urgent|occupied|empty)>
+;   <label-mode> - gets replaced with <label-(monocle|tiled|fullscreen|floating|locked|sticky|private)>
+; Default: <label-state>
+format = <label-state>
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-monitor = %name%
+label-monitor-padding = 2
+
+; If any values for label-dimmed-N are defined, the workspace/mode
+; colors will get overridden with those values if the monitor is out of focus
+; To only override workspaces in a specific state, use:
+;   label-dimmed-focused
+;   label-dimmed-occupied
+;   label-dimmed-urgent
+;   label-dimmed-empty
+label-dimmed-foreground = ${colors.color8}
+label-dimmed-underline = ${colors.background}
+label-dimmed-focused-background = ${colors.background}
+label-dimmed-focused-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-focused = %icon%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.color10}
+label-focused-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-occupied = %icon%
+label-occupied-underline = ${colors.background}
+label-occupied-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-urgent = %icon%
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.foreground}
+label-urgent-underline = ${colors.background}
+label-urgent-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-empty = %icon%
+label-empty-foreground = ${colors.color8}
+label-empty-padding = 2
+
+; The following labels will be used to indicate the layout/mode
+; for the focused workspace. Requires <label-mode>
+;
+; Available tokens:
+;   None
+;label-monocle = 
+;label-tiled = 
+;label-fullscreen = 
+;label-floating = 
+;label-pseudotiled = P
+;label-locked = 
+;label-locked-foreground = #bd2c40
+;label-sticky = 
+;label-sticky-foreground = #fba922
+;label-private = 
+;label-private-foreground = #bd2c40
+;label-marked = M
+
+; Separator in between workspaces
+label-separator = |
+label-separator-padding = 0
+label-separator-foreground = ${colors.background}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -448,7 +573,7 @@ format-online = <label-song>
 ;   %date%
 ;   %title%
 ; Default: %artist% - %title%
-label-song = %artist%  -  %title%
+label-song = ♫  %artist%  -  %title%
 
 ; Available tokens:
 ;   %elapsed%
@@ -584,7 +709,7 @@ format-padding = 0
 ; Available tokens:
 ;   %output%
 ; Default: %output%
-label = %output%
+label = ♫  %output%
 
 ; Available tokens:
 ;   %counter%
@@ -631,13 +756,13 @@ format = <label>
 format-warn = <label-warn>
 
 ; Available tokens:
-;   %temperature% (default)
-label =  %temperature%
+;   %temperature-c% (default)
+label =  %temperature-c%
 
 ; Available tokens:
 ;   %temperature% (default)
-label-warn = %temperature%
-label-warn-foreground = #B3D6D3
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.color11}
 
 ; Requires the <ramp> tag
 ; The icon selection will range from 0 to `warn-temperature`
@@ -664,9 +789,9 @@ scroll-down = ~/.config/polybar/pavolume.sh --down
 [module/spotify]
 type = custom/script
 interval = 1
-;format-prefix = " "
+format-prefix = "  ♫  "
 format = <label>
-exec = python ~/.config/polybar/spotify_status.py -f '{artist} - {song}' --font=0
+exec = python ~/.config/polybar/spotify_status.py -f '{artist} - {song}' --font=1 -t 50
 format-underline = #1db954
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
