@@ -64,15 +64,11 @@ nvidia-settings --load-config-only &
 # Start emacs daemon
 # emacs --daemon &
 
-# Restore last colorscheme set by pywal
-wal -R &
-feh --bg-scale "$(< "${home}/.cache/wal/wal")" &
-
-# Generate a pywal theme from a random wallpaper
-# sh ~/bin/select_random_theme &
-
 # Merge .Xresources
 xrdb ~/.Xresources &
+
+# Set Wallpaper
+~/.fehbg &
 
 # start window manager
 exec bspwm

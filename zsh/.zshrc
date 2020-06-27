@@ -112,14 +112,6 @@ export QT_QPA_PLATFORMTHEME="qt5ct-style"
 # Powerline
 #export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline
 
-# Pywal
-# Import colorscheme from 'wal' asynchronously
-(cat ~/.cache/wal/sequences &)
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
-
 # Ruby stuff
 export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.5.0/bin" # Add RVM to PATH for scripting
