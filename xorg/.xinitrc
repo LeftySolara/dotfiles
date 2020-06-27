@@ -55,17 +55,18 @@ mpd &
 # Enable MPD rich presence for Discord
 mpd_discord_rpc &
 
-# Monitor config
-xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 1920x0 --rotate normal --dpi 117 --primary &
-
 #load nvidia settings
 nvidia-settings --load-config-only &
 
 # Start emacs daemon
 # emacs --daemon &
 
+
 # Merge .Xresources
 xrdb ~/.Xresources &
+
+# Monitor config
+xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 1920x0 --rotate normal --dpi 117 --primary &
 
 # Set Wallpaper
 ~/.fehbg &
