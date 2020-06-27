@@ -19,25 +19,21 @@
 #
 ##### connection settings #####
 #
-mpd_host = 127.0.0.1 
+mpd_host = 127.0.0.1
 #
-# MPD Port
 mpd_port = 6600
-#
-# Mopidy Port
-#mpd_port = 6603
 #
 #mpd_connection_timeout = 5
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = /home/jalen/media/music
+mpd_music_dir = ~/media/music
 #
 #mpd_crossfade_time = 5
 #
 ##### music visualizer #####
 ##
-## Note: In order to msystemd remove unitake music visualizer work you'll
+## Note: In order to make music visualizer work you'll
 ## need to use mpd fifo output, whose format parameter
 ## has to be set to 44100:16:1 for mono visualization
 ## or 44100:16:2 for stereo visualization. Example
@@ -51,7 +47,7 @@ mpd_music_dir = /home/jalen/media/music
 ## }
 ##
 #
-#visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_fifo_path = /tmp/mpd.fifo
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -61,12 +57,12 @@ mpd_music_dir = /home/jalen/media/music
 ## are some problems with it.
 ##
 #
-#visualizer_output_name = Visualizer feed
+visualizer_output_name = mpd_fifo
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-#visualizer_in_stereo = yes
+visualizer_in_stereo = yes
 #
 ##
 ## Multiply received samples by given value. Very
@@ -82,7 +78,7 @@ mpd_music_dir = /home/jalen/media/music
 ## Keep in mind that sane values start with >=10.
 ##
 #
-#visualizer_sync_interval = 30
+visualizer_sync_interval = 30
 #
 ##
 ## Note: To enable spectrum frequency visualization
@@ -91,9 +87,10 @@ mpd_music_dir = /home/jalen/media/music
 #
 ## Available values: spectrum, wave.
 ##
-#visualizer_type = wave
+visualizer_type = wave_filled
 #
 #visualizer_look = ●▮
+visualizer_look = "  "
 #
 ##### system encoding #####
 ##
@@ -117,7 +114,7 @@ mpd_music_dir = /home/jalen/media/music
 ## Time of inactivity (in seconds) after playlist
 ## highlighting will be disabled (0 = always on).
 ##
-#playlist_disable_highlight_delay = 5
+playlist_disable_highlight_delay = 1
 #
 ## Defines how long messages are supposed to be visible.
 ##
@@ -177,10 +174,11 @@ mpd_music_dir = /home/jalen/media/music
 ##
 #
 #song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+song_list_format = " $7{%a »$6 %t $R$7%l$9} "
 #
 #song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
-#song_library_format = {%n - }{%t}|{%f}
+song_library_format = {%t}|{%f}
 #
 #tag_editor_album_format = {(%y) }%b
 #
@@ -214,25 +212,35 @@ mpd_music_dir = /home/jalen/media/music
 ##
 #
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+alternative_header_first_line_format = $6$b» {%t} «$/b
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+alternative_header_second_line_format = $7{%b}|{/%D/}
 #
 ##
 ## Note: below variables also support text attributes listed above.
 ##
 #
-#now_playing_prefix = $b
+now_playing_prefix = "$b$7 » "
 #
-#now_playing_suffix = $/b
+now_playing_suffix = "$/b"
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
-#selected_item_prefix = $6
+#selected_item_prefix = $(16)$r
+#
+current_item_prefix = "$(cyan)$r"
 #
 #selected_item_suffix = $9
+
+current_item_suffix = "$/r$(end)"
 #
 #modified_item_prefix = $3> $9
 #
+
+current_item_inactive_column_prefix = "$(white)$r"
+current_item_inactive_column_suffix = "$/r$(end)"
+
 ## Note: colors are not supported for below variable.
 ##
 #song_window_title_format = {%a - }{%t}|{%f}
@@ -284,9 +292,9 @@ mpd_music_dir = /home/jalen/media/music
 ## Attention: It doesn't support song format anymore.
 ## Use `ncmpcpp --now-playing SONG_FORMAT` instead.
 ##
-#execute_on_song_change = ""
+execute_on_song_change = "~/.ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
 #
-#playlist_show_remaining_time = no
+playlist_show_remaining_time = yes
 #
 #playlist_shorten_total_times = no
 #
@@ -295,7 +303,7 @@ mpd_music_dir = /home/jalen/media/music
 ##
 ## Note: Possible display modes: classic, columns.
 ##
-#playlist_display_mode = columns
+playlist_display_mode = classic
 #
 #browser_display_mode = classic
 #
@@ -311,15 +319,15 @@ mpd_music_dir = /home/jalen/media/music
 #
 #volume_change_step = 2
 #
-#autocenter_mode = no
+autocenter_mode = yes
 #
-#centered_cursor = no
+centered_cursor = yes
 #
 ##
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-#progressbar_look = =>
+progressbar_look = "▄▄▄"
 #
 #progressbar_boldness = yes
 #
@@ -347,11 +355,11 @@ user_interface = alternative
 #
 #default_tag_editor_pattern = %n - %t
 #
-#header_visibility = yes
+header_visibility = no
 #
-#statusbar_visibility = yes
+statusbar_visibility = no
 #
-#titles_visibility = yes
+titles_visibility = no
 #
 #header_text_scrolling = yes
 #
@@ -401,13 +409,17 @@ user_interface = alternative
 ## by choosing screen from the list above.
 ##
 #startup_screen = playlist
+startup_screen = visualizer
+startup_slave_screen = "playlist"
+startup_slave_screen_focus = yes
+#connected_message_on_startup = "no"
 #
 ##
 ## Default width of locked screen (in %).
 ## Acceptable values are from 20 to 80.
 ##
 #
-#locked_screen_width_part = 50
+locked_screen_width_part = 30
 #
 #ask_for_locked_screen_width_part = yes
 #
@@ -464,7 +476,7 @@ user_interface = alternative
 #
 #search_engine_default_search_mode = 1
 #
-#external_editor = nano
+external_editor = vim
 #
 ## Note: set to yes if external editor is a console application.
 ##
@@ -476,15 +488,15 @@ user_interface = alternative
 #
 #empty_tag_color = cyan
 #
-#header_window_color = default
+header_window_color = white
 #
 #volume_color = default
 #
-#state_line_color = default
+#state_line_color = cyan
 #
 #state_flags_color = default
 #
-#main_window_color = yellow
+main_window_color = white
 #
 #color1 = white
 #
@@ -492,17 +504,17 @@ user_interface = alternative
 #
 #main_window_highlight_color = yellow
 #
-#progressbar_color = black
+progressbar_color = white
 #
-#progressbar_elapsed_color = green
+progressbar_elapsed_color = magenta
 #
 #statusbar_color = default
 #
-#alternative_ui_separator_color = black
+alternative_ui_separator_color = white
 #
 #active_column_color = red
 #
-#visualizer_color = yellow
+visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 #window_border_color = green
 #

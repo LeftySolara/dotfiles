@@ -5,6 +5,7 @@ mpd/.config/mpd/state
 mpd/.config/mpd/sticker.sql
 
 ncmpcpp/.ncmpcpp/error.log
+ncmpcpp/.ncmpcpp/ncmpcpp-ueberzug
 
 pianobar/.config/pianobar/nowplaying
 pianobar/.config/pianobar/state
