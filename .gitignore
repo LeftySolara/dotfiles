@@ -1,3 +1,5 @@
+bin/bin/ncmpcpp-ueberzug
+
 mpd/.config/mpd/database
 mpd/.config/mpd/log
 mpd/.config/mpd/pid
