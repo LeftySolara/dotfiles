@@ -68,6 +68,7 @@ tickle() {
 # =============================================================================
 # Aliases
 alias ls='ls --color=auto'
+alias lsh='ls -lSh | less'
 alias xre='xrdb ~/.Xresources'  # reload .Xresources
 alias wall='feh --bg-scale'     # set desktop wallpaper
 alias perm='chmod 755'          # set default permissions
