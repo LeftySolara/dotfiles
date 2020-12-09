@@ -94,6 +94,7 @@ alias key='keychain --eval --agents ssh id_rsa'
 alias cm='cmake ../.. && make'
 alias texclean='mkdir -p out; mv *.aux *.log *.pdf *.synctex.gz *.bcf *.xml out/'
 alias ncmpcpp='ncmpcpp-ueberzug'
+alias psh='pipenv shell'
 # =============================================================================
 
 # =============================================================================
@@ -102,7 +103,6 @@ alias ncmpcpp='ncmpcpp-ueberzug'
 # virtualenv
 export VENV_HOME=~/venvs
 export PROJECT_HOME=~/proj
-source virtualenvwrapper.sh
 
 # iBus stuff for Japanese IME
 export GTK_IM_MODULE=ibus
