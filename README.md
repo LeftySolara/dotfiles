@@ -1,19 +1,16 @@
-Jalen's Dotfiles
-================
-Dotfiles for my main desktop system
+# Jalen's Dotfiles
 
-* Distro: `Arch Linux`
-* Window Manager: `i3-gaps`
-* Status Bar: `polybar`
-* Launcher: `rofi`
-* Compositor: `compton`
-* Shell: `zsh`
-* Terminal Emulator: `termite`
-* Editors: `spacemacs`,`vim`, `sublime text`
-* Music Daemon: `mpd`
-* Music Clients: `ncmpcpp`, `pms`, `pianobar`
-* File Managers: `ranger`, `thunar`
-* Web Browser: `firefox`
-* Mail Client: `thunderbird`
+Dotfiles for my main laptop (Dell XPS 9310).
 
-![](scrot.png?raw=true)
+- Distro: `Arch Linux`
+- Shell: `zsh`
+- Window Manager: `bspwm`
+- Bar: `polybar`
+- Launchers: `rofi`
+- Compositor: `picom`
+- Terminal Emulator: `alacritty`
+- Editors: `vim`, `vscode`
+- Music Players: `ncmpcpp`
+- File Managers: `ranger`
+- Browser: `firefox`
+- Notifications: `dunst`

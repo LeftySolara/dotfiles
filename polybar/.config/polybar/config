@@ -1,5 +1,5 @@
 [colors]
-include-file = /home/jalen/.config/polybar/theme.conf
+include-file = ~/.config/polybar/theme.conf
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -7,10 +7,10 @@ include-file = /home/jalen/.config/polybar/theme.conf
 ; Use the following command to list available outputs:
 ; If unspecified, the application will pick the first one it finds.
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = DP-4
+monitor = eDP1
 
 ; Use the specified monitor as a fallback if the main one is not found.
-monitor-fallback = HDMI-0
+; monitor-fallback = HDMI-0
 
 ; Require the monitor to be in connected state
 ; XRandR sometimes report my monitor as being disconnected (when in use')
@@ -21,19 +21,19 @@ monitor-strict = false
 override-redirect = false
 
 ; Put the bar at the bottom of the screen
-bottom = true
+bottom = false
 
 ; Prefer fixed center position for the `modules-center` block
 ; When false, the center position will be based on the size of the other blocks.
 fixed-center = true
 
 ; Dimensiosn defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-width = 100%
-height = 35
+width = 98%
+height = 40 
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-offset-x = 0
-offset-y = 0
+offset-x = 1%
+offset-y = 1%
 
 ; Background argb color (e.g. #f00, #ff992a, #ddff1023)
 background = ${colors.background}
@@ -48,7 +48,7 @@ foreground = ${colors.foreground}
 ; Value used for drawing rounded corners
 ; Individual top/bottom values can be defined using:
 ;   radius-{top,bottom}
-radius = 0.0
+radius = 10.10
 
 ; Under-/overline pixel size and argb color
 ; Individual values can be defined using:
@@ -67,7 +67,8 @@ border-color = ${colors.color0}
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-padding-right = 2
+padding-right = 5
+padding-left = 5
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
@@ -76,18 +77,19 @@ module-margin = 2
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
-font-0 = "NotoSans Nerd Font:Regular:size=13:antialias=true"
-font-1 = "Source Han Sans JP:Regular:size=13:antialias=true"
-font-2 = "Wuncon Siji:pixelsize=13;1"
-
+font-0 = "Clear Sans:size=12:antialias=true"
+font-1 = "NotoSansMono Nerd Font:size=12:antialias=true"
+;font-2 = "unifont:fontformat=truetype:size=12:antialias=true;0"
+font-3 = "Wuncon Siji:pixelsize=12;1"
+font-4 = "fixed:pixelsize=12;1"
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = bspwm pianobar mpd spotify
+modules-left = bspwm
 modules-center =
-modules-right = taskwarrior pavolume wired-network memory cpu temperature date
+modules-right = taskwarrior pavolume network memory cpu battery temperature date
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -215,6 +217,89 @@ ramp-coreload-4 = ▅
 ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP1
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+
+; see "man date" for details on how to format the time string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+; Default: %H:%M:%S
+time-format = %H:%M
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = <animation-charging> <label-charging>
+
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+format-discharging = <ramp-capacity> <label-discharging>
+
+; Available tags:
+;   <label-full> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;format-full = <ramp-capacity> <label-full>
+
+; Available tokens:
+;   %percentage% (default)
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+label-full = Fully charged
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -441,7 +526,7 @@ label-dimmed-focused-padding = 2
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.color10}
+label-focused-underline = ${colors.color13}
 label-focused-padding = 2
 
 ; Available tokens:
@@ -610,9 +695,9 @@ bar-progress-empty = ─
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-[module/wired-network]
+[module/network]
 type = internal/network
-interface = enp9s0
+interface = wlan0
 interval = 2.0
 accumulate-stats = true
 
@@ -640,13 +725,13 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ; Default: %ifname% %local_ip%
-label-connected =  %local_ip%
+label-connected =  %essid%
 label-connected-foreground = ${colors.foreground}
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
 ; Default: (none)
-label-disconnected =  not connected
+label-disconnected =  not connected
 label-disconnected-foreground = ${colors.foreground}
 
 ; Available tokens:

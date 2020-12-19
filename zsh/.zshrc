@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # =============================================================================
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -10,7 +17,7 @@ bindkey -v
 
 # =============================================================================
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/jalen/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -28,13 +35,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Set path
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$PATH"
 export PATH
-# =============================================================================
-
-# =============================================================================
-# Coala Configuration
-  autoload bashcompinit
-  bashcompinit
-  eval "$(register-python-argcomplete `which coala`)"
 # =============================================================================
 
 # =============================================================================
@@ -68,24 +68,20 @@ tickle() {
 # =============================================================================
 # Aliases
 alias ls='ls --color=auto'
-alias lsh='ls -lSh | less'
 alias xre='xrdb ~/.Xresources'  # reload .Xresources
 alias wall='feh --bg-scale'     # set desktop wallpaper
-alias perm='chmod 755'          # set default permissions
-alias g=compile_cpp             # compile in c++11 mode
 alias gsql=compile_cpp_sql
 alias down='sudo shutdown now'
 alias tree='tree -C'
 alias mk=new_dir
-alias vedit='nvim ~/.config/nvim/init.vim'
-alias zedit='nvim ~/.zshrc'
+alias vedit='vim ~/.config/nvim/init.vim'
+alias zedit='vim ~/.zshrc'
 alias tick=tickle
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'
 alias pianobar='pianobar; pc'
 alias think='tickle +1d'
 alias rest='systemctl suspend && lock'
 alias rmshit='python ~/bin/rmshit.py'
-alias rbackup='rsync -aAv --progress --numeric-ids --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/lost+found"} -e "ssh -p 32719" / jalen@vault-53:/srv/backup/vault-101'
 alias fetch='neofetch --w3m'
 alias gst='git status'
 alias gk='gitk &'
@@ -94,32 +90,10 @@ alias key='keychain --eval --agents ssh id_rsa'
 alias cm='cmake ../.. && make'
 alias texclean='mkdir -p out; mv *.aux *.log *.pdf *.synctex.gz *.bcf *.xml out/'
 alias ncmpcpp='ncmpcpp-ueberzug'
-alias psh='pipenv shell'
+alias tin='task +in'
 # =============================================================================
 
 # =============================================================================
 # Environment Variables
 
-# virtualenv
-export VENV_HOME=~/venvs
-export PROJECT_HOME=~/proj
-
-# iBus stuff for Japanese IME
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
-export QT_STYLE_OVERRIDE=GTK+
-export QT_QPA_PLATFORMTHEME="qt5ct-style"
-
-# Powerline
-#export POWERLINE_DIR=/usr/lib/python3.4/site-packages/powerline
-
-# Ruby stuff
-export rvm_ignore_gemrc_issues=1
-export PATH="$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.5.0/bin" # Add RVM to PATH for scripting
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Rust stuff
-source ~/.cargo/env
 # =============================================================================

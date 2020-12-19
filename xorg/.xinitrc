@@ -33,40 +33,23 @@ fi
 # set mouse pointer
 xsetroot -cursor_name left_ptr &
 
-# activate num lock
-numlockx &
-
-# disable screen blanking
-xset -dpms &
-xset s off &
-
 # start redshift
-redshift &
+#redshift &
+
+# start Dunst
+dunst &
 
 # start Dropbox
-dropbox &
-
-# Start ibus
-ibus-daemon --xim &
+#dropbox &
 
 # Start MPD
-mpd &
+#mpd &
 
 # Enable MPD rich presence for Discord
-mpd_discord_rpc &
-
-#load nvidia settings
-nvidia-settings --load-config-only &
-
-# Start emacs daemon
-# emacs --daemon &
-
+#mpd_discord_rpc &
 
 # Merge .Xresources
 xrdb ~/.Xresources &
-
-# Monitor config
-xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --output DP-4 --mode 2560x1440 --pos 1920x0 --rotate normal --dpi 117 --primary &
 
 # Set Wallpaper
 ~/.fehbg &

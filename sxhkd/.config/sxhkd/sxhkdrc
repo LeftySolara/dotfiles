@@ -4,20 +4,17 @@
 
 # terminal emulator
 super + Return
-	kitty --single-instance
-
-super + shift + Return
-        kitty
+	alacritty
 
 # program launcher
 super + d
 	rofi -show run
 
 super + shift + d
-        rofi -show window -width 20
+    rofi -show window -width 20
 
 super + ctrl + d
-        rofi -show ssh
+    rofi -show ssh
 
 # make sxhkd reload its configuration files
 super + Escape
@@ -25,31 +22,38 @@ super + Escape
 
 # lock screen
 super + F7
-        multilockscreen --lock
+    multilockscreen --lock
+
+# change screen brightness
+@XF86MonBrightnessUp
+    xbacklight -inc 2
+
+@XF86MonBrightnessDown
+    xbacklight -dec 2
 
 # change volume
 @XF86AudioRaiseVolume 
-        pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +3%
+    pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +3%
 
 @XF86AudioLowerVolume
-        pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -3%
+    pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -3%
 
 @XF86AudioMute
-        pactl set-sink-mute @DEFAULT_SINK@ toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # media controls
 @XF86AudioPlay
-        mpc toggle
+    mpc toggle
 @XF86AudioStop
-        mpc stop
+    mpc stop
 @XF86AudioNext
-        mpc next
+    mpc next
 @XF86AudioPrev
-        mpc prev
+    mpc prev
 
 # go to sleep
 @XF86Sleep
-        systemctl suspend && lock
+    systemctl suspend && lock
 
 
 #################

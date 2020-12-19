@@ -12,7 +12,8 @@ URxvt*scrollBar: false
 URxvt*lineSpace: 2
 URxvt.internalBorder: 20
 URxvt.iso14755: False
-URxvt.perl-ext-common: default,clipboard,resize-font
+! URxvt.perl-ext-common: default,clipboard,resize-font
 
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
+
