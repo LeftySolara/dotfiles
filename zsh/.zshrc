@@ -122,4 +122,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Rust stuff
 source ~/.cargo/env
+
+# Poetry stuff
+export PATH="$HOME/.poetry/bin:$PATH"
 # =============================================================================
+
