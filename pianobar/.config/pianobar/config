@@ -1,5 +1,0 @@
-audio_quality = high
-event_command = ~/.config/pianobar/event_command.py
-
-#password=mypassword
-user = leftysolara@protonmail.com
