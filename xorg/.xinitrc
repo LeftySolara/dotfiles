@@ -43,4 +43,5 @@ xset s off &
 # set wallpaper
 ~/.fehbg &
 
-exec xterm
+# start window manager
+exec bspwm
