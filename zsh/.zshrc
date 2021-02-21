@@ -53,6 +53,7 @@ alias ls='ls --color=auto'	# print ls with color
 alias mk=new_dir_cd		# create new directory and cd into it
 alias rest='systemctl suspend'	# put the computer to sleep
 alias tree='tree -C'		# print tree with color
+alias slideshow='feh -q -F -Y -z -r -D 15'  # play an image slideshow
 alias xre='xrdb ~/.Xresources'  # reload .Xresources file
 alias wall='feh --bg-scale'	# set desktop wallpaper
 alias zedit='vim ~/.zshrc'	# open ~/.zshrc for editing
