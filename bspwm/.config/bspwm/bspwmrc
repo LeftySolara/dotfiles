@@ -24,6 +24,6 @@ bspc rule -a discord desktop='^7'
 
 $HOME/.config/polybar/launch.sh &
 picom -b
-# multilockscreen -u '/home/jalen/media/pics/walls/3064x1724/IqqbRKA.jpg' -r 2560x1440
+multilockscreen -u '$HOME/media/pics/walls/3440x1440/wallhaven-96q3vd_3440x1440.png' --display 0       
 albert &
 dunst &
