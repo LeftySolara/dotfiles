@@ -88,7 +88,7 @@ font-2 = "Wuncon Siji:pixelsize=13;1"
 ;modules-left = bspwm pianobar mpd spotify
 ;modules-center =
 ;modules-right = taskwarrior pavolume wired-network memory cpu temperature date
-modules-left = bspwm
+modules-left = bspwm mpd
 modules-center =
 modules-right = taskwarrior pavolume memory cpu date
 
@@ -541,7 +541,7 @@ bar-used-empty-foreground = #444444
 [module/mpd]
 type = internal/mpd
 
-host = 127.0.0.1
+host = /home/julianne/.config/mpd/socket
 port = 6600
 
 ; Seconds to sleep between progressbar/song timer sync

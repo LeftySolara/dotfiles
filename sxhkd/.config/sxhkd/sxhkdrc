@@ -36,13 +36,13 @@ super + F7
 
 # media controls
 @XF86AudioPlay
-        mpc toggle
+    	mpc -h $HOME/.config/mpd/socket toggle
 @XF86AudioStop
-        mpc stop
+    	mpc -h $HOME/.config/mpd/socket stop
 @XF86AudioNext
-        mpc next
+    	mpc -h $HOME/.config/mpd/socket next
 @XF86AudioPrev
-        mpc prev
+    	mpc -h $HOME/.config/mpd/socket prev
 
 # go to sleep
 @XF86Sleep
