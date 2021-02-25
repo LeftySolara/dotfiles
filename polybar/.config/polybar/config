@@ -88,7 +88,7 @@ font-2 = "Wuncon Siji:pixelsize=13;1"
 ;modules-left = bspwm pianobar mpd spotify
 ;modules-center =
 ;modules-right = taskwarrior pavolume wired-network memory cpu temperature date
-modules-left = bspwm mpd
+modules-left = bspwm pianobar mpd
 modules-center =
 modules-right = taskwarrior pavolume memory cpu date
 
