@@ -1,6 +1,6 @@
 ! ----- Font Definitions -----
 #define Fontname  xft:Hack
-#define Fontsize  11
+#define Fontsize  14
 
 URxvt*font:             Fontname:regular:size=Fontsize:antialias=true,xft:Droid Sans Fallback:size=Fontsize:antialias=true
 URxvt*imFont:           Fontname:regular:size=Fontsize

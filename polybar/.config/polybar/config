@@ -87,7 +87,7 @@ font-4 = "fixed:pixelsize=12;1"
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = bspwm
+modules-left = bspwm mpd spotify
 modules-center =
 modules-right = taskwarrior pavolume network memory cpu battery temperature date
 
@@ -650,7 +650,7 @@ format-online = <label-song>
 
 ; Available tags:
 ;   <label-offline>
-;format-offline = <label-offline>
+format-offline = <label-offline>
 
 ; Available tokens:
 ;   %artist%
@@ -668,7 +668,7 @@ label-song = ♫  %artist%  -  %title%
 
 ; Available tokens:
 ;   None
-label-offline = 🎜 mpd is offline
+label-offline = ♫ mpd is offline
 
 ; Only applies if <icon-X> is used
 icon-play = ⏵

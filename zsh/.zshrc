@@ -14,6 +14,8 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # =============================================================================
+# Poetry completions. Must be placed before compinit.
+fpath+=~/.zfunc
 
 # =============================================================================
 # The following lines were added by compinstall
@@ -33,7 +35,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # =============================================================================
 # Set path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$PATH"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$PATH:$HOME/bin"
 export PATH
 # =============================================================================
 
@@ -89,11 +91,15 @@ alias ga='git add'
 alias key='keychain --eval --agents ssh id_rsa'
 alias cm='cmake ../.. && make'
 alias texclean='mkdir -p out; mv *.aux *.log *.pdf *.synctex.gz *.bcf *.xml out/'
-alias ncmpcpp='ncmpcpp-ueberzug'
+#alias ncmpcpp='ncmpcpp-ueberzug'
 alias tin='task +in'
+alias tw='timew'
+alias slideshow='feh -q -F -Y -z -r -D 15 .'
 # =============================================================================
 
 # =============================================================================
 # Environment Variables
 
+# Poetry stuff
+export PATH="$HOME/.poetry/bin:$PATH"
 # =============================================================================
