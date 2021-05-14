@@ -28,12 +28,12 @@ bottom = false
 fixed-center = true
 
 ; Dimensiosn defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-width = 98%
+width = 100%
 height = 40 
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-offset-x = 1%
-offset-y = 1%
+offset-x = 0%
+offset-y = 0%
 
 ; Background argb color (e.g. #f00, #ff992a, #ddff1023)
 background = ${colors.background}
@@ -48,13 +48,13 @@ foreground = ${colors.foreground}
 ; Value used for drawing rounded corners
 ; Individual top/bottom values can be defined using:
 ;   radius-{top,bottom}
-radius = 10.10
+radius = 0.0
 
 ; Under-/overline pixel size and argb color
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 4
+line-size = 5
 line-color = ${colors.foreground}
 
 ; Values applied to all bor %${colors.foreground}
@@ -67,8 +67,8 @@ border-color = ${colors.color0}
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-padding-right = 5
-padding-left = 5
+padding-right = 2
+padding-left = 0
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
@@ -526,7 +526,7 @@ label-dimmed-focused-padding = 2
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.color13}
+label-focused-underline = ${colors.color2}
 label-focused-padding = 2
 
 ; Available tokens:
