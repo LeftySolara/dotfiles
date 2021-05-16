@@ -49,12 +49,14 @@ new_dir_cd() {
 # =============================================================================
 alias down='sudo shutdown now'	# shut down the computer
 alias gst='git status'		# print git status
+alias in='task add +in'		# Add a task to the taskwarrior inbox
 alias ls='ls --color=auto'	# print ls with color
 alias mk=new_dir_cd		# create new directory and cd into it
 alias pc='cat /dev/null > ~/.config/pianobar/nowplaying'  # clear for polybar
 alias pianobar='pianobar; pc'
 alias rest='systemctl suspend'	# put the computer to sleep
 alias tree='tree -C'		# print tree with color
+alias tw='timew'		# timewarrior
 alias slideshow='feh -q -F -Y -z -r -D 15'  # play an image slideshow
 alias xre='xrdb ~/.Xresources'  # reload .Xresources file
 alias wall='feh --bg-scale'	# set desktop wallpaper
@@ -69,6 +71,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct-style"
 # =============================================================================
 # MPD Environment Variables
 # =============================================================================
+export EDITOR=vim
 export MPD_HOST="$HOME/.config/mpd/socket"
 
 # =============================================================================
