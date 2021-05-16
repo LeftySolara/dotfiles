@@ -1,8 +1,10 @@
-Jalen's Dotfiles
-================
+_**This computer is no longer in use. For current dotfiles, see the default branch.**_
+
+LeftySolara's Dotfiles
+======================
 My personal dotfiles for my main laptop.
 
-##Setup
+## Setup
 * Linux Distro: `arch`
 * Window Manager: `i3`
 * Bar: `i3blocks`
