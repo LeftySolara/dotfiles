@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Sets the desktop wallpaper using feh
+# and the lock screen image using multilockscreen.
+
+if [[ "$#" -eq 0 ]]; then
+    echo "No arguments given. Aborting..."
+    exit 2
+else
+    echo "Setting wallpaper..."
+
+    # Clear the existing .wall file.
+    PATHS=""
+    LOCK=0
+    >$HOME/.wall
+
+    # Write each path to the .wall file.
+    for path in $@; do
+        if [[ $path == "--lock" ]]; then
+            LOCK=1
+            continue
+        fi
+        PATHS+="$path "
+        echo $path >>$HOME/.wall
+    done
+
+    # Set the wallpaper(s)
+    feh --no-fehbg --bg-scale $PATHS
+    echo "Wallpaper set."
+
+    # Update the lock screen, if requested.
+    if [[ LOCK -eq 1 ]]; then
+        echo "Updating lock screen..."
+        multilockscreen -u $(head -1 $HOME/.wall) --display 0
+        echo "Updated lock screen image."
+    fi
+fi
+
+exit 0

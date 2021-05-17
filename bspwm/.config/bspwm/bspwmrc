@@ -25,6 +25,6 @@ bspc rule -a discord desktop='^7'
 killall -q redshift && redshift &
 $HOME/.config/polybar/launch.sh &
 picom -b
-multilockscreen -u '$HOME/media/pics/walls/3440x1440/wallhaven-96q3vd_3440x1440.png' --display 0       
+multilockscreen -u $(head -1 $HOME/.wall) --display 0       
 albert &
 dunst &
