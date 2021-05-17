@@ -443,7 +443,7 @@ label-dimmed-focused-padding = 2
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.color10}
+label-focused-underline = ${colors.color2}
 label-focused-padding = 2
 
 ; Available tokens:
