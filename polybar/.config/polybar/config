@@ -89,7 +89,7 @@ font-2 = "Wuncon Siji:pixelsize=13;1"
 ;modules-right = taskwarrior pavolume wired-network memory cpu temperature date
 modules-left = bspwm pianobar mpd spotify
 modules-center =
-modules-right = taskwarrior pavolume memory cpu date
+modules-right = taskwarrior pavolume memory cpu date powermenu
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -803,3 +803,14 @@ type = custom/script
 interval = 1
 label =  %output%
 exec = task status:pending +in count
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/powermenu]
+type = custom/text
+content = ⏻
+
+content-backgrount = ${colors.background}
+content-foreground = ${colors.foreground}
+
+click-left = ~/.config/rofi/applets/applets/powermenu.sh

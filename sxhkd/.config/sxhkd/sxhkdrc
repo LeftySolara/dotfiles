@@ -8,13 +8,13 @@ super + Return
 
 # program launcher
 super + d
-	rofi -show run
+	~/.config/rofi/bin/launcher_colorful
 
 super + shift + d
-        rofi -show window -width 20
+    rofi -show window -theme ~/.config/rofi/launchers/colorful/style_2.rasi
 
 super + ctrl + d
-        rofi -show ssh
+	rofi -show ssh -theme ~/.config/rofi/launchers/colorful/style_2.rasi
 
 # make sxhkd reload its configuration files
 super + Escape

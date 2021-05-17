@@ -32,6 +32,7 @@ compinit
 # Path
 # =============================================================================
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/bin:$PATH"
+PATH="$HOME/.config/rofi/bin:$PATH"
 export PATH
 
 # =============================================================================
