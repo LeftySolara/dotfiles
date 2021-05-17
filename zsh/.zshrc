@@ -31,7 +31,7 @@ compinit
 # =============================================================================
 # Path
 # =============================================================================
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$PATH"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$HOME/bin:$PATH"
 export PATH
 
 # =============================================================================
@@ -59,7 +59,6 @@ alias tree='tree -C'		# print tree with color
 alias tw='timew'		# timewarrior
 alias slideshow='feh -q -F -Y -z -r -D 15'  # play an image slideshow
 alias xre='xrdb ~/.Xresources'  # reload .Xresources file
-alias wall='feh --bg-scale'	# set desktop wallpaper
 alias zedit='vim ~/.zshrc'	# open ~/.zshrc for editing
 
 # =============================================================================
