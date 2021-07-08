@@ -20,5 +20,12 @@ return packer.startup(function()
     config = function()
       require("nvimTree").config()
     end
-    }
+  }
+
+  use {
+    "hrsh7th/nvim-compe",
+    config = function()
+      require("nvim-compe").config()
+    end
+  }
 end)
