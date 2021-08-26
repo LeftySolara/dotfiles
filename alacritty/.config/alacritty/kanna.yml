@@ -1,0 +1,23 @@
+# Kanna Alacritty Colors
+colors:
+  primary:
+    background: "#373e4d"
+    foreground: "#f4f4f4"
+  normal:
+    black: "#373e4d"
+    red: "#d2a7b8"
+    green: "#b8d2a7"
+    yellow: "#e7d0b6"
+    blue: "#d3b2cb"
+    magenta: "#ccadd7"
+    cyan: "#ecb8cd"
+    white: "#f4f4f4"
+  bright:
+    black: "#968c94"
+    red: "#d2a7b8"
+    green: "#a0f5cf"
+    yellow: "#e7d0b6"
+    blue: "#d3b2cb"
+    magenta: "#ccadd7"
+    cyan: "#ecb8cd"
+    white: "#f9f9f9"
