@@ -14,6 +14,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # =============================================================================
+# Plugins
+# =============================================================================
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# =============================================================================
 # General Configurations
 # =============================================================================
 HISTFILE=~/.histfile
@@ -48,6 +53,7 @@ new_dir_cd() {
 # =============================================================================
 # Aliases
 # =============================================================================
+alias cm='cmake ../.. && make'
 alias down='sudo shutdown now'	# shut down the computer
 alias gst='git status'		# print git status
 alias in='task add +in'		# Add a task to the taskwarrior inbox
