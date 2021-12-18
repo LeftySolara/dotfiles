@@ -1,7 +1,7 @@
 # Kanna Alacritty Colors
 colors:
   primary:
-    background: "#373e4d"
+    background: "#282c34"
     foreground: "#f4f4f4"
   normal:
     black: "#373e4d"
