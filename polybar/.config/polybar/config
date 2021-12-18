@@ -794,9 +794,9 @@ scroll-down = ~/.config/polybar/pavolume.sh --down
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = "  ♫  "
+format-prefix = ""
 format = <label>
-exec = python ~/.config/polybar/spotify_status.py -f '{artist} - {song}' --font=1 -t 50
+exec = python ~/.config/polybar/spotify_status.py -f '{artist} - {song}' --font=1 -t 75
 format-underline = #1db954
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
