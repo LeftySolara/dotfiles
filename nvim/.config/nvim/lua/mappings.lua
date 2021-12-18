@@ -66,6 +66,11 @@ map(
 
 map("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], opt)
 
+-- open terminals
+map("n", "<C-l>", [[<Cmd>vnew term://bash <CR>]], opt) -- term over right
+map("n", "<C-x>", [[<Cmd> split term://bash | resize 10 <CR>]], opt) --  term bottom
+map("n", "<C-t>t", [[<Cmd> tabnew | term <CR>]], opt) -- term newtab
+
 --  compe mappings
 map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})

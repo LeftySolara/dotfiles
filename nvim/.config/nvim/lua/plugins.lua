@@ -103,4 +103,6 @@ return require('packer').startup(function()
 
   use 'navarasu/onedark.nvim'
 
+  -- Discord Rich Presence
+  use 'andweeb/presence.nvim'
 end)

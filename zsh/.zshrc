@@ -66,6 +66,7 @@ alias tree='tree -C'		# print tree with color
 alias tw='timew'		# timewarrior
 alias slideshow='feh -q -F -Y -z -r -D 15'  # play an image slideshow
 alias xre='xrdb ~/.Xresources'  # reload .Xresources file
+alias vim='nvim'
 alias zedit='vim ~/.zshrc'	# open ~/.zshrc for editing
 
 # =============================================================================
