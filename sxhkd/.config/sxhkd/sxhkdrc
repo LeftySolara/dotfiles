@@ -8,13 +8,13 @@ super + Return
 
 # program launcher
 super + d
-	rofi -show run
+	~/.config/rofi/bin/launcher_colorful
 
 super + shift + d
-    rofi -show window -width 20
+    rofi -show window -theme ~/.config/rofi/launchers/colorful/style_2.rasi
 
 super + ctrl + d
-    rofi -show ssh
+    rofi -show ssh -theme ~/.config/rofi/launchers/colorful/style_2.rasi
 
 # make sxhkd reload its configuration files
 super + Escape
@@ -54,6 +54,10 @@ super + F9
 # go to sleep
 @XF86Sleep
     systemctl suspend && lock
+
+# take a screenshot
+super + o
+    scrot --file ~/media/pics/scrots/desktops/%Y-%m-%d_%H-%M-%S.png --quality 100 -d 3
 
 
 #################
