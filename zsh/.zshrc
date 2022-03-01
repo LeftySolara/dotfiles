@@ -34,6 +34,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # =============================================================================
 
 # =============================================================================
+# Plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# =============================================================================
+
+# =============================================================================
 # Set path
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.local/bin:$PATH:$HOME/bin"
 export PATH
@@ -95,11 +100,15 @@ alias texclean='mkdir -p out; mv *.aux *.log *.pdf *.synctex.gz *.bcf *.xml out/
 alias tin='task +in'
 alias tw='timew'
 alias slideshow='feh -q -F -Y -z -r -D 15 .'
+alias vim=nvim
 # =============================================================================
 
 # =============================================================================
-# Environment Variables
+# Path 
 
 # Poetry stuff
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# Rofi scripts
+export PATH="$HOME/.config/rofi/bin:$PATH"
 # =============================================================================
