@@ -1,4 +1,4 @@
-# Jalen's Dotfiles
+# Julianne's Dotfiles
 
 Dotfiles for my main laptop (Dell XPS 9310).
 
@@ -6,11 +6,14 @@ Dotfiles for my main laptop (Dell XPS 9310).
 - Shell: `zsh`
 - Window Manager: `bspwm`
 - Bar: `polybar`
-- Launchers: `rofi`
+- Launcher: `rofi`
 - Compositor: `picom`
 - Terminal Emulator: `alacritty`
-- Editors: `vim`, `vscode`
-- Music Players: `ncmpcpp`
+- Editors: `nvim`, `vscode`
+- Music Players: `ncmpcpp`, `spotify`
 - File Managers: `ranger`
 - Browser: `firefox`
 - Notifications: `dunst`
+- PDF viewer: `llpp`
+
+![](scrot.png?raw=true)
