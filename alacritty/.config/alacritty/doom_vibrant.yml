@@ -1,0 +1,23 @@
+# Doom-Vibrant Colors
+colors:
+  primary:
+    background: "#242730"
+    foreground: "#bbc2cf"
+  normal:
+    black: "#2a2e38"
+    red: "#ff665c"
+    green: "#7bc275"
+    yellow: "#FCCE7B"
+    blue: "#5cEfFF"
+    magenta: "#C57BDB"
+    cyan: "#51afef"
+    white: "#bbc2cf"
+  bright:
+    black: "#484854"
+    red: "#ff665c"
+    green: "#7bc275"
+    yellow: "#fcce7b"
+    blue: "#5cefff"
+    magenta: "#c57bdb"
+    cyan: "#51afef"
+    white: "#bbc2cf"
