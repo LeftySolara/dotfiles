@@ -44,6 +44,10 @@ super + F7
 @XF86AudioPrev
     	mpc -h $HOME/.config/mpd/socket prev
 
+# take a screenshot
+super + o
+    scrot --file ~/media/pics/scrots/desktops/%Y-%m-%d_%H-%M-%S.png --quality 100 -d 3
+
 # go to sleep
 @XF86Sleep
         systemctl suspend
