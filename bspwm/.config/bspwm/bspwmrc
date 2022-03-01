@@ -22,7 +22,6 @@ bspc rule -a vlc desktop='^5'
 bspc rule -a llpp desktop='^6'
 bspc rule -a discord desktop='^7'
 
-killall -q redshift && redshift &
 $HOME/.config/polybar/launch.sh &
 picom -b --experimental-backends
 multilockscreen -u $(head -1 $HOME/.wall) --display 0       
