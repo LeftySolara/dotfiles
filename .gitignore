@@ -7,4 +7,14 @@ ncmpcpp/
 pianobar/.config/pianobar/nowplaying
 pianobar/.config/pianobar/state
 
+rofi/.config/rofi/applets
+rofi/.config/rofi/bin
+rofi/.config/rofi/launchers
+rofi/.config/rofi/powermenu
+rofi/.config/rofi.old
+
+nvim.old
+
 taskwarrior/
+
+*packer_compiled*
