@@ -14,6 +14,8 @@ shittyfiles = [
     '~/.local/share/recently-used.xbel',
     '~/Desktop',             # Firefox creates this
     '~/Downloads',
+    '~/Music',
+    '~/Pictures',
     '~/.bzr.log',
     '~/.thumbnails',
     '~/.gconfd',
