@@ -77,19 +77,19 @@ module-margin = 2
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
-font-0 = "Clear Sans:size=12:antialias=true"
-font-1 = "NotoSansMono Nerd Font:size=12:antialias=true"
-;font-2 = "unifont:fontformat=truetype:size=12:antialias=true;0"
+font-0= "SF Pro Display:style=Regular:size=12"
+font-1= "SF Pro Display:style=Semibold:size=12"
+font-2 = "NotoSansMono Nerd Font:size=12:antialias=true"
 font-3 = "Wuncon Siji:pixelsize=12;1"
 font-4 = "fixed:pixelsize=12;1"
-
+font-5 = "Comfortaa:size=12:antialias=true"
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
 modules-left = bspwm mpd spotify
 modules-center =
-modules-right = taskwarrior pavolume network memory cpu battery temperature date
+modules-right = taskwarrior pavolume network memory cpu battery temperature date powermenu
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -186,6 +186,7 @@ format-padding =
 format-margin =
 format-offset =
 
+pseudo-transparency = false
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/cpu]
@@ -311,10 +312,10 @@ interval = 1.0
 
 ; See "man date" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = %a %d %b
+date = %d %b 
 
 ; Optional time format
-time = %H:%M
+time = %H:%M 
 
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
@@ -331,7 +332,7 @@ format-foreground = ${colors.foreground}
 ;   %date%
 ;   %time%
 ; Default: %date%
-label = %date%  %time%
+label = %time%  |  %date%
 label-font = 0
 label-foreground = ${colors.foreground}
 
@@ -504,7 +505,7 @@ format = <label-state>
 ;   %name%
 ; Default: %name%
 label-monitor = %name%
-label-monitor-padding = 2
+label-monitor-padding = 4
 
 ; If any values for label-dimmed-N are defined, the workspace/mode
 ; colors will get overridden with those values if the monitor is out of focus
@@ -516,7 +517,7 @@ label-monitor-padding = 2
 label-dimmed-foreground = ${colors.color8}
 label-dimmed-underline = ${colors.background}
 label-dimmed-focused-background = ${colors.background}
-label-dimmed-focused-padding = 2
+label-dimmed-focused-padding = 4
 
 ; Available tokens:
 ;   %name%
@@ -526,8 +527,8 @@ label-dimmed-focused-padding = 2
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.color2}
-label-focused-padding = 2
+label-focused-underline = ${colors.color5}
+label-focused-padding = 4
 
 ; Available tokens:
 ;   %name%
@@ -535,8 +536,8 @@ label-focused-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 label-occupied = %icon%
-label-occupied-underline = ${colors.background}
-label-occupied-padding = 2
+label-occupied-underline =
+label-occupied-padding = 4
 
 ; Available tokens:
 ;   %name%
@@ -547,7 +548,7 @@ label-urgent = %icon%
 label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.foreground}
 label-urgent-underline = ${colors.background}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 ; Available tokens:
 ;   %name%
@@ -556,7 +557,7 @@ label-urgent-padding = 2
 ; Default: %icon%  %name%
 label-empty = %icon%
 label-empty-foreground = ${colors.color8}
-label-empty-padding = 2
+label-empty-padding = 4
 
 ; The following labels will be used to indicate the layout/mode
 ; for the focused workspace. Requires <label-mode>
@@ -577,7 +578,7 @@ label-empty-padding = 2
 ;label-marked = M
 
 ; Separator in between workspaces
-label-separator = |
+label-separator = 
 label-separator-padding = 0
 label-separator-foreground = ${colors.background}
 
@@ -658,7 +659,7 @@ format-offline = <label-offline>
 ;   %date%
 ;   %title%
 ; Default: %artist% - %title%
-label-song = ♫  %artist%  -  %title%
+label-song = %{A1:~/.config/rofi/applets/applets/mpd.sh &:} %artist%  -  %title% %{A}
 
 ; Available tokens:
 ;   %elapsed%
@@ -668,7 +669,7 @@ label-song = ♫  %artist%  -  %title%
 
 ; Available tokens:
 ;   None
-label-offline = ♫ mpd is offline
+label-offline = mpd is offline
 
 ; Only applies if <icon-X> is used
 icon-play = ⏵
@@ -886,3 +887,14 @@ type = custom/script
 interval = 1
 label =  %output%
 exec = task status:pending +in count
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/powermenu]
+type = custom/text
+content = 
+
+content-background = ${color.bg}
+content-foreground = ${color.green}
+
+click-left = ~/.config/rofi/applets/applets/powermenu.sh
