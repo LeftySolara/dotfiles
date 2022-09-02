@@ -21,7 +21,7 @@ monitor-strict = false
 override-redirect = false
 
 ; Put the bar at the bottom of the screen
-bottom = false
+bottom = true
 
 ; Prefer fixed center position for the `modules-center` block
 ; When false, the center position will be based on the size of the other blocks.
@@ -148,7 +148,7 @@ margin-bottom = 0
 
 ; Adjust the _NET_WM_STRUT_PARTIAL bottom value
 ;   Used for bottom aligned bars
-margin-top = 0
+margin-top = 20
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
