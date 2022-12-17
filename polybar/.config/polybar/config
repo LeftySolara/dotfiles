@@ -21,7 +21,7 @@ monitor-strict = false
 override-redirect = false
 
 ; Put the bar at the bottom of the screen
-bottom = true
+bottom = false
 
 ; Prefer fixed center position for the `modules-center` block
 ; When false, the center position will be based on the size of the other blocks.
@@ -107,7 +107,7 @@ dim-value = 1.0
 ; If the value is empty or undefined, the atom value
 ; will be created from the following template: polybar-[BAR]_[MONITOR]
 ; NOTE: The placeholders are not available for custom values
-wm-name =
+wm-name = bspwm
 
 ; Locale used to localize various module data (e.g. date)
 ; Expects a valid libc locale, for example: sv_SE.UTF-8
@@ -122,7 +122,7 @@ locale = en_US.UTF-8
 ; Currently supported WM's:
 ;   bspwm
 ;   i3 (requires: `override-redirect = true`)
-; wm-restack = true
+wm-restack = bspwm
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
@@ -148,7 +148,7 @@ margin-bottom = 0
 
 ; Adjust the _NET_WM_STRUT_PARTIAL bottom value
 ;   Used for bottom aligned bars
-margin-top = 20
+margin-top = 0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -210,7 +210,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label =   %percentage%%
+label =     %percentage%%
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -243,7 +243,7 @@ time-alt = %H:%M:%S
 
 ; Available tags:
 ;   <label> (default)
-format =  <label>
+format =    <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
@@ -525,7 +525,7 @@ format = <label>
 ;   %mb_used%
 ;   %mb_free%
 ;   %mb_total%
-label =   %gb_used%
+label =     %gb_used%
 
 ; Only applies if <bar-used> is used
 bar-used-indicator =
@@ -804,7 +804,7 @@ format-underline = #1db954
 [module/taskwarrior]
 type = custom/script
 interval = 1
-label =  %output%
+label =    %output%
 exec = task status:pending +in count
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
