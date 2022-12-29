@@ -101,6 +101,7 @@ alias tin='task +in'
 alias tw='timew'
 alias slideshow='feh -q -F -Y -z -r -D 15 .'
 alias vim=nvim
+alias rc='echo $?' # print the exit code of the last command
 # =============================================================================
 
 # =============================================================================
@@ -112,3 +113,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # Rofi scripts
 export PATH="$HOME/.config/rofi/bin:$PATH"
 # =============================================================================
+#
+# =============================================================================
+# Misc. Environment Variables
+export _JAVA_AWT_WM_NONREPARENTING=1

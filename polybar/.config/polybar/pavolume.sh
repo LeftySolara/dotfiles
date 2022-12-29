@@ -84,7 +84,7 @@ function volSync {
 
 function getCurVol {
 
-        curVol=`pacmd list-sinks |grep -A 15 'index: '${active_sink}'' |grep 'volume:' |egrep -v 'base volume:' |awk -F : '{print $3}' |grep -o -P '.{0,3}%'|sed s/.$// |tr -d ' '`
+        curVol=`pacmd list-sinks |grep -A 15 'index: '${active_sink}'' |grep 'volume:' |grep -E -v 'base volume:' |awk -F : '{print $3}' |grep -o -P '.{0,3}%'|sed s/.$// |tr -d ' '`
 
 }
 
@@ -149,9 +149,9 @@ case "$1" in
         volMuteStatus
                 if [ "${curStatus}" = 'yes' ]
                 then
-            echo " $curVol%"
+            echo "   $curVol%"
         else
-            echo " $curVol%"
+            echo "   $curVol%"
         fi
         ;;
 esac

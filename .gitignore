@@ -18,3 +18,5 @@ nvim.old
 taskwarrior/
 
 *packer_compiled*
+
+*.AppImage

@@ -67,7 +67,7 @@ border-color = ${colors.color0}
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-padding-right = 2
+padding-right = 5
 padding-left = 0
 
 ; Number of spaces to add before/after each module
@@ -208,7 +208,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label =   %percentage%%
+label =     %percentage%%
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -253,13 +253,13 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging>    <label-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity>    <label-discharging>
 
 ; Available tags:
 ;   <label-full> (default)
@@ -324,7 +324,7 @@ time-alt = %H:%M:%S
 
 ; Available tags:
 ;   <label> (default)
-format =  <label>
+format =   <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
@@ -606,7 +606,7 @@ format = <label>
 ;   %mb_used%
 ;   %mb_free%
 ;   %mb_total%
-label =   %gb_used%
+label =    %gb_used%
 
 ; Only applies if <bar-used> is used
 bar-used-indicator =
@@ -726,13 +726,13 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ; Default: %ifname% %local_ip%
-label-connected =  %essid%
+label-connected =    %essid%
 label-connected-foreground = ${colors.foreground}
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
 ; Default: (none)
-label-disconnected =  not connected
+label-disconnected =    not connected
 label-disconnected-foreground = ${colors.foreground}
 
 ; Available tokens:
@@ -885,7 +885,7 @@ format-underline = #1db954
 [module/taskwarrior]
 type = custom/script
 interval = 1
-label =  %output%
+label =    %output%
 exec = task status:pending +in count
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
