@@ -1,3 +1,6 @@
 require('base')
 require('highlights')
 require('maps')
+require('plugins')
+-- require('onedark').load()
+require('lualine').setup({})
