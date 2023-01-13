@@ -86,5 +86,10 @@ return packer.startup(function(use)
       'nvim-tree/nvim-web-devicons'
     }
   }
+
+  use {
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+  }
 end)
 
