@@ -54,5 +54,11 @@ xrdb ~/.Xresources &
 # Set Wallpaper
 ~/.fehbg &
 
+# Start ibus
+export GTK_IM_MODULE='ibus'
+export QT_IM_MODULE='ibus'
+export XMODIFIERS='@im=ibus'
+ibus-daemon -dr
+
 # start window manager
 exec bspwm

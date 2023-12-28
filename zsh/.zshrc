@@ -70,6 +70,20 @@ tickle() {
     shift
     in +tickle wait:$deadline $@
 }
+
+webpage_title() {
+    wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
+
+read_and_review() {
+    link="$1"
+    title=$(webpage_title $link)
+    echo $title
+    descr="\"Read and review: $title\""
+    id=$(task add +next +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+    task "$id" annotate "$link"
+}
+
 # =============================================================================
 
 # =============================================================================
@@ -102,6 +116,9 @@ alias tw='timew'
 alias slideshow='feh -q -F -Y -z -r -D 15 .'
 alias vim=nvim
 alias rc='echo $?' # print the exit code of the last command
+alias ms="sudo systemctl start mnt-sharlayan.mount"
+alias us="sudo umount /mnt/sharlayan"
+alias rnr=read_and_review
 # =============================================================================
 
 # =============================================================================
@@ -116,4 +133,5 @@ export PATH="$HOME/.config/rofi/bin:$PATH"
 #
 # =============================================================================
 # Misc. Environment Variables
-export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=2
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"

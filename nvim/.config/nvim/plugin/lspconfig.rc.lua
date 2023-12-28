@@ -19,7 +19,7 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" }
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -37,3 +37,8 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 nvim_lsp.tailwindcss.setup {}
+
+nvim_lsp.clangd.setup {}
+
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', 'gh', '<Cmd>ClangdSwitchSourceHeader<cr>', opts)
