@@ -1,0 +1,24 @@
+import = ["~/.config/alacritty/colors.toml"]
+
+[font]
+size = 7.0
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack"
+style = "Italic"
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+
+[window.padding]
+x = 0
+y = 0
